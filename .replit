@@ -1,0 +1,30 @@
+entrypoint = "index.js"
+modules = ["nodejs-22"]
+hidden = [".config", "package-lock.json"]
+
+[gitHubImport]
+requiredFiles = [".replit", "replit.nix", "package.json", "package-lock.json"]
+
+[nix]
+channel = "stable-24_11"
+
+[deployment]
+run = ["sh", "-c", "php -S 0.0.0.0:5000 -t katnery"]
+deploymentTarget = "autoscale"
+ignorePorts = false
+
+[workflows]
+runButton = "Run PHP Server"
+
+[[workflows.workflow]]
+name = "Run PHP Server"
+author = 41541841
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "php -S 0.0.0.0:5000 -t katnery -d error_reporting=E_ALL"
+
+[[ports]]
+localPort = 5000
+externalPort = 80

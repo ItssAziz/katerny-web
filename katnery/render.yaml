@@ -1,0 +1,16 @@
+databases:
+  - name: katerny_db
+    databaseName: katerny
+    user: katerny_user
+    plan: free
+
+services:
+  - type: web
+    name: katerny-web
+    runtime: php
+    buildCommand: "./setup.sh"
+    startCommand: "php -S 0.0.0.0:\$PORT -t public"
+    envVars:
+      - key: APP_ENV
+        value: production
+    plan: free
