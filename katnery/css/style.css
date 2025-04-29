@@ -139,6 +139,8 @@ nav ul li a:hover {
     font-weight: bold;
     font-size: 60px;
     color: #a86e3b;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    display: inline-block;
 }
 
 .static-text {
@@ -154,10 +156,16 @@ nav ul li a:hover {
 
 .typed-cursor {
   opacity: 1;
-  transition: opacity 0.7s ease;
+  transition: opacity 0.3s ease;
   font-size: 65px;
   color: black;
   display: inline-block;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 .typed-cursor.typed-cursor--blink {
@@ -220,12 +228,13 @@ nav ul li a:hover {
     max-width: 90%; /* Slightly larger */
     max-height: 90%;
     object-fit: contain;
-    filter: none !important; /* Force color */
-    transition: none;
+    filter: grayscale(100%) contrast(120%);
+    transition: filter 0.4s ease, transform 0.3s ease;
 }
 
 .logo-item:hover img {
-    transform: scale(1.03); /* Very slight zoom */
+    filter: none;
+    transform: scale(1.05);
 }
 
 /* General section styling for both Trending and Best Selling */
