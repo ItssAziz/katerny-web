@@ -15,19 +15,19 @@
         <h2 class="client-title">Trusted By</h2>
         <div class="logo-grid">
             <div class="logo-item">
-                <img src="/assets/img/cover 4.jpeg" alt="Client 1" loading="lazy">
+                <img src="/assets/img/Bvlgari-Logo.webp" alt="Bvlgari" loading="lazy">
             </div>
             <div class="logo-item">
-                <img src="/assets/img/cover 2.jpg" alt="Client 2" loading="lazy">
+                <img src="/assets/img/Cartier-Logo.webp" alt="Cartier" loading="lazy">
             </div>
             <div class="logo-item">
-                <img src="/assets/img/cover 5.jpg" alt="Client 3" loading="lazy">
+                <img src="/assets/img/oviliya-logo.webp" alt="Oviliya" loading="lazy">
             </div>
             <div class="logo-item">
-                <img src="/assets/img/cover ring.jpg" alt="Client 4" loading="lazy">
+                <img src="/assets/img/handmade-logo.webp" alt="Handmade" loading="lazy">
             </div>
             <div class="logo-item">
-                <img src="/assets/img/kat ring 2.jpg" alt="Client 5" loading="lazy">
+                <img src="/assets/img/raqiya-logo.webp" alt="Raqiya" loading="lazy">
             </div>
         </div>
     </div>
