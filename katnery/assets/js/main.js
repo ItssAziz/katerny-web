@@ -6,21 +6,28 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log('Initializing Typed.js');
         new Typed('#typed-text', {
             strings: ['Ring', 'Necklaces', 'Bracelets', 'Earrings'],
-            typeSpeed: 40,
-            backSpeed: 50,
+            typeSpeed: 150,  // Optimal human reading speed
+            backSpeed: 70,  // Slower backspace
             loop: true,
             showCursor: true,
             cursorChar: '|',
             autoInsertCss: true,
             contentType: 'html',
-            startDelay: 500,  
-            backDelay: 1000,  
+            startDelay: 800,  // Natural pause
+            backDelay: 1200,
+            fadeOut: false,  // Disable fade for letter-by-letter
+            smartBackspace: false,  // Force letter-by-letter
+            shuffle: false,
             onBegin: (self) => {
                 console.log('Animation started');
                 // Remove any existing cursors
                 document.querySelectorAll('.typed-cursor').forEach(el => el.remove());
             },
-            onComplete: () => console.log('Animation complete')
+            onComplete: () => console.log('Animation complete'),
+            onStringRemove: (arrayPos, self) => {  
+                self.el.classList.add('deleting');
+                setTimeout(() => self.el.classList.remove('deleting'), 300);
+            }
         });
     }
 
@@ -355,4 +362,12 @@ document.addEventListener("DOMContentLoaded", function() {
         header.classList.remove('scrolled');
       }
     });
+
+    // Generate product URL
+    function getProductUrl(product) {
+        const baseUrl = 'https://dreamy-sa.com/YgbnVwE';
+        return `${baseUrl}?name=${encodeURIComponent(product.name)}` + 
+               `&price=${product.price}` +
+               `&desc=${encodeURIComponent(product.description.substring(0, 100))}`;
+    }
 });

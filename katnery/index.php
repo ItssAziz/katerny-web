@@ -10,29 +10,6 @@
     <p class="static-text">Exclusive Designs. Timeless Elegance.</p>
 </section>
 
-<section class="clients-section">
-    <div id="ourclients">
-        <h2 class="client-title">Trusted By</h2>
-        <div class="logo-grid">
-            <div class="logo-item">
-                <img src="/assets/img/Bvlgari-Logo.webp" alt="Bvlgari" loading="lazy">
-            </div>
-            <div class="logo-item">
-                <img src="/assets/img/Cartier-Logo.webp" alt="Cartier" loading="lazy">
-            </div>
-            <div class="logo-item">
-                <img src="/assets/img/oviliya-logo.webp" alt="Oviliya" loading="lazy">
-            </div>
-            <div class="logo-item">
-                <img src="/assets/img/handmade-logo.webp" alt="Handmade" loading="lazy">
-            </div>
-            <div class="logo-item">
-                <img src="/assets/img/raqiya-logo.webp" alt="Raqiya" loading="lazy">
-            </div>
-        </div>
-    </div>
-</section>
-
 <section class="trending-products">
   <h3 class="section-title small">Popular Products</h3>
   <h2 class="section-title big">Trending Now</h2>
@@ -248,7 +225,12 @@
         <input type="text" placeholder="Your Name" required>
         <input type="email" placeholder="Your Email" required>
         <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
+        <div class="form-buttons">
+          <button type="submit">Send Message</button>
+          <button type="button" onclick="window.location.href='https://t.me/yourchannel'" class="submit-btn">
+            Via Telegram
+          </button>
+        </div>
     </form>
 </section>
 
