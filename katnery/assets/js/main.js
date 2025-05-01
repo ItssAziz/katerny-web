@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
         new Typed('#typed-text', {
             strings: ['Ring', 'Necklaces', 'Bracelets', 'Earrings'],
             typeSpeed: 150,  // Optimal human reading speed
-            backSpeed: 70,  // Slower backspace
+            backSpeed: 150,  // Matched to typeSpeed
             loop: true,
             showCursor: true,
             cursorChar: '|',
