@@ -7,38 +7,37 @@
 
         <!-- About Us Section -->
         <div class="footer-about">
-            <h3>About Us</h3>
+            <h3><?= $translations['about_us'] ?></h3>
             <ul aria-label="Footer navigation links">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="about.php">About</a></li>
-                <li><a href="contact.php">Contact</a></li>
+                <li><a href="index.php"><?= $translations['home'] ?></a></li>
+                <li><a href="about.php"><?= $translations['about'] ?></a></li>
+                <li><a href="contact.php"><?= $translations['contact'] ?></a></li>
             </ul>
         </div>
 
         <!-- Shop Section -->
         <div class="footer-shop">
-            <h3>Shop</h3>
+            <h3><?= $translations['shop'] ?></h3>
             <ul>
-                <li><a href="rings.php">Rings</a></li>
-                <li><a href="bracelets.php">Bracelets</a></li>
-                <li><a href="earrings.php">Earrings</a></li>
-                <li><a href="necklaces.php">Necklaces</a></li>
+                <li><a href="rings.php"><?= $translations['rings'] ?></a></li>
+                <li><a href="bracelets.php"><?= $translations['bracelets'] ?></a></li>
+                <li><a href="earrings.php"><?= $translations['earrings'] ?></a></li>
+                <li><a href="necklaces.php"><?= $translations['necklaces'] ?></a></li>
             </ul>
         </div>
 
         <!-- Contact Us Section -->
         <div class="footer-contact">
-            <h3>Contact Us</h3>
-            <p> AL-AZIZIYA , MAKKAH, NY 10160</p>
-            <p><a href="mailto:contact@info.com">contact@info.com</a></p>
-            <p><a href="tel:940508643">+251-940508643</a></p>
+            <h3><?= $translations['contact_us'] ?></h3>
+            <p><?= $translations['address'] ?></p>
+            <p><a href="mailto:katnery@gmail.com">katnery@gmail.com</a></p>
+            <p><a href="tel:+966553464889">+966 55 346 4889</a></p>
         </div>
     
     </div>
     <div class="copyright">
     <div class="footer-copyright">
-        <p> &copy; 2024 <strong>Katnery</strong>. All rights reserved.
-    </p>
+        <p><?= $translations['copyright'] ?></p>
     </div>
     </div>
 </footer>
@@ -75,6 +74,14 @@
         </div>
     </div>
 </div>
+
+<?php
+// Initialize language (if not already included from header)
+if(!isset($translations)) {
+    $lang = $_GET['lang'] ?? 'en';
+    $translations = include "lang/$lang.php";
+}
+?>
 
 <script src="assets/js/main.js"></script>
 <script src="https://websitedemos.net/blingg-jewelry-store-04/wp-content/plugins/woocommerce/assets/js/zoom/jquery.zoom.min.js?ver=1.7.21-wc.9.3.1" defer></script>

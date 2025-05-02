@@ -1,35 +1,98 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Typed.js Animation (Single Instance)
-    // Typed.js Debug
-    console.log('Typed.js element:', document.getElementById('typed-text'));
-    if(document.getElementById('typed-text')) {
-        console.log('Initializing Typed.js');
-        new Typed('#typed-text', {
-            strings: ['Ring', 'Necklaces', 'Bracelets', 'Earrings'],
-            typeSpeed: 150,  // Optimal human reading speed
-            backSpeed: 150,  // Matched to typeSpeed
-            loop: true,
-            showCursor: true,
-            cursorChar: '|',
-            autoInsertCss: true,
-            contentType: 'html',
-            startDelay: 800,  // Natural pause
-            backDelay: 1200,
-            fadeOut: false,  // Disable fade for letter-by-letter
-            smartBackspace: false,  // Force letter-by-letter
-            shuffle: false,
-            onBegin: (self) => {
-                console.log('Animation started');
-                // Remove any existing cursors
-                document.querySelectorAll('.typed-cursor').forEach(el => el.remove());
-            },
-            onComplete: () => console.log('Animation complete'),
-            onStringRemove: (arrayPos, self) => {  
-                self.el.classList.add('deleting');
-                setTimeout(() => self.el.classList.remove('deleting'), 300);
+    /**
+     * TypeWriter Class - Handles the typing animation
+     * @param {HTMLElement} txtElement - Element to animate
+     * @param {Array} words - Array of words to cycle through
+     * @param {Number} wait - Delay between words (ms)
+     */
+    class TypeWriter {
+        constructor(txtElement, words, wait = 2000) {
+            // Animation settings
+            this.txtElement = txtElement;
+            this.words = words;
+            this.wait = parseInt(wait, 10);
+            
+            // Animation state
+            this.txt = '';
+            this.wordIndex = 0;
+            this.isDeleting = false;
+            
+            // Start animation
+            this.type();
+        }
+
+        /**
+         * Main animation method - handles typing/deleting
+         */
+        type() {
+            // Current word and full text
+            const currentWordIndex = this.wordIndex % this.words.length;
+            const fullTxt = this.words[currentWordIndex];
+
+            // Check if deleting
+            if (this.isDeleting) {
+                // Remove character
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+                // Add character
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
             }
-        });
+
+            // Update DOM
+            this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+
+            // Calculate typing speed
+            let typeSpeed = 200; // Base speed
+            
+            if (this.isDeleting) {
+                typeSpeed /= 2; // Faster when deleting
+            }
+
+            // Check if word is complete
+            if (!this.isDeleting && this.txt === fullTxt) {
+                typeSpeed = this.wait; // Pause at end
+                this.isDeleting = true;
+            } 
+            // Check if word is deleted
+            else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.wordIndex++;
+                typeSpeed = 500; // Brief pause before next word
+            }
+
+            // Continue animation
+            setTimeout(() => this.type(), typeSpeed);
+        }
     }
+
+    /**
+     * Get random phrase option
+     */
+    function getRandomPhrase() {
+      const phraseData = document.querySelector('.phrase-data').dataset.phrases;
+      return JSON.parse(phraseData)[Math.floor(Math.random() * JSON.parse(phraseData).length)];
+    }
+
+    /**
+     * Initialize the typing animation
+     */
+    function initTypeAnimation() {
+      const txtElement = document.querySelector('.txt-type');
+      if (!txtElement) return;
+      
+      const {prefix, suffix} = getRandomPhrase();
+      const words = JSON.parse(txtElement.getAttribute('data-words'));
+      const wait = txtElement.getAttribute('data-wait');
+      
+      // Update static text elements
+      document.querySelector('.prefix-text').textContent = prefix;
+      document.querySelector('.suffix-text').textContent = suffix;
+      
+      new TypeWriter(txtElement, words, wait);
+    }
+
+    // Initialize when DOM loads
+    initTypeAnimation();
 
     // Client Slider (Single Instance)
     if($("#clientlogo").length) {

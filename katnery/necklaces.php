@@ -3,7 +3,7 @@
 <div class="container mx-auto px-4 py-8">
     <!-- Breadcrumb Navigation -->
     <nav class="breadcrumb-nav text-sm text-gray-500 mb-4">
-        <a href="http://localhost/katnery/" class="no-underline text-gray-500">Home</a> &nbsp;/&nbsp; Necklaces
+        <a href="index.php" class="no-underline text-gray-500">Home</a> &nbsp;/&nbsp; Necklaces
     </nav>
 
     <!-- Page Title -->
