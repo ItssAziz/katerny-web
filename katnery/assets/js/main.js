@@ -127,7 +127,10 @@ document.addEventListener("DOMContentLoaded", function() {
         const price = item.getAttribute('data-price');
         const priceElement = item.querySelector('.price');
         if (priceElement) {
-            priceElement.textContent = `$${parseFloat(price).toLocaleString()}`;
+            const currencySymbol = '<span class="icon-saudi_riyal">&#xea;</span>';
+            priceElement.innerHTML = (document.documentElement.dir === 'rtl') ? 
+                `${parseFloat(price).toLocaleString()}${currencySymbol}` : 
+                `${currencySymbol}${parseFloat(price).toLocaleString()}`;
         }
     });
 
@@ -146,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (priceRange) {
             priceRange.addEventListener('input', function () {
-                priceValue.textContent = '$' + this.value;
+                priceValue.innerHTML = '<span class="icon-saudi_riyal">&#xea;</span>' + this.value;
                 filterByPrice(parseInt(this.value));
                 updateProductCount();
             });
@@ -188,10 +191,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function updateProductCount() {
         const visibleCount = document.querySelectorAll('.product-item:not([style*="display: none"])').length;
-        const countElement = document.getElementById('product-count');
-        if (countElement) {
-            countElement.textContent = `Showing ${visibleCount} products`;
+        const defaultText = `Showing ${visibleCount} products`;
+        
+        if (!window.translations) {
+            document.getElementById('product-count').textContent = defaultText;
+            return;
         }
+        
+        const lang = document.documentElement.dir === 'rtl' ? 'ar' : 'en';
+        const formatString = window.translations[lang]?.showing_x_products || defaultText;
+        document.getElementById('product-count').textContent = formatString.replace('%d', visibleCount);
     }
 
     setupProductFiltering();
@@ -330,7 +339,7 @@ document.addEventListener("DOMContentLoaded", function() {
       // Update modal content
       document.getElementById('modal-category').textContent = category;
       document.getElementById('modal-title').textContent = name;
-      document.getElementById('modal-price').textContent = `$${parseFloat(price).toLocaleString()}`;
+      document.getElementById('modal-price').innerHTML = `<span class="icon-saudi_riyal">&#xea;</span>${parseFloat(price).toLocaleString()}`;
       document.getElementById('modal-description').textContent = description;
 
       // Clear and update slideshow
@@ -417,14 +426,27 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Header Scroll Effect
-    window.addEventListener('scroll', function() {
-      const header = document.querySelector('header');
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
+    const header = document.querySelector('header');
+    if (header) {
+        let lastScroll = 0;
+        
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.scrollY || document.documentElement.scrollTop;
+            
+            if (currentScroll <= 10) {
+                header.classList.remove('scrolled');
+            } else if (currentScroll > lastScroll && currentScroll > 50) {
+                header.classList.add('scrolled');
+            } 
+            
+            lastScroll = currentScroll;
+        }, {passive: true});
+        
+        // Initialize state
+        if (window.scrollY > 10) {
+            header.classList.add('scrolled');
+        }
+    }
 
     // Generate product URL
     function getProductUrl(product) {
@@ -432,5 +454,10 @@ document.addEventListener("DOMContentLoaded", function() {
         return `${baseUrl}?name=${encodeURIComponent(product.name)}` + 
                `&price=${product.price}` +
                `&desc=${encodeURIComponent(product.description.substring(0, 100))}`;
+    }
+
+    // Persist RTL mode on navigation
+    if (sessionStorage.getItem('lang') === 'ar') {
+        document.documentElement.dir = 'rtl';
     }
 });

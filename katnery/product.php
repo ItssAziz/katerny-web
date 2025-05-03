@@ -23,7 +23,7 @@
     <!-- Product Info Section -->
     <div class="product-info">
       <h1><?= $_GET['name'] ?? 'Product' ?></h1>
-      <p class="price">$<?= $_GET['price'] ?? '0' ?></p>
+      <p class="price"><span class="icon-saudi_riyal">&#xea;</span><?= number_format($_GET['price'] ?? '0', 2) ?></p>
       <p class="description"><?= $_GET['description'] ?? '' ?></p>
       
       <div class="product-actions">

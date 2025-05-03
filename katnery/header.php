@@ -1,6 +1,10 @@
 <?php
 // Language initialization
-$lang = $_GET['lang'] ?? 'en';
+session_start();
+if (!isset($_SESSION['lang'])) {
+    $_SESSION['lang'] = 'en';
+}
+$lang = $_SESSION['lang'];
 $translations = require "lang/$lang.php";
 ?>
 <!DOCTYPE html>
@@ -13,8 +17,10 @@ $translations = require "lang/$lang.php";
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@abdulrysr/saudi-riyal-new-symbol-font@latest/style.css">
     <!-- Essential scripts with proper order -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -25,23 +31,23 @@ $translations = require "lang/$lang.php";
     <header>
         <div class="container">
             <div class="logo" style="max-width: 180px;">
-                <a href="index.php"><img src="/assets/img/katnery logo.png" alt="Brand Logo" style="width:100%; height:auto;"></a>
+                <a href="index.php?lang=<?= $_SESSION['lang'] ?? 'en' ?>"><img src="/assets/img/katnery logo.png" alt="Brand Logo" style="width:100%; height:auto;"></a>
             </div>
             <nav>
                 <ul class="left-nav">
-                    <li><a href="rings.php" class="<?= basename($_SERVER['PHP_SELF']) == 'rings.php' ? 'active' : '' ?>"><?= $translations['rings'] ?></a></li>
-                    <li><a href="necklaces.php" class="<?= basename($_SERVER['PHP_SELF']) == 'necklaces.php' ? 'active' : '' ?>"><?= $translations['necklaces'] ?></a></li>
-                    <li><a href="bracelets.php" class="<?= basename($_SERVER['PHP_SELF']) == 'bracelets.php' ? 'active' : '' ?>"><?= $translations['bracelets'] ?></a></li>
-                    <li><a href="earrings.php" class="<?= basename($_SERVER['PHP_SELF']) == 'earrings.php' ? 'active' : '' ?>"><?= $translations['earrings'] ?></a></li>
+                    <li><a href="rings.php?lang=<?= $_SESSION['lang'] ?? 'en' ?>" class="<?= basename($_SERVER['PHP_SELF']) == 'rings.php' ? 'active' : '' ?>"><?= $translations['rings'] ?></a></li>
+                    <li><a href="necklaces.php?lang=<?= $_SESSION['lang'] ?? 'en' ?>" class="<?= basename($_SERVER['PHP_SELF']) == 'necklaces.php' ? 'active' : '' ?>"><?= $translations['necklaces'] ?></a></li>
+                    <li><a href="bracelets.php?lang=<?= $_SESSION['lang'] ?? 'en' ?>" class="<?= basename($_SERVER['PHP_SELF']) == 'bracelets.php' ? 'active' : '' ?>"><?= $translations['bracelets'] ?></a></li>
+                    <li><a href="earrings.php?lang=<?= $_SESSION['lang'] ?? 'en' ?>" class="<?= basename($_SERVER['PHP_SELF']) == 'earrings.php' ? 'active' : '' ?>"><?= $translations['earrings'] ?></a></li>
                 </ul>
                 <ul class="right-nav">
-                    <li><a href="index.php" class="<?= basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : '' ?>"><?= $translations['home'] ?></a></li>
-                    <li><a href="about.php" class="<?= basename($_SERVER['PHP_SELF']) == 'about.php' ? 'active' : '' ?>"><?= $translations['about'] ?></a></li>
-                    <li><a href="contact.php" class="<?= basename($_SERVER['PHP_SELF']) == 'contact.php' ? 'active' : '' ?>"><?= $translations['contact'] ?></a></li>
+                    <li><a href="index.php?lang=<?= $_SESSION['lang'] ?? 'en' ?>" class="<?= basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : '' ?>"><?= $translations['home'] ?></a></li>
+                    <li><a href="about.php?lang=<?= $_SESSION['lang'] ?? 'en' ?>" class="<?= basename($_SERVER['PHP_SELF']) == 'about.php' ? 'active' : '' ?>"><?= $translations['about'] ?></a></li>
+                    <li><a href="contact.php?lang=<?= $_SESSION['lang'] ?? 'en' ?>" class="<?= basename($_SERVER['PHP_SELF']) == 'contact.php' ? 'active' : '' ?>"><?= $translations['contact'] ?></a></li>
                     <li class="language-switcher">
-                        <a href="?lang=en" class="<?= ($_GET['lang'] ?? 'en') === 'en' ? 'active' : '' ?>">EN</a>
+                        <a href="?lang=en" class="<?= ($_SESSION['lang'] ?? 'en') === 'en' ? 'active' : '' ?>">EN</a>
                         <span class="text-gray-400">/</span>
-                        <a href="?lang=ar" class="<?= ($_GET['lang'] ?? 'en') === 'ar' ? 'active' : '' ?>">العربية</a>
+                        <a href="?lang=ar" class="<?= ($_SESSION['lang'] ?? 'en') === 'ar' ? 'active' : '' ?>">العربية</a>
                     </li>
                 </ul>
             </nav>
@@ -53,13 +59,13 @@ $translations = require "lang/$lang.php";
 
             <nav class="mobile-nav">
                 <ul>
-                    <li><a href="index.php"><?= $translations['home'] ?></a></li>
-                    <li><a href="rings.php"><?= $translations['rings'] ?></a></li>
-                    <li><a href="necklaces.php"><?= $translations['necklaces'] ?></a></li>
-                    <li><a href="bracelets.php"><?= $translations['bracelets'] ?></a></li>
-                    <li><a href="earrings.php"><?= $translations['earrings'] ?></a></li>
-                    <li><a href="about.php"><?= $translations['about'] ?></a></li>
-                    <li><a href="contact.php"><?= $translations['contact'] ?></a></li>
+                    <li><a href="index.php?lang=<?= $_SESSION['lang'] ?? 'en' ?>"><?= $translations['home'] ?></a></li>
+                    <li><a href="rings.php?lang=<?= $_SESSION['lang'] ?? 'en' ?>"><?= $translations['rings'] ?></a></li>
+                    <li><a href="necklaces.php?lang=<?= $_SESSION['lang'] ?? 'en' ?>"><?= $translations['necklaces'] ?></a></li>
+                    <li><a href="bracelets.php?lang=<?= $_SESSION['lang'] ?? 'en' ?>"><?= $translations['bracelets'] ?></a></li>
+                    <li><a href="earrings.php?lang=<?= $_SESSION['lang'] ?? 'en' ?>"><?= $translations['earrings'] ?></a></li>
+                    <li><a href="about.php?lang=<?= $_SESSION['lang'] ?? 'en' ?>"><?= $translations['about'] ?></a></li>
+                    <li><a href="contact.php?lang=<?= $_SESSION['lang'] ?? 'en' ?>"><?= $translations['contact'] ?></a></li>
                     <li class="mobile-language-switcher">
                         <a href="?lang=en">EN</a>
                         <span>/</span>

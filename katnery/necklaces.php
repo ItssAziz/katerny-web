@@ -19,7 +19,7 @@
                 <span class="text-gray-500 whitespace-nowrap">Max Price:</span>
                 <input type="range" id="price-range" min="0" max="5000" step="100" value="5000" 
                        class="w-24 md:w-32" />
-                <span id="price-value" class="text-gray-500">$5000</span>
+                <span id="price-value" class="text-gray-500"><span class="icon-saudi_riyal">&#xea;</span>5000</span>
             </div>
             
             <!-- Sorting -->
@@ -57,7 +57,7 @@
                 </div>
             </div>
             <h2 class="text-xl font-semibold">Elegant Pearl Necklace</h2>
-            <p class="price">$2800</p>
+            <p class="price"><span class="icon-saudi_riyal">&#xea;</span>2800</p>
         </div>
 
         <!-- Add more necklace items here following the same structure -->
