@@ -1,3 +1,10 @@
+<?php
+// Start output buffering and session at very top
+ob_start();
+require_once 'header.php';
+
+// Rest of file content
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <?php include('header.php'); ?>
 
     <div class="container mx-auto px-4 py-8" <?= ($_SESSION['lang'] ?? 'en') == 'ar' ? 'dir="rtl"' : '' ?>>
         <!-- Breadcrumb Navigation -->

@@ -1,6 +1,11 @@
 <?php
-// Language initialization
+// Start output buffering first
+ob_start();
+
+// Then start session
 session_start();
+
+// Language initialization
 if (isset($_GET['lang'])) {
     $_SESSION['lang'] = ($_GET['lang'] === 'ar') ? 'ar' : 'en';
     header('Location: ' . strtok($_SERVER['REQUEST_URI'], '?'));

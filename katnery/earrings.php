@@ -1,4 +1,8 @@
-<?php include('header.php'); ?>
+<?php
+// Ensure no whitespace before opening tag
+require_once 'header.php';
+
+?>
 
 <div class="container mx-auto px-4 py-8">
     <!-- Breadcrumb Navigation -->
