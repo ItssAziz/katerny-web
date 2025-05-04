@@ -1,6 +1,11 @@
 <?php
 // Language initialization
 session_start();
+if (isset($_GET['lang'])) {
+    $_SESSION['lang'] = ($_GET['lang'] === 'ar') ? 'ar' : 'en';
+    header('Location: ' . strtok($_SERVER['REQUEST_URI'], '?'));
+    exit;
+}
 if (!isset($_SESSION['lang'])) {
     $_SESSION['lang'] = 'en';
 }
@@ -25,13 +30,15 @@ $translations = require "lang/$lang.php";
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/js/typed.js/typed.umd.js"></script>
+    <!-- ElevateZoom -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js"></script>
     <script src="assets/js/main.js" defer></script>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo" style="max-width: 180px;">
-                <a href="index.php?lang=<?= $_SESSION['lang'] ?? 'en' ?>"><img src="/assets/img/katnery logo.png" alt="Brand Logo" style="width:100%; height:auto;"></a>
+                <a href="index.php?lang=<?= $_SESSION['lang'] ?? 'en' ?>"><img src="/assets/img/katnery logo.png" alt="<?= $translations['brand_logo'] ?>" style="width:100%; height:auto;"></a>
             </div>
             <nav>
                 <ul class="left-nav">
@@ -45,9 +52,9 @@ $translations = require "lang/$lang.php";
                     <li><a href="about.php?lang=<?= $_SESSION['lang'] ?? 'en' ?>" class="<?= basename($_SERVER['PHP_SELF']) == 'about.php' ? 'active' : '' ?>"><?= $translations['about'] ?></a></li>
                     <li><a href="contact.php?lang=<?= $_SESSION['lang'] ?? 'en' ?>" class="<?= basename($_SERVER['PHP_SELF']) == 'contact.php' ? 'active' : '' ?>"><?= $translations['contact'] ?></a></li>
                     <li class="language-switcher">
-                        <a href="?lang=en" class="<?= ($_SESSION['lang'] ?? 'en') === 'en' ? 'active' : '' ?>">EN</a>
+                        <a href="?lang=en" class="<?= ($_SESSION['lang'] ?? 'en') === 'en' ? 'active' : '' ?>" data-lang="en">EN</a>
                         <span class="text-gray-400">/</span>
-                        <a href="?lang=ar" class="<?= ($_SESSION['lang'] ?? 'en') === 'ar' ? 'active' : '' ?>">العربية</a>
+                        <a href="?lang=ar" class="<?= ($_SESSION['lang'] ?? 'en') === 'ar' ? 'active' : '' ?>" data-lang="ar">العربية</a>
                     </li>
                 </ul>
             </nav>

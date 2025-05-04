@@ -22,6 +22,11 @@ return [
     'popular_products' => 'منتجات رائجة',
     'trending_now' => 'الأكثر مبيعاً',
     'quick_view' => 'عرض سريع',
+    'brand_logo' => 'شعار كاتنري للمجوهرات',
+    'workshop_image' => 'ورشة مجوهراتنا',
+    'craftsmanship_image' => 'تفاصيل مصنوعة يدويًا',
+    'sustainability_image' => 'مواد مستدامة',
+    'customer_care_image' => 'خدمة شخصية',
     'bracelet' => 'سوار',
     'bracelet_description' => 'سوارنا الكلاسيكي هو الإضافة المثالية لأي إطلالة. مصنوع من مواد عالية الجودة.',
     'bracelet_2_description' => 'ضاعفي أناقتك مع سوارنا الأنيق ذو التصميم الفريد.',
@@ -56,18 +61,20 @@ return [
         ['prefix' => 'أناقة', 'suffix' => 'رومانسية'],
         ['prefix' => 'إطلالة', 'suffix' => 'مكتملة']
     ],
-    /* Rings Page */
-    'rings_page_title' => 'خواتم',
-    'max_price' => 'أقصى سعر',
+    /* Sorting Options */
     'default_sorting' => 'الترتيب الافتراضي',
     'price_low_to_high' => 'السعر: من الأقل للأعلى',
     'price_high_to_low' => 'السعر: من الأعلى للأقل',
     'name_a_to_z' => 'الاسم: من أ إلى ي',
     'name_z_to_a' => 'الاسم: من ي إلى أ',
+    /* Rings Page */
+    'rings_page_title' => 'خواتم',
+    'max_price' => 'أقصى سعر',
     'quick_view' => 'عرض سريع',
     'sale_badge' => 'تخفيض!',
     'free_shipping' => 'وشحن مجاني',
     'showing_x_products' => 'عرض %d منتجات',
+    'price_filter_label' => 'أقصى سعر:',
     /* Product Names */
     'elegant_gold_ring' => 'خاتم ذهبي أنيق',
     'sparkling_gemstone_ring' => 'خاتم مرصع بالجواهر',
@@ -79,4 +86,49 @@ return [
     'sparkling_gemstone_ring_desc' => 'خاتم يخطف الأنظار بجواهر متلألئة. قطعة استثنائية تضيف لمسة من البريق إلى إطلالتك.',
     'classic_timeless_ring_desc' => 'تصميم كلاسيكي لا يخضع للموضة. خاتم أنيق يناسب جميع المناسبات.',
     'delicate_charm_ring_desc' => 'خاتم رقيق يضفي لمسة من السحر على أي إطلالة. مثالي للطبقات أو للارتداء بمفرده.',
+
+    /* Necklaces Page */
+    'necklaces_page_title' => 'سلاسل',
+    'elegant_pearl_necklace' => 'قلادة لؤلؤ أنيقة',
+    'diamond_pendant_necklace' => 'قلادة ماسية معلقة',
+    'elegant_pearl_necklace_desc' => 'قلادة لؤلؤ خالدة بتصميم فريد يجمع بين الأناقة والحداثة. مثالية للمناسبات الخاصة أو للارتداء اليومي.',
+    'diamond_pendant_necklace_desc' => 'قلادة ماسية مبهرجة تضيف لمسة من الفخامة إلى أي إطلالة. مصنوعة من مواد عالية الجودة لجمال دائم.',
+
+    /* Bracelets Page */
+    'bracelets_page_title' => 'أساور',
+    'gold_cuff_bracelet' => 'سوار ذهبي',
+    'silver_chain_bracelet' => 'سوار سلسلة فضية',
+    'gold_cuff_bracelet_desc' => 'سوار ذهبي جريء يلفت الانتباه. مثالي للطبقات أو للارتداء بمفرده.',
+    'silver_chain_bracelet_desc' => 'سوار سلسلة فضية رقيق بطول قابل للتعديل. مثالي للارتداء اليومي.',
+
+    /* Earrings Page */
+    'earrings_page_title' => 'أقراط',
+    'diamond_stud_earrings' => 'أقراط ماسية',
+    'gold_hoop_earrings' => 'أقراط ذهبية دائرية',
+    'diamond_stud_earrings_desc' => 'أقراط ماسية كلاسيكية تضيف لمسة أناقة إلى أي إطلالة. مثالية للمناسبات اليومية والرسمية.',
+    'gold_hoop_earrings_desc' => 'أقراط ذهبية دائرية متعددة المقاسات. تصميم خالد للارتداء اليومي.',
+
+    /* About Page */
+    'about_title' => 'عن كاتنري',
+    'about_hero' => 'صنع مجوهرات خالدة بشغف ودقة',
+    'our_heritage' => 'إرثنا',
+    'our_story' => 'قصتنا',
+    'craftsmanship' => 'الحرفية',
+    'sustainability' => 'الاستدامة',
+    'customer_care' => 'رعاية العملاء',
+    'heritage_description' => 'تأسست في مكة المكرمة برؤية تجمع بين الحرفية التقليدية والتصميم المعاصر، أصبحت كاتنري مرادفًا للجودة والأناقة في المجوهرات الفاخرة.',
+    'story_description' => 'ما بدأ كورشة عائلية صغيرة تحول إلى دار مجوهرات مرموقة، مع الحفاظ على نفس التفاني في الجودة الذي بدأ به كل شيء.',
+    'established_point' => 'تأسست عام 2010 بواسطة صاغة ذهب محترفين',
+    'designs_point' => 'أكثر من 100 تصميم فريد يتم إنشاؤه سنويًا',
+    'materials_point' => 'معادن ثمينة وأحجار كريمة مصدرها أخلاقي',
+    'craftsmanship_desc' => 'كل قطعة تخضع لأكثر من 20 فحص جودة من قبل صاغتنا المحترفين.',
+    'sustainability_desc' => 'نستخدم ذهبًا معاد تدويره بنسبة 100% وألماسًا خاليًا من النزاعات.',
+    'customer_care_desc' => 'ضمان مدى الحياة وتنظيف مجاني سنوي لجميع القطع.',
+    /* Contact Page */
+    'contact_title' => 'اتصل بنا',
+    'contact_subtitle' => 'تواصل معنا عبر التليجرام أو الهاتف',
+    'message_telegram' => 'راسلنا على التليجرام',
+    'open_telegram' => 'فتح التليجرام',
+    'call_us' => 'اتصل بنا',
+    'connect_with_us' => 'تواصل معنا',
 ];

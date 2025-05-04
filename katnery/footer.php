@@ -2,7 +2,7 @@
     <div class="footer-content">
         <!-- Footer Logo -->
         <div class="footer-logo">
-            <img src="assets/img/katnery logo.png" alt="Katnery Jewelry Brand Logo">
+            <img src="assets/img/katnery logo.png" alt="<?= $translations['brand_logo'] ?>">
         </div>
 
         <!-- About Us Section -->
@@ -42,51 +42,19 @@
     </div>
 </footer>
 
-<!-- Modal -->
-<div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden" id="product-modal">
-    <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl w-full relative">
-        <button class="absolute top-4 right-4 text-gray-600 hover:text-gray-900" id="close-modal">
-            <i class="fas fa-times"></i>
-        </button>
-        <div class="flex flex-col md:flex-row">
-            <div class="md:w-1/2">
-                <div class="relative">
-                    <span class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">Sale!</span>
-                    <div class="slideshow-container" id="modal-slideshow">
-                        <!-- Slides will be inserted here dynamically -->
-                    </div>
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                    <div class="flex justify-center mt-4 space-x-2" id="modal-dots">
-                        <!-- Dots will be inserted here dynamically -->
-                    </div>
-                </div>
-            </div>
-            <div class="md:w-1/2 md:pl-6 mt-6 md:mt-0">
-                <a href="#" class="text-sm text-gray-500 hover:underline" id="modal-category"></a>
-                <h1 class="text-3xl font-bold text-gray-900" id="modal-title"></h1>
-                <div class="flex items-center mt-2">
-                    <span class="text-2xl font-bold text-brown-600 ml-2" id="modal-price"></span>
-                    <span class="text-sm text-gray-500 ml-2">&amp; Free Shipping</span>
-                </div>
-                <p class="text-gray-700 mt-4" id="modal-description"></p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<?php
-// Initialize language (if not already included from header)
-if(!isset($translations)) {
-    $lang = $_GET['lang'] ?? 'en';
-    $translations = include "lang/$lang.php";
+<?php 
+// Removed duplicate session_start() since it's already called in header.php
+if (!isset($_SESSION['lang'])) {
+    $_SESSION['lang'] = 'en';
 }
+$lang = $_SESSION['lang'];
+$translations = require __DIR__."/lang/$lang.php";
 ?>
 
 <script>
     window.translations = {
         en: <?= json_encode($translations) ?>,
-        ar: <?= json_encode(include('lang/ar.php')) ?>
+        ar: <?= json_encode(require __DIR__."/lang/ar.php") ?>
     };
 </script>
 

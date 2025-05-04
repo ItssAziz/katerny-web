@@ -44,8 +44,12 @@ function changeImage(src) {
 
 function navigateGallery(direction) {
   const images = <?= json_encode(isset($_GET['images']) ? explode(',', $_GET['images']) : []) ?>;
-  const currentSrc = document.getElementById('mainImage').src.split('/').pop();
-  const currentIndex = images.findIndex(img => img.includes(currentSrc));
+  const currentSrc = document.getElementById('mainImage').src;
+  const currentPath = new URL(currentSrc).pathname.split('/').pop();
+  const currentIndex = images.findIndex(img => {
+    const imgPath = new URL(img, window.location.origin).pathname.split('/').pop();
+    return imgPath === currentPath;
+  });
   
   let newIndex = currentIndex + direction;
   if(newIndex < 0) newIndex = images.length - 1;

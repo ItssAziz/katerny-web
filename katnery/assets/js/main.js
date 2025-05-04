@@ -280,6 +280,27 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    // Universal Quick View Handler
+    document.querySelectorAll('.quick-view-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Find nearest element with product data (any level up)
+        let container = this.closest('[data-name]');
+        
+        // Fallback: Check if parent has data (older structure)
+        if (!container) container = this.parentElement.closest('[data-category]');
+        
+        if (container) {
+          openQuickView(container);
+        } else {
+          console.warn('QuickView: No product data container found');
+          // Optional: Fallback to URL-based loading
+          // window.location = this.href; 
+        }
+      });
+    });
+
     // Quick View functionality
     let slideIndex = 0;
     let slideInterval;
@@ -320,8 +341,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function openQuickView(productItem) {
       const modal = document.getElementById('product-modal');
-      if (!modal) return;
-
+      if (!modal) {
+        console.error('Modal element not found');
+        return;
+      }
+      
+      // Force remove all hiding classes
+      modal.classList.remove('hidden');
+      modal.style.display = 'flex';
+      
       // Get product data
       const category = productItem.getAttribute('data-category');
       const name = productItem.getAttribute('data-name');
@@ -364,22 +392,6 @@ document.addEventListener("DOMContentLoaded", function() {
       // Initialize slideshow
       slideIndex = 1;
       showSlides(slideIndex);
-      
-      // Add transition styles to modal
-      modal.style.transition = 'opacity 0.3s ease-in-out';
-      modal.querySelector('div').style.transition = 'transform 0.3s ease-in-out';
-      modal.querySelector('div').style.transform = 'translateY(-20px)';
-      
-      // Reset animation state
-      modal.style.opacity = '0';
-      modal.querySelector('div').style.transform = 'translateY(-20px)';
-      modal.classList.remove('hidden');
-      
-      // Animate in
-      setTimeout(() => {
-        modal.style.opacity = '1';
-        modal.querySelector('div').style.transform = 'translateY(0)';
-      }, 10);
     }
 
     // Add click handlers for prev/next buttons
@@ -390,23 +402,38 @@ document.addEventListener("DOMContentLoaded", function() {
     showSlides(slideIndex);
     slideInterval = setInterval(() => plusSlides(1), 3000);
 
-    // Quick view modal handlers
-    document.querySelectorAll('.quick-view-btn').forEach(button => {
-      button.addEventListener('click', function(event) {
-        event.preventDefault();
-        const productItem = this.closest('.product-item');
-        openQuickView(productItem);
+    // Unified modal handling
+    function initModals() {
+      const modals = document.querySelectorAll('#product-modal');
+      modals.forEach(modal => {
+        const content = modal.querySelector('div');
+        if (content) {
+          content.classList.add('bg-white', 'rounded-lg', 'shadow-lg');
+        }
       });
-    });
+    }
+
+    document.addEventListener('DOMContentLoaded', initModals);
+
+    // RTL Modal Support
+    function setupRTLModals() {
+      if (document.documentElement.dir === 'rtl') {
+        const modals = document.querySelectorAll('#product-modal');
+        modals.forEach(modal => {
+          const content = modal.querySelector('div > div');
+          if (content) {
+            content.classList.add('flex-row-reverse');
+          }
+        });
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', setupRTLModals);
 
     // Enhanced modal closing with animations
     function closeModal() {
       const modal = document.getElementById('product-modal');
-      modal.style.opacity = '0';
-      setTimeout(() => {
-        modal.classList.add('hidden');
-        modal.style.opacity = '1';
-      }, 300);
+      if (modal) modal.classList.add('hidden');
     }
 
     // Close modal when clicking outside (more reliable method)
@@ -424,6 +451,19 @@ document.addEventListener("DOMContentLoaded", function() {
     if (closeModalButton) {
       closeModalButton.addEventListener('click', closeModal);
     }
+
+    // Add consistent close button behavior
+    function setupModalClose() {
+      const closeButtons = document.querySelectorAll('#close-modal, .modal-close');
+      closeButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const modal = btn.closest('[id^="modal-"], .modal');
+          if (modal) modal.classList.add('hidden');
+        });
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', setupModalClose);
 
     // Header Scroll Effect
     const header = document.querySelector('header');
@@ -456,8 +496,55 @@ document.addEventListener("DOMContentLoaded", function() {
                `&desc=${encodeURIComponent(product.description.substring(0, 100))}`;
     }
 
+    // Handle language switch
+    function handleLanguageSwitch(lang) {
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      sessionStorage.setItem('lang', lang);
+    }
+
+    // Apply saved language preference on load
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedLang = sessionStorage.getItem('lang');
+      if (savedLang) {
+        document.documentElement.dir = savedLang === 'ar' ? 'rtl' : 'ltr';
+      }
+    });
+
     // Persist RTL mode on navigation
     if (sessionStorage.getItem('lang') === 'ar') {
         document.documentElement.dir = 'rtl';
+    }
+
+    function initZoom(imageElement) {
+      $('#zoom-image').attr('src', imageElement.src);
+      $('.zoom-container').removeClass('hidden');
+      $('.slideshow-container').addClass('hidden');
+      
+      $('#zoom-image').elevateZoom({
+        zoomType: "lens",
+        lensShape: "round",
+        lensSize: 200,
+        cursor: "crosshair",
+        zoomWindowFadeIn: 300,
+        zoomWindowFadeOut: 300
+      });
+    }
+    
+    function resetZoom() {
+      $('.zoom-container').addClass('hidden');
+      $('.slideshow-container').removeClass('hidden');
+      $('.zoomContainer').remove();
+    }
+    
+    // Add to openQuickView after slideshow init:
+    $('.mySlides img').click(function() {
+      initZoom(this);
+    });
+    
+    // Add to closeModal:
+    function closeModal() {
+      const modal = document.getElementById('product-modal');
+      if (modal) modal.classList.add('hidden');
+      resetZoom();
     }
 });

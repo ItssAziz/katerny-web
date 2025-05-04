@@ -35,7 +35,7 @@
             </div>
         </div>
     </div>
-
+ 
     <!-- Product Grid -->
     <div class="product-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         <!-- Product Items -->
@@ -126,11 +126,11 @@
 
     <!-- Modal -->
     <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden" id="product-modal">
-        <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl w-full relative">
-            <button class="absolute top-4 right-4 text-gray-600 hover:text-gray-900" id="close-modal">
-                <i class="fas fa-times"></i>
+        <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl w-full relative <?= $_SESSION['lang'] === 'ar' ? 'rtl' : '' ?>">
+            <button class="modal-close absolute top-4 right-4 <?= $_SESSION['lang'] === 'ar' ? 'right-auto left-4' : '' ?>" id="close-modal">
+              <i class="fas fa-times text-xl"></i>
             </button>
-            <div class="flex flex-col md:flex-row">
+            <div class="flex flex-col md:flex-row <?= $_SESSION['lang'] === 'ar' ? 'md:flex-row-reverse' : '' ?>">
                 <div class="md:w-1/2">
                     <div class="relative">
                         <span class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow"><?= $translations['sale_badge'] ?></span>
