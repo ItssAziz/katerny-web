@@ -51,7 +51,7 @@ require_once 'header.php';
             data-description="<?= $translations['elegant_gold_ring_desc'] ?>">
             <div class="product-image">
                 <a href="product.php?name=<?= urlencode($translations['elegant_gold_ring']) ?>&price=1500&description=<?= urlencode($translations['elegant_gold_ring_desc']) ?>&images=/assets/img/ring-01-a.jpg,/assets/img/ring-01-b.jpg,/assets/img/ring-01-c.jpg,/assets/img/ring-01-d.jpg&category=Ring">
-                    <img alt="<?= $translations['elegant_gold_ring'] ?>" src="/assets/img/ring-01-a.jpg">
+                    <img alt="<?= htmlspecialchars($translations['elegant_gold_ring']) ?> - <?= htmlspecialchars($translations['elegant_gold_ring_desc']) ?>" src="/assets/img/ring-01-a.jpg" class="w-full h-auto">
                 </a>
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
@@ -72,7 +72,7 @@ require_once 'header.php';
             data-description="<?= $translations['sparkling_gemstone_ring_desc'] ?>">
             <div class="product-image">
                 <a href="product.php?name=<?= urlencode($translations['sparkling_gemstone_ring']) ?>&price=2200&description=<?= urlencode($translations['sparkling_gemstone_ring_desc']) ?>&images=/assets/img/ring-01-a.jpg,/assets/img/ring-01-b.jpg,/assets/img/ring-01-c.jpg,/assets/img/ring-01-d.jpg&category=Ring">
-                    <img alt="<?= $translations['sparkling_gemstone_ring'] ?>" src="/assets/img/ring-01-b.jpg">
+                    <img alt="<?= htmlspecialchars($translations['sparkling_gemstone_ring']) ?> - <?= htmlspecialchars($translations['sparkling_gemstone_ring_desc']) ?>" src="/assets/img/ring-01-b.jpg" class="w-full h-auto">
                 </a>
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
@@ -93,7 +93,7 @@ require_once 'header.php';
             data-description="<?= $translations['classic_timeless_ring_desc'] ?>">
             <div class="product-image">
                 <a href="product.php?name=<?= urlencode($translations['classic_timeless_ring']) ?>&price=1300&description=<?= urlencode($translations['classic_timeless_ring_desc']) ?>&images=/assets/img/ring-01-a.jpg,/assets/img/ring-01-b.jpg,/assets/img/ring-01-c.jpg,/assets/img/ring-01-d.jpg&category=Ring">
-                    <img alt="<?= $translations['classic_timeless_ring'] ?>" src="/assets/img/ring-01-c.jpg">
+                    <img alt="<?= htmlspecialchars($translations['classic_timeless_ring']) ?> - <?= htmlspecialchars($translations['classic_timeless_ring_desc']) ?>" src="/assets/img/ring-01-c.jpg" class="w-full h-auto">
                 </a>
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
@@ -114,7 +114,7 @@ require_once 'header.php';
             data-description="<?= $translations['delicate_charm_ring_desc'] ?>">
             <div class="product-image">
                 <a href="product.php?name=<?= urlencode($translations['delicate_charm_ring']) ?>&price=750&description=<?= urlencode($translations['delicate_charm_ring_desc']) ?>&images=/assets/img/ring-01-a.jpg,/assets/img/ring-01-b.jpg,/assets/img/ring-01-c.jpg,/assets/img/ring-01-d.jpg&category=Ring">
-                    <img alt="<?= $translations['delicate_charm_ring'] ?>" src="/assets/img/ring-01-d.jpg">
+                    <img alt="<?= htmlspecialchars($translations['delicate_charm_ring']) ?> - <?= htmlspecialchars($translations['delicate_charm_ring_desc']) ?>" src="/assets/img/ring-01-d.jpg" class="w-full h-auto">
                 </a>
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
@@ -131,8 +131,8 @@ require_once 'header.php';
     <!-- Modal -->
     <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden" id="product-modal">
         <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl w-full relative <?= $_SESSION['lang'] === 'ar' ? 'rtl' : '' ?>">
-            <button class="modal-close absolute top-4 right-4 <?= $_SESSION['lang'] === 'ar' ? 'right-auto left-4' : '' ?>" id="close-modal">
-              <i class="fas fa-times text-xl"></i>
+            <button id="close-modal" class="absolute top-4 right-4 text-2xl" aria-label="Close product modal">
+                &times;
             </button>
             <div class="flex flex-col md:flex-row <?= $_SESSION['lang'] === 'ar' ? 'md:flex-row-reverse' : '' ?>">
                 <div class="md:w-1/2">
@@ -143,21 +143,24 @@ require_once 'header.php';
                         <div class="slideshow-container" id="modal-slideshow">
                             <!-- Slides will be inserted here dynamically -->
                         </div>
-                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        <a class="prev" onclick="plusSlides(-1)"><?= $_SESSION['lang'] === 'ar' ? '❯' : '❮' ?></a>
+                        <a class="next" onclick="plusSlides(1)"><?= $_SESSION['lang'] === 'ar' ? '❮' : '❯' ?></a>
                         <div class="flex justify-center mt-4 space-x-2" id="modal-dots">
                             <!-- Dots will be inserted here dynamically -->
                         </div>
                     </div>
                 </div>
                 <div class="md:w-1/2 md:pl-6 mt-6 md:mt-0">
-                    <a href="http://localhost/katnery/bracelets.php" class="text-sm text-gray-500 hover:underline" id="modal-category"></a>
-                    <h1 class="text-3xl font-bold text-gray-900" id="modal-title"></h1>
+                    <a href="http://localhost/katnery/bracelets.php" class="text-sm text-gray-500 hover:underline" id="modal-category"><?= $translations['category'] ?? 'Category' ?></a>
+                    <h1 class="text-3xl font-bold text-gray-900" id="modal-title"><?= $translations['product_name'] ?? 'Product Name' ?></h1>
                     <div class="flex items-center mt-2">
-                        <span class="text-2xl font-bold text-brown-600 ml-2" id="modal-price"><span class="icon-saudi_riyal">&#xea;</span></span>
+                        <span class="text-2xl font-bold text-brown-600 ml-2" id="modal-price"><span class="icon-saudi_riyal">&#xea;</span><?= $translations['price'] ?? 'Price' ?></span>
                         <span class="text-sm text-gray-500 ml-2"><?= $translations['free_shipping'] ?></span>
                     </div>
-                    <p class="text-gray-700 mt-4" id="modal-description"></p>
+                    <p class="text-gray-700 mt-4" id="modal-description"><?= $translations['product_description'] ?? 'Product Description' ?></p>
+                    <a href="https://t.me/yourtelegram" class="order-button mt-4" target="_blank">
+                        <i class="fab fa-telegram"></i> <?= $translations['order_now'] ?? 'Order Now' ?>
+                    </a>
                 </div>
             </div>
         </div>

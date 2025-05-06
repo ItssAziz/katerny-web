@@ -90,10 +90,24 @@ return [
     'bracelet_description' => 'Our classic bracelet is the perfect addition to any outfit. Made from high quality materials.',
     'bracelet_2_description' => 'Double your elegance with our stylish bracelet with unique design.',
     'bracelet_2' => 'Bracelet 2',
+    'chain_bracelet' => 'Chain Bracelet',
+    'chain_bracelet_desc' => 'Delicate chain bracelet with adjustable length',
+    'bangle_bracelet' => 'Bangle Bracelet',
+    'bangle_bracelet_desc' => 'Solid bangle bracelet with secure clasp',
+    'silver_chain_bracelet' => 'Silver Chain Bracelet',
+    'silver_chain_bracelet_desc' => 'Delicate silver chain bracelet with adjustable length. Perfect for everyday wear.',
     'necklace' => 'Necklace',
     'necklace_description' => 'Make a difference with our wonderful necklace, precisely designed with high quality materials',
     'ring' => 'Ring',
     'ring_description' => 'Complete your look with our luxurious ring with exquisite design',
+    'hoop_earrings' => 'Hoop Earrings',
+    'hoop_earrings_desc' => 'Classic hoop earrings in various sizes',
+    'drop_earrings' => 'Drop Earrings',
+    'drop_earrings_desc' => 'Elegant drop earrings with secure fastening',
+    'diamond_stud_earrings' => 'Diamond Stud Earrings',
+    'diamond_stud_earrings_desc' => 'Classic diamond stud earrings that add a touch of elegance to any look. Perfect for both casual and formal occasions.',
+    'gold_hoop_earrings' => 'Gold Hoop Earrings',
+    'gold_hoop_earrings_desc' => 'Gold hoop earrings in multiple sizes. Timeless design for everyday wear.',
     'best_selling' => 'Best Selling',
     'be_always_on_the_trend' => 'Be always on the trend',
     'stay_ahead_with_the_latest_styles_and_trends' => 'Stay ahead with the latest styles and trends. Discover exclusive jewelry collections that will elevate your look.',
@@ -125,6 +139,25 @@ return [
     'diamond_stud_earrings_desc' => 'Classic diamond stud earrings that add elegance to any outfit. Perfect for both casual and formal occasions.',
     'gold_hoop_earrings_desc' => 'Versatile gold hoop earrings available in multiple sizes. Timeless design for everyday wear.',
     
+    /* New Jewelry Additions */
+    'statement_chandelier_earrings' => 'Statement Chandelier Earrings',
+    'statement_chandelier_earrings_desc' => 'Dramatic chandelier earrings with intricate metalwork and gemstone accents',
+    
+    'elegant_stud_earrings' => 'Elegant Stud Earrings',
+    'elegant_stud_earrings_desc' => 'Sophisticated stud earrings with secure screw-back fastening for all-day comfort',
+    
+    'personalized_charm_bracelet' => 'Personalized Charm Bracelet',
+    'personalized_charm_bracelet_desc' => 'Custom-crafted bracelet with hand-selected charms that tell your unique story',
+    
+    'elegant_diamondcut_tennis_bracelet' => 'Elegant Diamond-Cut Tennis Bracelet',
+    'elegant_diamondcut_tennis_bracelet_desc' => 'Exquisite tennis bracelet featuring precision diamond-cut stones in a fluid, articulated design',
+    
+    'luxury_gold_choker' => 'Luxurious Gold Choker',
+    'luxury_gold_choker_desc' => 'Handcrafted 18K gold choker featuring intricate filigree work and premium diamond accents',
+    
+    'modern_lariat_necklace' => 'Modern Silver Lariat Necklace',
+    'modern_lariat_necklace_desc' => 'Contemporary 925 sterling silver lariat with innovative sliding mechanism for customizable length and versatile styling',
+    
     /* About Page */
     'about_title' => 'About Katnery',
     'about_hero' => 'Crafting timeless jewelry with passion and precision',
@@ -149,6 +182,14 @@ return [
     'open_telegram' => 'Open Telegram',
     'call_us' => 'Call Us',
     'connect_with_us' => 'Connect With Us',
+    
+    /* Modal Translations */
+    'category' => 'Category',
+    'product_name' => 'Product Name',
+    'price' => 'Price',
+    'product_description' => 'Product Description',
+    'order_now' => 'Order Now',
+    'close' => 'Close',
 ];
 
 ?>

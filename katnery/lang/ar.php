@@ -104,6 +104,11 @@ return [
     'bracelet_2_description' => 'ضاعفي أناقتك مع سوارنا الأنيق ذو التصميم الفريد.',
     'bracelet_2' => 'سوار 2',
     
+    'chain_bracelet' => 'سوار سلسلة',
+    'chain_bracelet_desc' => 'سوار سلسلة رقيق بطول قابل للتعديل',
+    'bangle_bracelet' => 'سوار صلب',
+    'bangle_bracelet_desc' => 'سوار صلب بإغلاق آمن ومريح',
+    
     'necklace' => 'قلادة',
     'necklace_description' => 'أحدثي فرقاً مع قلادتنا الرائعة المصممة بدقة وبمواد عالية الجودة',
     
@@ -127,6 +132,38 @@ return [
     
     'gold_hoop_earrings' => 'أقراط ذهبية دائرية',
     'gold_hoop_earrings_desc' => 'أقراط ذهبية دائرية متعددة المقاسات. تصميم خالد للارتداء اليومي.',
+    
+    'hoop_earrings' => 'أقراط دائرية',
+    'hoop_earrings_desc' => 'أقراط دائرية كلاسيكية بمقاسات متعددة',
+    'drop_earrings' => 'أقراط متدلية',
+    'drop_earrings_desc' => 'أقراط متدلية أنيقة بإغلاق آمن',
+    
+    /* إضافات مجوهرات جديدة */
+    'statement_chandelier_earrings' => 'أقراط ثريا جريئة',
+    'statement_chandelier_earrings_desc' => 'أقراط ثريا ملفتة بأناقة مع تفاصيل معدنية دقيقة وتركيبات من الأحجار الكريمة',
+    
+    'elegant_stud_earrings' => 'أقراط مثبتة أنيقة',
+    'elegant_stud_earrings_desc' => 'أقراط مثبتة عصرية بإغلاق لولبي آمن للراحة طوال اليوم',
+    
+    'personalized_charm_bracelet' => 'سوار تعليقات شخصي',
+    'personalized_charm_bracelet_desc' => 'سوار مصنوع يدوياً مع تعليقات مختارة بعناية تروي قصتك الخاصة',
+    
+    'elegant_diamondcut_tennis_bracelet' => 'سوار تنس أنيق بقص الماس',
+    'elegant_diamondcut_tennis_bracelet_desc' => 'سوار تنس فاخر بحجارة مقطوعة بدقة الماس ضمن تصميم مرن متحرك',
+    
+    'luxury_gold_choker' => 'طوق ذهبي فاخر',
+    'luxury_gold_choker_desc' => 'طوق مصنوع يدوياً من ذهب عيار 18 قيراط بتصميم دقيق من الزخارف المعدنية وتطعيمات ماسية مميزة',
+    
+    'modern_lariat_necklace' => 'قلادة لارييت فضية عصرية',
+    'modern_lariat_necklace_desc' => 'قلادة لارييت من الفضة الإسترليني عيار 925 بآلية انزلاق مبتكرة تتيح طولاً قابل للتعديل وتنسيقات متعددة',
+    
+    /* Modal Translations */
+    'category' => 'الفئة',
+    'product_name' => 'اسم المنتج',
+    'price' => 'السعر',
+    'product_description' => 'وصف المنتج',
+    'order_now' => 'اطلب الآن',
+    'close' => 'إغلاق',
     
     /* About Page */
     'about_title' => 'عن كاتنري',

@@ -275,8 +275,8 @@ include('header.php');
  <!-- Modal -->
 <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden" id="product-modal">
     <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl w-full relative <?= $_SESSION['lang'] === 'ar' ? 'rtl' : '' ?>">
-        <button class="modal-close absolute top-4 right-4 <?= $_SESSION['lang'] === 'ar' ? 'right-auto left-4' : '' ?>" id="close-modal">
-          <i class="fas fa-times text-xl"></i>
+        <button id="close-modal" class="absolute top-4 right-4 text-2xl" aria-label="Close product modal">
+          &times;
         </button>
         <div class="flex flex-col md:flex-row <?= $_SESSION['lang'] === 'ar' ? 'md:flex-row-reverse' : '' ?>">
             <div class="md:w-1/2">

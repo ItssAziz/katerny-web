@@ -45,12 +45,12 @@ require_once 'header.php';
         <!-- Product Item 1 -->
         <div class="product-item text-center" 
             data-category="Necklace"
-            data-name="<?= $translations['elegant_pearl_necklace'] ?? 'Elegant Pearl Necklace' ?>"
-            data-price="1200"
-            data-images='["/assets/img/necklace-01-a.jpg", "/assets/img/necklace-01-b.jpg", "/assets/img/necklace-01-c.jpg", "/assets/img/necklace-01-d.jpg"]'
-            data-description="<?= $translations['elegant_pearl_necklace_desc'] ?? 'Beautiful pearl necklace with gold accents' ?>">
+            data-name="<?= $translations['luxury_gold_choker'] ?? 'Luxurious Gold Choker' ?>"
+            data-price="2200"
+            data-images='["/assets/img/necklace-01-a.webp", "/assets/img/necklace-01-b.webp"]'
+            data-description="<?= $translations['luxury_gold_choker_desc'] ?? 'Handcrafted 18K gold choker with diamond accents' ?>">
             <div class="product-image">
-                <img src="/assets/img/necklace-01-a.jpg" alt="<?= $translations['elegant_pearl_necklace'] ?? 'Elegant Pearl Necklace' ?>" class="w-full">
+                <img src="/assets/img/necklace-01-a.webp" alt="<?= htmlspecialchars($translations['luxury_gold_choker'] ?? 'Luxurious Gold Choker') ?> - <?= htmlspecialchars($translations['luxury_gold_choker_desc'] ?? 'Handcrafted 18K gold choker with diamond accents' ?>)" class="w-full">
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
                         <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>">
@@ -58,19 +58,19 @@ require_once 'header.php';
                     </a>
                 </div>
             </div>
-            <h2 class="text-xl font-semibold mt-4"><?= $translations['elegant_pearl_necklace'] ?? 'Elegant Pearl Necklace' ?></h2>
-            <p class="price mt-2"><span class="icon-saudi_riyal">&#xea;</span>1200</p>
+            <h2 class="text-xl font-semibold mt-4"><?= $translations['luxury_gold_choker'] ?? 'Luxurious Gold Choker' ?></h2>
+            <p class="price mt-2"><span class="icon-saudi_riyal">&#xea;</span>2200</p>
         </div>
 
         <!-- Product Item 2 -->
         <div class="product-item text-center" 
             data-category="Necklace"
-            data-name="<?= $translations['diamond_pendant_necklace'] ?? 'Diamond Pendant Necklace' ?>"
-            data-price="950"
-            data-images='["/assets/img/necklace-01-a.jpg", "/assets/img/necklace-01-b.jpg", "/assets/img/necklace-01-d.jpg"]'
-            data-description="<?= $translations['diamond_pendant_necklace_desc'] ?? 'Elegant diamond pendant on silver chain' ?>">
+            data-name="<?= $translations['modern_lariat_necklace'] ?? 'Modern Silver Lariat Necklace' ?>"
+            data-price="1750"
+            data-images='["/assets/img/necklace-02-a.webp", "/assets/img/necklace-02-b.webp", "/assets/img/necklace-02-c.jpg"]'
+            data-description="<?= $translations['modern_lariat_necklace_desc'] ?? 'Contemporary sterling silver lariat with adjustable length' ?>">
             <div class="product-image">
-                <img src="/assets/img/necklace-01-b.jpg" alt="<?= $translations['diamond_pendant_necklace'] ?? 'Diamond Pendant Necklace' ?>" class="w-full">
+                <img src="/assets/img/necklace-02-a.webp" alt="<?= htmlspecialchars($translations['modern_lariat_necklace'] ?? 'Modern Silver Lariat Necklace') ?> - <?= htmlspecialchars($translations['modern_lariat_necklace_desc'] ?? 'Contemporary sterling silver lariat with adjustable length' ?>)" class="w-full">
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
                         <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>">
@@ -78,8 +78,8 @@ require_once 'header.php';
                     </a>
                 </div>
             </div>
-            <h2 class="text-xl font-semibold mt-4"><?= $translations['diamond_pendant_necklace'] ?? 'Diamond Pendant Necklace' ?></h2>
-            <p class="price mt-2"><span class="icon-saudi_riyal">&#xea;</span>950</p>
+            <h2 class="text-xl font-semibold mt-4"><?= $translations['modern_lariat_necklace'] ?? 'Modern Silver Lariat Necklace' ?></h2>
+            <p class="price mt-2"><span class="icon-saudi_riyal">&#xea;</span>1750</p>
         </div>
 
         <!-- Product Item 3 -->
@@ -90,7 +90,7 @@ require_once 'header.php';
             data-images='["/assets/img/necklace-01-b.jpg", "/assets/img/necklace-01-c.jpg", "/assets/img/necklace-01-d.jpg"]'
             data-description="<?= $translations['gold_choker_necklace_desc'] ?? 'Luxurious gold choker with intricate design' ?>">
             <div class="product-image">
-                <img src="/assets/img/necklace-01-c.jpg" alt="<?= $translations['gold_choker_necklace'] ?? 'Gold Choker Necklace' ?>" class="w-full">
+                <img src="/assets/img/necklace-01-c.jpg" alt="<?= htmlspecialchars($translations['gold_choker_necklace'] ?? 'Gold Choker Necklace') ?> - <?= htmlspecialchars($translations['gold_choker_necklace_desc'] ?? 'Luxurious gold choker with intricate design') ?>" class="w-full">
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
                         <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>">
@@ -110,7 +110,7 @@ require_once 'header.php';
             data-images='["/assets/img/necklace-01-a.jpg", "/assets/img/necklace-01-c.jpg", "/assets/img/necklace-01-d.jpg"]'
             data-description="<?= $translations['silver_lariat_necklace_desc'] ?? 'Modern silver lariat necklace with adjustable length' ?>">
             <div class="product-image">
-                <img src="/assets/img/necklace-01-d.jpg" alt="<?= $translations['silver_lariat_necklace'] ?? 'Silver Lariat Necklace' ?>" class="w-full">
+                <img src="/assets/img/necklace-01-d.jpg" alt="<?= htmlspecialchars($translations['silver_lariat_necklace'] ?? 'Silver Lariat Necklace') ?> - <?= htmlspecialchars($translations['silver_lariat_necklace_desc'] ?? 'Modern silver lariat necklace with adjustable length') ?>" class="w-full">
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
                         <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>">
@@ -126,8 +126,8 @@ require_once 'header.php';
     <!-- Modal -->
 <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden" id="product-modal">
     <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl w-full relative <?= $_SESSION['lang'] === 'ar' ? 'rtl' : '' ?>">
-        <button class="modal-close absolute top-4 right-4 <?= $_SESSION['lang'] === 'ar' ? 'right-auto left-4' : '' ?>" id="close-modal">
-          <i class="fas fa-times text-xl"></i>
+        <button id="close-modal" class="absolute top-4 right-4 text-2xl" aria-label="Close product modal">
+            &times;
         </button>
         <div class="flex flex-col md:flex-row <?= $_SESSION['lang'] === 'ar' ? 'md:flex-row-reverse' : '' ?>">
             <div class="md:w-1/2">
@@ -147,13 +147,16 @@ require_once 'header.php';
                 </div>
             </div>
             <div class="md:w-1/2 md:pl-6 mt-6 md:mt-0">
-                <a href="http://localhost/katnery/bracelets.php" class="text-sm text-gray-500 hover:underline" id="modal-category"></a>
-                <h1 class="text-3xl font-bold text-gray-900" id="modal-title"></h1>
+                <a href="http://localhost/katnery/bracelets.php" class="text-sm text-gray-500 hover:underline" id="modal-category"><?= $translations['category'] ?? 'Category' ?></a>
+                <h1 class="text-3xl font-bold text-gray-900" id="modal-title"><?= $translations['product_name'] ?? 'Product Name' ?></h1>
                 <div class="flex items-center mt-2">
-                    <span class="text-2xl font-bold text-brown-600 ml-2" id="modal-price"></span>
-                    <span class="text-sm text-gray-500 ml-2">&amp; <?= $translations['free_shipping'] ?></span>
+                    <span class="text-2xl font-bold text-brown-600 ml-2" id="modal-price"><span class="icon-saudi_riyal">&#xea;</span><?= $translations['price'] ?? 'Price' ?></span>
+                    <span class="text-sm text-gray-500 ml-2"><?= $translations['free_shipping'] ?></span>
                 </div>
-                <p class="text-gray-700 mt-4" id="modal-description"></p>
+                <p class="text-gray-700 mt-4" id="modal-description"><?= $translations['product_description'] ?? 'Product Description' ?></p>
+                <a href="https://t.me/yourtelegram" class="order-button mt-4" target="_blank">
+                    <i class="fab fa-telegram"></i> <?= $translations['order_now'] ?? 'Order Now' ?>
+                </a>
             </div>
         </div>
     </div>

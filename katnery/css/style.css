@@ -998,8 +998,6 @@ img, video {
     transform: scale(1.1);
 }
 
-/* ***********************Modal*************************** */
-
 /* Modal Styles */
 .fixed {
   position: fixed;
@@ -1014,7 +1012,6 @@ img, video {
   display: none;
 }
 
-/* Slideshow */
 .slideshow-container {
   position: relative;
   margin: auto;
@@ -1028,29 +1025,52 @@ img, video {
   width: 100%;
 }
 
+
+/* Modal Navigation Arrows */
 .prev, .next {
-  cursor: pointer;
   position: absolute;
   top: 50%;
-  width: auto;
+  transform: translateY(-50%);
+  cursor: pointer;
   padding: 16px;
-  margin-top: -22px;
   color: white;
   font-weight: bold;
   font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  transition: 0.3s ease;
   user-select: none;
   background-color: rgba(0,0,0,0.5);
+  border-radius: 0 3px 3px 0;
+  z-index: 10;
 }
 
+/* LTR (default) positioning */
+.prev {
+  left: 10px;
+}
 .next {
-  right: 0;
+  right: 10px;
   border-radius: 3px 0 0 3px;
+}
+
+/* RTL (Arabic) positioning */
+.rtl .prev {
+  right: 10px;
+  left: auto;
+}
+.rtl .next {
+  left: 10px;
+  right: auto;
 }
 
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
+}
+
+@media (max-width: 768px) {
+  .prev, .next {
+    padding: 20px;
+    min-width: 44px; /* Recommended touch target size */
+  }
 }
 
 .dot {
@@ -1601,33 +1621,43 @@ img, video {
 }
 
 .gallery-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  background: rgba(255,255,255,0.8);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 10;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-.gallery-arrow.prev {
-  left: 1rem;
-}
-
-.gallery-arrow.next {
-  right: 1rem;
-}
-
-.gallery-arrow i {
-  color: #a86e3b;
-  font-size: 1.2rem;
-}
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  /* LTR (default) positioning */
+  .gallery-arrow.prev {
+    left: 1rem;
+  }
+  .gallery-arrow.next {
+    right: 1rem;
+  }
+  
+  /* RTL (Arabic) positioning */
+  .rtl .gallery-arrow.prev {
+    right: 1rem;
+    left: auto;
+  }
+  .rtl .gallery-arrow.next {
+    left: 1rem;
+    right: auto;
+  }
+  
+  .gallery-arrow i {
+    color: #a86e3b;
+    font-size: 1.2rem;
+  }
 
 @media (max-width: 1200px) {
   header .logo {
