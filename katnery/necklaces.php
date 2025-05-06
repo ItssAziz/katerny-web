@@ -47,10 +47,10 @@ require_once 'header.php';
             data-category="Necklace"
             data-name="<?= $translations['luxury_gold_choker'] ?? 'Luxurious Gold Choker' ?>"
             data-price="2200"
-            data-images='["/assets/img/necklace-01-a.webp", "/assets/img/necklace-01-b.webp"]'
+            data-images='["/assets/img/necklace-01-a.jpg", "/assets/img/necklace-01-b.jpg", "/assets/img/necklace-01-c.jpg", "/assets/img/necklace-01-d.jpg"]'
             data-description="<?= $translations['luxury_gold_choker_desc'] ?? 'Handcrafted 18K gold choker with diamond accents' ?>">
             <div class="product-image">
-                <img src="/assets/img/necklace-01-a.webp" alt="<?= htmlspecialchars($translations['luxury_gold_choker'] ?? 'Luxurious Gold Choker') ?> - <?= htmlspecialchars($translations['luxury_gold_choker_desc'] ?? 'Handcrafted 18K gold choker with diamond accents' ?>)" class="w-full">
+                <img src="/assets/img/necklace-01-a.jpg" alt="<?= htmlspecialchars($translations['luxury_gold_choker'] ?? 'Luxurious Gold Choker') ?> - <?= htmlspecialchars($translations['luxury_gold_choker_desc'] ?? 'Handcrafted 18K gold choker with diamond accents') ?>" class="w-full">
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
                         <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>">
@@ -67,10 +67,10 @@ require_once 'header.php';
             data-category="Necklace"
             data-name="<?= $translations['modern_lariat_necklace'] ?? 'Modern Silver Lariat Necklace' ?>"
             data-price="1750"
-            data-images='["/assets/img/necklace-02-a.webp", "/assets/img/necklace-02-b.webp", "/assets/img/necklace-02-c.jpg"]'
+            data-images='["/assets/img/necklace-01-b.jpg", "/assets/img/necklace-01-c.jpg", "/assets/img/necklace-01-d.jpg", "/assets/img/necklace-01-a.jpg"]'
             data-description="<?= $translations['modern_lariat_necklace_desc'] ?? 'Contemporary sterling silver lariat with adjustable length' ?>">
             <div class="product-image">
-                <img src="/assets/img/necklace-02-a.webp" alt="<?= htmlspecialchars($translations['modern_lariat_necklace'] ?? 'Modern Silver Lariat Necklace') ?> - <?= htmlspecialchars($translations['modern_lariat_necklace_desc'] ?? 'Contemporary sterling silver lariat with adjustable length' ?>)" class="w-full">
+                <img src="/assets/img/necklace-01-b.jpg" alt="<?= htmlspecialchars($translations['modern_lariat_necklace'] ?? 'Modern Silver Lariat Necklace') ?> - <?= htmlspecialchars($translations['modern_lariat_necklace_desc'] ?? 'Contemporary sterling silver lariat with adjustable length') ?>" class="w-full">
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
                         <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>">
@@ -87,7 +87,7 @@ require_once 'header.php';
             data-category="Necklace"
             data-name="<?= $translations['gold_choker_necklace'] ?? 'Gold Choker Necklace' ?>"
             data-price="1800"
-            data-images='["/assets/img/necklace-01-b.jpg", "/assets/img/necklace-01-c.jpg", "/assets/img/necklace-01-d.jpg"]'
+            data-images='["/assets/img/necklace-01-c.jpg", "/assets/img/necklace-01-d.jpg", "/assets/img/necklace-01-a.jpg", "/assets/img/necklace-01-b.jpg"]'
             data-description="<?= $translations['gold_choker_necklace_desc'] ?? 'Luxurious gold choker with intricate design' ?>">
             <div class="product-image">
                 <img src="/assets/img/necklace-01-c.jpg" alt="<?= htmlspecialchars($translations['gold_choker_necklace'] ?? 'Gold Choker Necklace') ?> - <?= htmlspecialchars($translations['gold_choker_necklace_desc'] ?? 'Luxurious gold choker with intricate design') ?>" class="w-full">
@@ -107,7 +107,7 @@ require_once 'header.php';
             data-category="Necklace"
             data-name="<?= $translations['silver_lariat_necklace'] ?? 'Silver Lariat Necklace' ?>"
             data-price="1500"
-            data-images='["/assets/img/necklace-01-a.jpg", "/assets/img/necklace-01-c.jpg", "/assets/img/necklace-01-d.jpg"]'
+            data-images='["/assets/img/necklace-01-a.jpg", "/assets/img/necklace-01-b.jpg", "/assets/img/necklace-01-c.jpg", "/assets/img/necklace-01-d.jpg"]'
             data-description="<?= $translations['silver_lariat_necklace_desc'] ?? 'Modern silver lariat necklace with adjustable length' ?>">
             <div class="product-image">
                 <img src="/assets/img/necklace-01-d.jpg" alt="<?= htmlspecialchars($translations['silver_lariat_necklace'] ?? 'Silver Lariat Necklace') ?> - <?= htmlspecialchars($translations['silver_lariat_necklace_desc'] ?? 'Modern silver lariat necklace with adjustable length') ?>" class="w-full">

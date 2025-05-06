@@ -39,17 +39,6 @@ require_once 'header.php';
                     <span id="price-value" class="text-gray-500"><span class="icon-saudi_riyal">&#xea;</span>5000</span>
                 </div>
                 
-                <!-- Category Filter -->
-                <div class="relative">
-                    <select id="filter-options" class="appearance-none bg-transparent border-none text-gray-500">
-    <option value="Bracelet"><?= $translations['bracelets'] ?></option>
-    <option value="Ring"><?= $translations['rings'] ?></option>
-    <option value="Earring"><?= $translations['earrings'] ?></option>
-    <option value="Necklace"><?= $translations['necklaces'] ?></option>
-</select>
-                    <i class="fas fa-chevron-down absolute right-0 top-0 mt-2 mr-2 text-gray-500"></i>
-                </div>
-                
                 <!-- Sorting -->
                 <div class="relative">
                     <select id="sort-options" class="appearance-none bg-transparent border-none text-gray-500">

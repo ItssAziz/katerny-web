@@ -47,7 +47,7 @@ require_once 'header.php';
             data-category="Earring"
             data-name="<?= $translations['statement_chandelier_earrings'] ?? 'Statement Chandelier Earrings' ?>"
             data-price="1800"
-            data-images='["/assets/img/earrings-01-a.webp", "/assets/img/earrings-01-b.webp", "/assets/img/earrings-01-c.jpg"]'
+            data-images='["/assets/img/earrings-01-a.webp", "/assets/img/earrings-01-b.webp", "/assets/img/earrings-01-c.jpg", "/assets/img/earrings-01-d.jpeg"]'
             data-description="<?= $translations['statement_chandelier_earrings_desc'] ?? 'Dramatic chandelier earrings with intricate metalwork' ?>">
             <div class="product-image">
                 <img src="/assets/img/earrings-01-a.webp" alt="<?= htmlspecialchars($translations['statement_chandelier_earrings'] ?? 'Statement Chandelier Earrings') ?> - <?= htmlspecialchars($translations['statement_chandelier_earrings_desc'] ?? 'Dramatic chandelier earrings with intricate metalwork' )?>" class="w-full">
@@ -66,10 +66,10 @@ require_once 'header.php';
             data-category="Earring"
             data-name="<?= $translations['elegant_stud_earrings'] ?? 'Elegant Stud Earrings' ?>"
             data-price="950"
-            data-images='["/assets/img/earrings-02-a.webp", "/assets/img/earrings-02-b.webp"]'
+            data-images='["/assets/img/earrings-01-a.webp", "/assets/img/earrings-01-b.webp", "/assets/img/earrings-01-c.jpg", "/assets/img/earrings-01-d.jpeg"]'
             data-description="<?= $translations['elegant_stud_earrings_desc'] ?? 'Sophisticated stud earrings with secure fastening' ?>">
             <div class="product-image">
-                <img src="/assets/img/earrings-02-a.webp" alt="<?= htmlspecialchars($translations['elegant_stud_earrings'] ?? 'Elegant Stud Earrings') ?> - <?= htmlspecialchars($translations['elegant_stud_earrings_desc'] ?? 'Sophisticated stud earrings with secure fastening' )?>" class="w-full">
+                <img src="/assets/img/earrings-01-b.webp" alt="<?= htmlspecialchars($translations['elegant_stud_earrings'] ?? 'Elegant Stud Earrings') ?> - <?= htmlspecialchars($translations['elegant_stud_earrings_desc'] ?? 'Sophisticated stud earrings with secure fastening' )?>" class="w-full">
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
                         <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>">
