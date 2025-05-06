@@ -47,11 +47,11 @@ require_once 'header.php';
             data-category="Ring" 
             data-name="<?= $translations['elegant_gold_ring'] ?>" 
             data-price="1500"
-            data-images='["/assets/img/bracelet-d.jpg", "/assets/img/bracelet-01-a.jpg", "/assets/img/bracelet-01-b.jpg"]'
+            data-images='["/assets/img/ring-01-a.jpg", "/assets/img/ring-01-b.jpg", "/assets/img/ring-01-c.jpg", "/assets/img/ring-01-d.jpg"]'
             data-description="<?= $translations['elegant_gold_ring_desc'] ?>">
             <div class="product-image">
-                <a href="product.php?name=<?= urlencode($translations['elegant_gold_ring']) ?>&price=1500&description=<?= urlencode($translations['elegant_gold_ring_desc']) ?>&images=/assets/img/bracelet-d.jpg,/assets/img/bracelet-01-a.jpg,/assets/img/bracelet-01-b.jpg&category=Ring">
-                    <img alt="<?= $translations['elegant_gold_ring'] ?>" src="https://storage.googleapis.com/a1aa/image/1u2VM7easZ3Mci876MOCAfb1oCTOoaDcJfcP6swejncWdR8PB.jpg">
+                <a href="product.php?name=<?= urlencode($translations['elegant_gold_ring']) ?>&price=1500&description=<?= urlencode($translations['elegant_gold_ring_desc']) ?>&images=/assets/img/ring-01-a.jpg,/assets/img/ring-01-b.jpg,/assets/img/ring-01-c.jpg,/assets/img/ring-01-d.jpg&category=Ring">
+                    <img alt="<?= $translations['elegant_gold_ring'] ?>" src="/assets/img/ring-01-a.jpg">
                 </a>
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
@@ -68,11 +68,11 @@ require_once 'header.php';
             data-category="Ring" 
             data-name="<?= $translations['sparkling_gemstone_ring'] ?>" 
             data-price="2200"
-            data-images='["/assets/img/bracelet-d.jpg", "/assets/img/bracelet-01-a.jpg", "/assets/img/bracelet-01-b.jpg"]'
+            data-images='["/assets/img/ring-01-a.jpg", "/assets/img/ring-01-b.jpg", "/assets/img/ring-01-c.jpg", "/assets/img/ring-01-d.jpg"]'
             data-description="<?= $translations['sparkling_gemstone_ring_desc'] ?>">
             <div class="product-image">
-                <a href="product.php?name=<?= urlencode($translations['sparkling_gemstone_ring']) ?>&price=2200&description=<?= urlencode($translations['sparkling_gemstone_ring_desc']) ?>&images=/assets/img/bracelet-d.jpg,/assets/img/bracelet-01-a.jpg,/assets/img/bracelet-01-b.jpg&category=Ring">
-                    <img alt="<?= $translations['sparkling_gemstone_ring'] ?>" src="https://storage.googleapis.com/a1aa/image/8m5DiFZmEQqzClS9hpeP8m40DfQe0gdVEfWOvhDe1JBI6i4fE.jpg">
+                <a href="product.php?name=<?= urlencode($translations['sparkling_gemstone_ring']) ?>&price=2200&description=<?= urlencode($translations['sparkling_gemstone_ring_desc']) ?>&images=/assets/img/ring-01-a.jpg,/assets/img/ring-01-b.jpg,/assets/img/ring-01-c.jpg,/assets/img/ring-01-d.jpg&category=Ring">
+                    <img alt="<?= $translations['sparkling_gemstone_ring'] ?>" src="/assets/img/ring-01-b.jpg">
                 </a>
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
@@ -89,11 +89,11 @@ require_once 'header.php';
             data-category="Ring" 
             data-name="<?= $translations['classic_timeless_ring'] ?>" 
             data-price="1300"
-            data-images='["/assets/img/bracelet-d.jpg", "/assets/img/bracelet-01-a.jpg", "/assets/img/bracelet-01-b.jpg"]'
+            data-images='["/assets/img/ring-01-a.jpg", "/assets/img/ring-01-b.jpg", "/assets/img/ring-01-c.jpg", "/assets/img/ring-01-d.jpg"]'
             data-description="<?= $translations['classic_timeless_ring_desc'] ?>">
             <div class="product-image">
-                <a href="product.php?name=<?= urlencode($translations['classic_timeless_ring']) ?>&price=1300&description=<?= urlencode($translations['classic_timeless_ring_desc']) ?>&images=/assets/img/bracelet-d.jpg,/assets/img/bracelet-01-a.jpg,/assets/img/bracelet-01-b.jpg&category=Ring">
-                    <img alt="<?= $translations['classic_timeless_ring'] ?>" src="https://storage.googleapis.com/a1aa/image/ZJAGFIG83u6uPlTouOCDyETqUOMcd2ChYEQPfiHM7CIqLifTA.jpg">
+                <a href="product.php?name=<?= urlencode($translations['classic_timeless_ring']) ?>&price=1300&description=<?= urlencode($translations['classic_timeless_ring_desc']) ?>&images=/assets/img/ring-01-a.jpg,/assets/img/ring-01-b.jpg,/assets/img/ring-01-c.jpg,/assets/img/ring-01-d.jpg&category=Ring">
+                    <img alt="<?= $translations['classic_timeless_ring'] ?>" src="/assets/img/ring-01-c.jpg">
                 </a>
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
@@ -110,11 +110,11 @@ require_once 'header.php';
             data-category="Ring" 
             data-name="<?= $translations['delicate_charm_ring'] ?>" 
             data-price="750"
-            data-images='["/assets/img/bracelet-d.jpg", "/assets/img/bracelet-01-a.jpg", "/assets/img/bracelet-01-b.jpg"]'
+            data-images='["/assets/img/ring-01-a.jpg", "/assets/img/ring-01-b.jpg", "/assets/img/ring-01-c.jpg", "/assets/img/ring-01-d.jpg"]'
             data-description="<?= $translations['delicate_charm_ring_desc'] ?>">
             <div class="product-image">
-                <a href="product.php?name=<?= urlencode($translations['delicate_charm_ring']) ?>&price=750&description=<?= urlencode($translations['delicate_charm_ring_desc']) ?>&images=/assets/img/bracelet-d.jpg,/assets/img/bracelet-01-a.jpg,/assets/img/bracelet-01-b.jpg&category=Ring">
-                    <img alt="<?= $translations['delicate_charm_ring'] ?>" src="https://storage.googleapis.com/a1aa/image/BDo8fmKe6drqEkGElxsncJPf2bogB3rhfrMNFU8MwyzKdR8PB.jpg">
+                <a href="product.php?name=<?= urlencode($translations['delicate_charm_ring']) ?>&price=750&description=<?= urlencode($translations['delicate_charm_ring_desc']) ?>&images=/assets/img/ring-01-a.jpg,/assets/img/ring-01-b.jpg,/assets/img/ring-01-c.jpg,/assets/img/ring-01-d.jpg&category=Ring">
+                    <img alt="<?= $translations['delicate_charm_ring'] ?>" src="/assets/img/ring-01-d.jpg">
                 </a>
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
@@ -137,7 +137,9 @@ require_once 'header.php';
             <div class="flex flex-col md:flex-row <?= $_SESSION['lang'] === 'ar' ? 'md:flex-row-reverse' : '' ?>">
                 <div class="md:w-1/2">
                     <div class="relative">
-                        <span class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow"><?= $translations['sale_badge'] ?></span>
+                        <?php if(isset($translations['sale_badge'])): ?>
+                            <span class="absolute top-0 left-0 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded"><?= $translations['sale_badge'] ?></span>
+                        <?php endif; ?>
                         <div class="slideshow-container" id="modal-slideshow">
                             <!-- Slides will be inserted here dynamically -->
                         </div>

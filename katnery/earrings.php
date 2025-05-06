@@ -44,50 +44,87 @@ require_once 'header.php';
     <div class="product-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         <!-- Product Items -->
         <div class="product-item text-center" 
-            data-category="Earring" 
-            data-name="<?= $translations['diamond_stud_earrings'] ?>" 
-            data-price="2200"
-            data-description="<?= $translations['diamond_stud_earrings_desc'] ?>"
-            data-images='["/assets/img/earrings-a.jpg", "/assets/img/earrings-b.jpg", "/assets/img/earrings-c.jpg"]'>
+            data-category="Earrings"
+            data-name="<?= $translations['stud_earrings'] ?? 'Stud Earrings' ?>"
+            data-price="800"
+            data-images='["/assets/img/earrings-01-a.webp", "/assets/img/earrings-01-b.webp", "/assets/img/earrings-01-c.jpg", "/assets/img/earrings-01-d.jpeg"]'
+            data-description="<?= $translations['stud_earrings_desc'] ?? 'Elegant stud earrings with secure fastening' ?>">
             <div class="product-image">
-                <a href="product.php?name=<?= $translations['diamond_stud_earrings'] ?>&price=2200&description=<?= $translations['diamond_stud_earrings_desc'] ?>&images=/assets/img/earrings-a.jpg,/assets/img/earrings-b.jpg,/assets/img/earrings-c.jpg&category=Earring">
-                    <img alt="<?= $translations['diamond_stud_earrings'] ?>" src="https://storage.googleapis.com/a1aa/image/earring-example.jpg">
-                </a>
+                <img src="/assets/img/earrings-01-a.webp" alt="<?= $translations['stud_earrings'] ?? 'Stud Earrings' ?>" class="w-full">
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
-                        <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?>">
-                        <span class="quick-view-tooltip"><?= $translations['quick_view'] ?></span>
+                        <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>">
+                        <span class="quick-view-tooltip"><?= $translations['quick_view'] ?? 'Quick View' ?></span>
                     </a>
                 </div>
             </div>
-            <h2 class="text-xl font-semibold"><?= $translations['diamond_stud_earrings'] ?></h2>
-            <p class="price"><span class="icon-saudi_riyal">&#xea;</span>2200</p>
+            <h2 class="text-xl font-semibold mt-4"><?= $translations['stud_earrings'] ?? 'Stud Earrings' ?></h2>
+            <p class="price mt-2"><span class="icon-saudi_riyal">&#xea;</span>800</p>
         </div>
 
         <div class="product-item text-center" 
-            data-category="Earring" 
-            data-name="<?= $translations['gold_hoop_earrings'] ?>" 
-            data-price="1500"
-            data-description="<?= $translations['gold_hoop_earrings_desc'] ?>"
-            data-images='["/assets/img/earrings-d.jpg", "/assets/img/earrings-e.jpg", "/assets/img/earrings-f.jpg"]'>
+            data-category="Earrings"
+            data-name="<?= $translations['hoop_earrings'] ?? 'Hoop Earrings' ?>"
+            data-price="950"
+            data-images='["/assets/img/earrings-01-b.webp", "/assets/img/earrings-01-c.jpg", "/assets/img/earrings-01-d.jpeg", "/assets/img/earrings-01-a.webp"]'
+            data-description="<?= $translations['hoop_earrings_desc'] ?? 'Classic hoop earrings in various sizes' ?>">
             <div class="product-image">
-                <a href="product.php?name=<?= $translations['gold_hoop_earrings'] ?>&price=1500&description=<?= $translations['gold_hoop_earrings_desc'] ?>&images=/assets/img/earrings-d.jpg,/assets/img/earrings-e.jpg,/assets/img/earrings-f.jpg&category=Earring">
-                    <img alt="<?= $translations['gold_hoop_earrings'] ?>" src="https://storage.googleapis.com/a1aa/image/earring-example.jpg">
-                </a>
+                <img src="/assets/img/earrings-01-b.webp" alt="<?= $translations['hoop_earrings'] ?? 'Hoop Earrings' ?>" class="w-full">
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
-                        <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?>">
-                        <span class="quick-view-tooltip"><?= $translations['quick_view'] ?></span>
+                        <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>">
+                        <span class="quick-view-tooltip"><?= $translations['quick_view'] ?? 'Quick View' ?></span>
                     </a>
                 </div>
             </div>
-            <h2 class="text-xl font-semibold"><?= $translations['gold_hoop_earrings'] ?></h2>
-            <p class="price"><span class="icon-saudi_riyal">&#xea;</span>1500</p>
+            <h2 class="text-xl font-semibold mt-4"><?= $translations['hoop_earrings'] ?? 'Hoop Earrings' ?></h2>
+            <p class="price mt-2"><span class="icon-saudi_riyal">&#xea;</span>950</p>
+        </div>
+
+        <!-- Product Item 3 -->
+        <div class="product-item text-center" 
+            data-category="Earrings"
+            data-name="<?= $translations['drop_earrings'] ?? 'Drop Earrings' ?>"
+            data-price="1100"
+            data-images='["/assets/img/earrings-01-c.jpg", "/assets/img/earrings-01-d.jpeg", "/assets/img/earrings-01-a.webp", "/assets/img/earrings-01-b.webp"]'
+            data-description="<?= $translations['drop_earrings_desc'] ?? 'Elegant drop earrings with secure fastening' ?>">
+            <div class="product-image">
+                <img src="/assets/img/earrings-01-c.jpg" alt="<?= $translations['drop_earrings'] ?? 'Drop Earrings' ?>" class="w-full">
+                <div class="overlay">
+                    <a href="#" class="eye-icon quick-view-btn">
+                        <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>">
+                        <span class="quick-view-tooltip"><?= $translations['quick_view'] ?? 'Quick View' ?></span>
+                    </a>
+                </div>
+            </div>
+            <h2 class="text-xl font-semibold mt-4"><?= $translations['drop_earrings'] ?? 'Drop Earrings' ?></h2>
+            <p class="price mt-2"><span class="icon-saudi_riyal">&#xea;</span>1100</p>
+        </div>
+
+        <!-- Product Item 4 -->
+        <div class="product-item text-center" 
+            data-category="Earrings"
+            data-name="<?= $translations['chandelier_earrings'] ?? 'Chandelier Earrings' ?>"
+            data-price="1350"
+            data-images='["/assets/img/earrings-01-d.jpeg", "/assets/img/earrings-01-a.webp", "/assets/img/earrings-01-b.webp", "/assets/img/earrings-01-c.jpg"]'
+            data-description="<?= $translations['chandelier_earrings_desc'] ?? 'Statement chandelier earrings' ?>">
+            <div class="product-image">
+                <img src="/assets/img/earrings-01-d.jpeg" alt="<?= $translations['chandelier_earrings'] ?? 'Chandelier Earrings' ?>" class="w-full">
+                <div class="overlay">
+                    <a href="#" class="eye-icon quick-view-btn">
+                        <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>">
+                        <span class="quick-view-tooltip"><?= $translations['quick_view'] ?? 'Quick View' ?></span>
+                    </a>
+                </div>
+            </div>
+            <h2 class="text-xl font-semibold mt-4"><?= $translations['chandelier_earrings'] ?? 'Chandelier Earrings' ?></h2>
+            <p class="price mt-2"><span class="icon-saudi_riyal">&#xea;</span>1350</p>
         </div>
 
         <!-- Add more earring items here following the same structure -->
     </div>
 
+    <!-- Modal -->
     <!-- Modal -->
     <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden" id="product-modal">
         <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl w-full relative <?= $_SESSION['lang'] === 'ar' ? 'rtl' : '' ?>">
@@ -95,15 +132,34 @@ require_once 'header.php';
               <i class="fas fa-times text-xl"></i>
             </button>
             <div class="flex flex-col md:flex-row <?= $_SESSION['lang'] === 'ar' ? 'md:flex-row-reverse' : '' ?>">
-                <div class="product-gallery">
-                    <!-- Gallery content will be populated by JavaScript -->
+                <div class="md:w-1/2">
+                    <div class="relative">
+                        <?php if(isset($translations['sale_badge'])): ?>
+                            <span class="absolute top-0 left-0 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded"><?= $translations['sale_badge'] ?></span>
+                        <?php endif; ?>
+                        <div class="slideshow-container" id="modal-slideshow">
+                            <!-- Slides will be inserted here dynamically -->
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        <div class="flex justify-center mt-4 space-x-2" id="modal-dots">
+                            <!-- Dots will be inserted here dynamically -->
+                        </div>
+                    </div>
                 </div>
-                <div class="product-details">
-                    <!-- Details content will be populated by JavaScript -->
+                <div class="md:w-1/2 md:pl-6 mt-6 md:mt-0">
+                    <a href="http://localhost/katnery/bracelets.php" class="text-sm text-gray-500 hover:underline" id="modal-category"></a>
+                    <h1 class="text-3xl font-bold text-gray-900" id="modal-title"></h1>
+                    <div class="flex items-center mt-2">
+                        <span class="text-2xl font-bold text-brown-600 ml-2" id="modal-price"><span class="icon-saudi_riyal">&#xea;</span></span>
+                        <span class="text-sm text-gray-500 ml-2"><?= $translations['free_shipping'] ?></span>
+                    </div>
+                    <p class="text-gray-700 mt-4" id="modal-description"></p>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <?php include('footer.php'); ?>

@@ -37,7 +37,7 @@
     </div>
     <div class="copyright">
     <div class="footer-copyright">
-        <p><?= $translations['copyright'] ?></p>
+        <p> 2024 Katnery by Aziz. All rights reserved.</p>
     </div>
     </div>
 </footer>

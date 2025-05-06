@@ -45,26 +45,26 @@ include('header.php');
   <h2 class="section-title big"><?= $translations['trending_now'] ?></h2>
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-0">
     <!-- Standardized Product Item Structure -->
-    <div class="product-item text-center" 
-         data-category="Bracelet"
-         data-name="<?= $translations['bracelet'] ?>"
-         data-price="225"
-         data-images='["/assets/img/bracelet-01-a.jpg", "/assets/img/bracelet-01-b.jpg", "/assets/img/bracelet-01-c.jpg", "/assets/img/bracelet-d.jpg"]'
-         data-description="<?= $translations['bracelet_description'] ?>">
-      <div class="product-image">
-        <a href="product.php?name=<?= urlencode($translations['bracelet']) ?>&price=225&description=<?= urlencode($translations['bracelet_description']) ?>&images=/assets/img/bracelet-01-a.jpg,/assets/img/bracelet-01-b.jpg,/assets/img/bracelet-01-c.jpg,/assets/img/bracelet-d.jpg&category=Bracelet">
-          <img alt="<?= $translations['bracelet'] ?>" src="/assets/img/bracelet-01-a.jpg">
-        </a>
-        <div class="overlay">
-          <a href="#" class="eye-icon quick-view-btn">
-            <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?>">
-            <span class="quick-view-tooltip"><?= $translations['quick_view'] ?></span>
-          </a>
+     <!-- Product Items -->
+     <div class="product-item text-center" 
+            data-category="Ring" 
+            data-name="<?= $translations['elegant_gold_ring'] ?>" 
+            data-price="1500"
+            data-images='["/assets/img/ring-01-a.jpg", "/assets/img/ring-01-b.jpg", "/assets/img/ring-01-c.jpg", "/assets/img/ring-01-d.jpg"]'
+            data-description="<?= $translations['elegant_gold_ring_desc'] ?>">
+            <div class="product-image">
+                <img alt="<?= $translations['elegant_gold_ring'] ?>" src="/assets/img/ring-01-a.jpg">
+                <div class="overlay">
+                    <a href="#" class="eye-icon quick-view-btn">
+                        <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?>">
+                        <span class="quick-view-tooltip"><?= $translations['quick_view'] ?></span>
+                    </a>
+                </div>
+            </div>
+            <h2 class="text-xl font-semibold"><?= $translations['elegant_gold_ring'] ?></h2>
+            <p class="price"><span class="icon-saudi_riyal">&#xea;</span>1500</p>
         </div>
-      </div>
-      <h2 class="text-xl font-semibold"><?= $translations['bracelet'] ?></h2>
-      <p class="price"></p>
-    </div>
+    
     <!-- Standardized Product Item Structure -->
     <div class="product-item text-center" 
          data-category="Bracelet"
@@ -73,9 +73,7 @@ include('header.php');
          data-images='["/assets/img/bracelet-01-b.jpg", "/assets/img/bracelet-01-c.jpg", "/assets/img/bracelet-d.jpg", "/assets/img/bracelet-01-a.jpg"]'
          data-description="<?= $translations['bracelet_2_description'] ?>">
       <div class="product-image">
-        <a href="product.php?name=<?= urlencode($translations['bracelet_2']) ?>&price=180&description=<?= urlencode($translations['bracelet_2_description']) ?>&images=/assets/img/bracelet-01-b.jpg,/assets/img/bracelet-01-c.jpg,/assets/img/bracelet-d.jpg,/assets/img/bracelet-01-a.jpg&category=Bracelet">
-          <img alt="<?= $translations['bracelet_2'] ?>" src="/assets/img/bracelet-01-b.jpg">
-        </a>
+        <img alt="<?= $translations['bracelet_2'] ?>" src="/assets/img/bracelet-01-b.jpg">
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
             <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?>">
@@ -84,8 +82,9 @@ include('header.php');
         </div>
       </div>
       <h2 class="text-xl font-semibold"><?= $translations['bracelet_2'] ?></h2>
-      <p class="price"></p>
+      <p class="price"><span class="icon-saudi_riyal">&#xea;</span>180</p>
     </div>
+    
     <!-- Standardized Product Item Structure -->
     <div class="product-item text-center" 
          data-category="Necklace"
@@ -94,9 +93,7 @@ include('header.php');
          data-images='["/assets/img/cover 2.jpg", "/assets/img/cover 5.jpg", "/assets/img/kat list.jpg", "/assets/img/kat ring 2.jpg"]'
          data-description="<?= $translations['necklace_description'] ?>">
       <div class="product-image">
-        <a href="product.php?name=<?= urlencode($translations['necklace']) ?>&price=250&description=<?= urlencode($translations['necklace_description']) ?>&images=/assets/img/cover 2.jpg,/assets/img/cover 5.jpg,/assets/img/kat list.jpg,/assets/img/kat ring 2.jpg&category=Necklace">
-          <img alt="<?= $translations['necklace'] ?>" src="/assets/img/cover 2.jpg">
-        </a>
+        <img alt="<?= $translations['necklace'] ?>" src="/assets/img/cover 2.jpg">
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
             <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?>">
@@ -105,8 +102,9 @@ include('header.php');
         </div>
       </div>
       <h2 class="text-xl font-semibold"><?= $translations['necklace'] ?></h2>
-      <p class="price"></p>
+      <p class="price"><span class="icon-saudi_riyal">&#xea;</span>250</p>
     </div>
+    
     <!-- Standardized Product Item Structure -->
     <div class="product-item text-center" 
          data-category="Ring"
@@ -115,9 +113,7 @@ include('header.php');
          data-images='["/assets/img/cover ring.jpg", "/assets/img/kat ring 2.jpg", "/assets/img/cover 2.jpg", "/assets/img/cover 5.jpg"]'
          data-description="<?= $translations['ring_description'] ?>">
       <div class="product-image">
-        <a href="product.php?name=<?= urlencode($translations['ring']) ?>&price=300&description=<?= urlencode($translations['ring_description']) ?>&images=/assets/img/cover ring.jpg,/assets/img/kat ring 2.jpg,/assets/img/cover 2.jpg,/assets/img/cover 5.jpg&category=Ring">
-          <img alt="<?= $translations['ring'] ?>" src="/assets/img/cover ring.jpg">
-        </a>
+        <img alt="<?= $translations['ring'] ?>" src="/assets/img/cover ring.jpg">
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
             <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?>">
@@ -126,7 +122,7 @@ include('header.php');
         </div>
       </div>
       <h2 class="text-xl font-semibold"><?= $translations['ring'] ?></h2>
-      <p class="price"></p>
+      <p class="price"><span class="icon-saudi_riyal">&#xea;</span>300</p>
     </div>
   </div>
 </section>
@@ -144,9 +140,7 @@ include('header.php');
          data-images='["/assets/img/bracelet-01-a.jpg", "/assets/img/bracelet-01-b.jpg", "/assets/img/bracelet-01-c.jpg", "/assets/img/bracelet-d.jpg"]'
          data-description="<?= $translations['bracelet_description'] ?>">
       <div class="product-image">
-        <a href="product.php?name=<?= urlencode($translations['bracelet']) ?>&price=225&description=<?= urlencode($translations['bracelet_description']) ?>&images=/assets/img/bracelet-01-a.jpg,/assets/img/bracelet-01-b.jpg,/assets/img/bracelet-01-c.jpg,/assets/img/bracelet-d.jpg&category=Bracelet">
-          <img alt="<?= $translations['bracelet'] ?>" src="/assets/img/bracelet-01-a.jpg">
-        </a>
+        <img alt="<?= $translations['bracelet'] ?>" src="/assets/img/bracelet-01-a.jpg">
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
             <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?>">
@@ -155,7 +149,7 @@ include('header.php');
         </div>
       </div>
       <h2 class="text-xl font-semibold"><?= $translations['bracelet'] ?></h2>
-      <p class="price"></p>
+      <p class="price"><span class="icon-saudi_riyal">&#xea;</span>225</p>
     </div>
     <!-- Standardized Product Item Structure -->
     <div class="product-item text-center" 
@@ -165,9 +159,7 @@ include('header.php');
          data-images='["/assets/img/bracelet-01-b.jpg", "/assets/img/bracelet-01-c.jpg", "/assets/img/bracelet-d.jpg", "/assets/img/bracelet-01-a.jpg"]'
          data-description="<?= $translations['bracelet_2_description'] ?>">
       <div class="product-image">
-        <a href="product.php?name=<?= urlencode($translations['bracelet_2']) ?>&price=180&description=<?= urlencode($translations['bracelet_2_description']) ?>&images=/assets/img/bracelet-01-b.jpg,/assets/img/bracelet-01-c.jpg,/assets/img/bracelet-d.jpg,/assets/img/bracelet-01-a.jpg&category=Bracelet">
-          <img alt="<?= $translations['bracelet_2'] ?>" src="/assets/img/bracelet-01-b.jpg">
-        </a>
+        <img alt="<?= $translations['bracelet_2'] ?>" src="/assets/img/bracelet-01-b.jpg">
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
             <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?>">
@@ -176,7 +168,7 @@ include('header.php');
         </div>
       </div>
       <h2 class="text-xl font-semibold"><?= $translations['bracelet_2'] ?></h2>
-      <p class="price"></p>
+      <p class="price"><span class="icon-saudi_riyal">&#xea;</span>180</p>
     </div>
     <!-- Standardized Product Item Structure -->
     <div class="product-item text-center" 
@@ -186,9 +178,7 @@ include('header.php');
          data-images='["/assets/img/cover 2.jpg", "/assets/img/cover 5.jpg", "/assets/img/kat list.jpg", "/assets/img/kat ring 2.jpg"]'
          data-description="<?= $translations['necklace_description'] ?>">
       <div class="product-image">
-        <a href="product.php?name=<?= urlencode($translations['necklace']) ?>&price=250&description=<?= urlencode($translations['necklace_description']) ?>&images=/assets/img/cover 2.jpg,/assets/img/cover 5.jpg,/assets/img/kat list.jpg,/assets/img/kat ring 2.jpg&category=Necklace">
-          <img alt="<?= $translations['necklace'] ?>" src="/assets/img/cover 2.jpg">
-        </a>
+        <img alt="<?= $translations['necklace'] ?>" src="/assets/img/cover 2.jpg">
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
             <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?>">
@@ -197,7 +187,7 @@ include('header.php');
         </div>
       </div>
       <h2 class="text-xl font-semibold"><?= $translations['necklace'] ?></h2>
-      <p class="price"></p>
+      <p class="price"><span class="icon-saudi_riyal">&#xea;</span>250</p>
     </div>
     <!-- Standardized Product Item Structure -->
     <div class="product-item text-center" 
@@ -207,9 +197,7 @@ include('header.php');
          data-images='["/assets/img/cover ring.jpg", "/assets/img/kat ring 2.jpg", "/assets/img/cover 2.jpg", "/assets/img/cover 5.jpg"]'
          data-description="<?= $translations['ring_description'] ?>">
       <div class="product-image">
-        <a href="product.php?name=<?= urlencode($translations['ring']) ?>&price=300&description=<?= urlencode($translations['ring_description']) ?>&images=/assets/img/cover ring.jpg,/assets/img/kat ring 2.jpg,/assets/img/cover 2.jpg,/assets/img/cover 5.jpg&category=Ring">
-          <img alt="<?= $translations['ring'] ?>" src="/assets/img/cover ring.jpg">
-        </a>
+        <img alt="<?= $translations['ring'] ?>" src="/assets/img/cover ring.jpg">
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
             <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?>">
@@ -218,7 +206,7 @@ include('header.php');
         </div>
       </div>
       <h2 class="text-xl font-semibold"><?= $translations['ring'] ?></h2>
-      <p class="price"></p>
+      <p class="price"><span class="icon-saudi_riyal">&#xea;</span>300</p>
     </div>
   </div>
 </section>

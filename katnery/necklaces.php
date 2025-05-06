@@ -42,67 +42,122 @@ require_once 'header.php';
 
     <!-- Product Grid -->
     <div class="product-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-        <!-- Product Items -->
+        <!-- Product Item 1 -->
         <div class="product-item text-center" 
-            data-category="Necklace" 
-            data-name="<?= $translations['elegant_pearl_necklace'] ?>" 
-            data-price="2800"
-            data-images='["/assets/img/necklace-a.jpg", "/assets/img/necklace-b.jpg", "/assets/img/necklace-c.jpg"]'
-            data-description="<?= $translations['elegant_pearl_necklace_desc'] ?>">
+            data-category="Necklace"
+            data-name="<?= $translations['elegant_pearl_necklace'] ?? 'Elegant Pearl Necklace' ?>"
+            data-price="1200"
+            data-images='["/assets/img/necklace-01-a.jpg", "/assets/img/necklace-01-b.jpg", "/assets/img/necklace-01-c.jpg", "/assets/img/necklace-01-d.jpg"]'
+            data-description="<?= $translations['elegant_pearl_necklace_desc'] ?? 'Beautiful pearl necklace with gold accents' ?>">
             <div class="product-image">
-                <a href="product.php?name=<?= $translations['elegant_pearl_necklace'] ?>&price=2800&description=<?= $translations['elegant_pearl_necklace_desc'] ?>&images=/assets/img/necklace-a.jpg,/assets/img/necklace-b.jpg,/assets/img/necklace-c.jpg&category=Necklace">
-                    <img alt="<?= $translations['elegant_pearl_necklace'] ?>" src="https://storage.googleapis.com/a1aa/image/necklace-example.jpg">
-                </a>
+                <img src="/assets/img/necklace-01-a.jpg" alt="<?= $translations['elegant_pearl_necklace'] ?? 'Elegant Pearl Necklace' ?>" class="w-full">
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
-                        <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?>">
-                        <span class="quick-view-tooltip"><?= $translations['quick_view'] ?></span>
+                        <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>">
+                        <span class="quick-view-tooltip"><?= $translations['quick_view'] ?? 'Quick View' ?></span>
                     </a>
                 </div>
             </div>
-            <h2 class="text-xl font-semibold"><?= $translations['elegant_pearl_necklace'] ?></h2>
-            <p class="price"><span class="icon-saudi_riyal">&#xea;</span>2800</p>
+            <h2 class="text-xl font-semibold mt-4"><?= $translations['elegant_pearl_necklace'] ?? 'Elegant Pearl Necklace' ?></h2>
+            <p class="price mt-2"><span class="icon-saudi_riyal">&#xea;</span>1200</p>
         </div>
 
+        <!-- Product Item 2 -->
         <div class="product-item text-center" 
-            data-category="Necklace" 
-            data-name="<?= $translations['diamond_pendant_necklace'] ?>" 
-            data-price="3500"
-            data-images='["/assets/img/necklace-d.jpg", "/assets/img/necklace-e.jpg", "/assets/img/necklace-f.jpg"]'
-            data-description="<?= $translations['diamond_pendant_necklace_desc'] ?>">
+            data-category="Necklace"
+            data-name="<?= $translations['diamond_pendant_necklace'] ?? 'Diamond Pendant Necklace' ?>"
+            data-price="950"
+            data-images='["/assets/img/necklace-01-a.jpg", "/assets/img/necklace-01-b.jpg", "/assets/img/necklace-01-d.jpg"]'
+            data-description="<?= $translations['diamond_pendant_necklace_desc'] ?? 'Elegant diamond pendant on silver chain' ?>">
             <div class="product-image">
-                <a href="product.php?name=<?= urlencode($translations['diamond_pendant_necklace']) ?>&price=3500&description=<?= urlencode($translations['diamond_pendant_necklace_desc']) ?>&images=/assets/img/necklace-d.jpg,/assets/img/necklace-e.jpg,/assets/img/necklace-f.jpg&category=Necklace">
-                    <img alt="<?= $translations['diamond_pendant_necklace'] ?>" src="/assets/img/necklace-d.jpg">
-                </a>
+                <img src="/assets/img/necklace-01-b.jpg" alt="<?= $translations['diamond_pendant_necklace'] ?? 'Diamond Pendant Necklace' ?>" class="w-full">
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
-                        <i class="fas fa-eye"></i>
+                        <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>">
+                        <span class="quick-view-tooltip"><?= $translations['quick_view'] ?? 'Quick View' ?></span>
                     </a>
                 </div>
             </div>
-            <h2 class="text-xl font-semibold"><?= $translations['diamond_pendant_necklace'] ?></h2>
-            <p class="price"><span class="icon-saudi_riyal">&#xea;</span>3500</p>
+            <h2 class="text-xl font-semibold mt-4"><?= $translations['diamond_pendant_necklace'] ?? 'Diamond Pendant Necklace' ?></h2>
+            <p class="price mt-2"><span class="icon-saudi_riyal">&#xea;</span>950</p>
         </div>
 
-        <!-- Add more necklace items here following the same structure -->
+        <!-- Product Item 3 -->
+        <div class="product-item text-center" 
+            data-category="Necklace"
+            data-name="<?= $translations['gold_choker_necklace'] ?? 'Gold Choker Necklace' ?>"
+            data-price="1800"
+            data-images='["/assets/img/necklace-01-b.jpg", "/assets/img/necklace-01-c.jpg", "/assets/img/necklace-01-d.jpg"]'
+            data-description="<?= $translations['gold_choker_necklace_desc'] ?? 'Luxurious gold choker with intricate design' ?>">
+            <div class="product-image">
+                <img src="/assets/img/necklace-01-c.jpg" alt="<?= $translations['gold_choker_necklace'] ?? 'Gold Choker Necklace' ?>" class="w-full">
+                <div class="overlay">
+                    <a href="#" class="eye-icon quick-view-btn">
+                        <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>">
+                        <span class="quick-view-tooltip"><?= $translations['quick_view'] ?? 'Quick View' ?></span>
+                    </a>
+                </div>
+            </div>
+            <h2 class="text-xl font-semibold mt-4"><?= $translations['gold_choker_necklace'] ?? 'Gold Choker Necklace' ?></h2>
+            <p class="price mt-2"><span class="icon-saudi_riyal">&#xea;</span>1800</p>
+        </div>
+
+        <!-- Product Item 4 -->
+        <div class="product-item text-center" 
+            data-category="Necklace"
+            data-name="<?= $translations['silver_lariat_necklace'] ?? 'Silver Lariat Necklace' ?>"
+            data-price="1500"
+            data-images='["/assets/img/necklace-01-a.jpg", "/assets/img/necklace-01-c.jpg", "/assets/img/necklace-01-d.jpg"]'
+            data-description="<?= $translations['silver_lariat_necklace_desc'] ?? 'Modern silver lariat necklace with adjustable length' ?>">
+            <div class="product-image">
+                <img src="/assets/img/necklace-01-d.jpg" alt="<?= $translations['silver_lariat_necklace'] ?? 'Silver Lariat Necklace' ?>" class="w-full">
+                <div class="overlay">
+                    <a href="#" class="eye-icon quick-view-btn">
+                        <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>">
+                        <span class="quick-view-tooltip"><?= $translations['quick_view'] ?? 'Quick View' ?></span>
+                    </a>
+                </div>
+            </div>
+            <h2 class="text-xl font-semibold mt-4"><?= $translations['silver_lariat_necklace'] ?? 'Silver Lariat Necklace' ?></h2>
+            <p class="price mt-2"><span class="icon-saudi_riyal">&#xea;</span>1500</p>
+        </div>
     </div>
 
     <!-- Modal -->
-    <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden" id="product-modal">
-        <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl w-full relative <?= $_SESSION['lang'] === 'ar' ? 'rtl' : '' ?>">
-            <button class="modal-close absolute top-4 right-4 <?= $_SESSION['lang'] === 'ar' ? 'right-auto left-4' : '' ?>" id="close-modal">
-              <i class="fas fa-times text-xl"></i>
-            </button>
-            <div class="flex flex-col md:flex-row <?= $_SESSION['lang'] === 'ar' ? 'md:flex-row-reverse' : '' ?>">
-                <div class="product-gallery">
-                    <!-- Gallery content will be populated by JavaScript -->
+<div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden" id="product-modal">
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl w-full relative <?= $_SESSION['lang'] === 'ar' ? 'rtl' : '' ?>">
+        <button class="modal-close absolute top-4 right-4 <?= $_SESSION['lang'] === 'ar' ? 'right-auto left-4' : '' ?>" id="close-modal">
+          <i class="fas fa-times text-xl"></i>
+        </button>
+        <div class="flex flex-col md:flex-row <?= $_SESSION['lang'] === 'ar' ? 'md:flex-row-reverse' : '' ?>">
+            <div class="md:w-1/2">
+                <div class="relative">
+                    <span class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow"><?= $translations['sale'] ?></span>
+                    <div class="slideshow-container" id="modal-slideshow">
+                        <!-- Slides will be inserted here dynamically -->
+                    </div>
+                    <div class="zoom-container hidden">
+                        <img id="zoom-image" class="w-full rounded-lg">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    <div class="flex justify-center mt-4 space-x-2" id="modal-dots">
+                        <!-- Dots will be inserted here dynamically -->
+                    </div>
                 </div>
-                <div class="product-details">
-                    <!-- Details content will be populated by JavaScript -->
+            </div>
+            <div class="md:w-1/2 md:pl-6 mt-6 md:mt-0">
+                <a href="http://localhost/katnery/bracelets.php" class="text-sm text-gray-500 hover:underline" id="modal-category"></a>
+                <h1 class="text-3xl font-bold text-gray-900" id="modal-title"></h1>
+                <div class="flex items-center mt-2">
+                    <span class="text-2xl font-bold text-brown-600 ml-2" id="modal-price"></span>
+                    <span class="text-sm text-gray-500 ml-2">&amp; <?= $translations['free_shipping'] ?></span>
                 </div>
+                <p class="text-gray-700 mt-4" id="modal-description"></p>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <?php include('footer.php'); ?>

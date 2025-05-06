@@ -1,4 +1,7 @@
+console.log('[main.js] Script loaded');
 document.addEventListener("DOMContentLoaded", function() {
+  const quickViewBtns = document.querySelectorAll('.quick-view-btn');
+  
     /**
      * TypeWriter Class - Handles the typing animation
      * @param {HTMLElement} txtElement - Element to animate
@@ -192,26 +195,25 @@ document.addEventListener("DOMContentLoaded", function() {
     function updateProductCount() {
         const visibleCount = document.querySelectorAll('.product-item:not([style*="display: none"])').length;
         const defaultText = `Showing ${visibleCount} products`;
-        
-        if (!window.translations) {
-            document.getElementById('product-count').textContent = defaultText;
+
+        const countElem = document.getElementById('product-count');
+        if (!countElem) {
+            // No product-count element, skip updating
             return;
         }
-        
+
+        if (!window.translations) {
+            countElem.textContent = defaultText;
+            return;
+        }
+
         const lang = document.documentElement.dir === 'rtl' ? 'ar' : 'en';
         const formatString = window.translations[lang]?.showing_x_products || defaultText;
-        document.getElementById('product-count').textContent = formatString.replace('%d', visibleCount);
+        countElem.textContent = formatString.replace('%d', visibleCount);
     }
 
     setupProductFiltering();
     updateProductCount();
-
-    // Initialize elevateZoom
-    $('.zoom').elevateZoom({
-        zoomType: "lens",
-        lensShape: "round",
-        lensSize: 200
-    });
 
     // Fix image paths
     document.querySelectorAll('img[src^="/katnery/"]').forEach(img => {
@@ -280,25 +282,25 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Universal Quick View Handler
+    // Quick view handler with click protection
     document.querySelectorAll('.quick-view-btn').forEach(btn => {
-      btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        // Find nearest element with product data (any level up)
-        let container = this.closest('[data-name]');
-        
-        // Fallback: Check if parent has data (older structure)
-        if (!container) container = this.parentElement.closest('[data-category]');
-        
-        if (container) {
-          openQuickView(container);
-        } else {
-          console.warn('QuickView: No product data container found');
-          // Optional: Fallback to URL-based loading
-          // window.location = this.href; 
-        }
-      });
+        let isProcessing = false;
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const productItem = this.closest('.product-item');
+            
+            if (productItem) {
+                try {
+                    openQuickView(productItem);
+                } catch (err) {
+                    
+                }
+            } else {
+                
+            }
+        });
     });
 
     // Quick View functionality
@@ -330,68 +332,95 @@ document.addEventListener("DOMContentLoaded", function() {
 
       slides[slideIndex-1].style.display = "block";
       dots[slideIndex-1].className += " active";
-
-      // Reinitialize zoom for the current slide
-      $('.zoom').elevateZoom({
-        zoomType: "lens",
-        lensShape: "round",
-        lensSize: 200
-      });
     }
 
-    function openQuickView(productItem) {
-      const modal = document.getElementById('product-modal');
-      if (!modal) {
-        console.error('Modal element not found');
-        return;
-      }
-      
-      // Force remove all hiding classes
-      modal.classList.remove('hidden');
-      modal.style.display = 'flex';
-      
-      // Get product data
-      const category = productItem.getAttribute('data-category');
-      const name = productItem.getAttribute('data-name');
-      const price = productItem.getAttribute('data-price');
-      const description = productItem.getAttribute('data-description');
-      const clickedImageSrc = productItem.querySelector('.product-image img').src;
-      const clickedImageName = clickedImageSrc.split('/').pop();
-      
-      // Get all variants of the clicked image
-      const baseImageName = clickedImageName.replace(/-[a-z]\./, '.');
-      const variants = ['a', 'b', 'c', 'd'].map(variant => 
-        `/assets/img/${baseImageName.replace('.', `-${variant}.`)}`
-      );
+    // Debug-enhanced modal functions
+    function openQuickView(product) {
+        
+        const modal = document.getElementById('product-modal');
+        
+        if (!modal) {
+            return;
+        }
+        
+        // Force modal visibility
+        modal.style.display = 'flex';
+        modal.style.opacity = '1';
+        modal.style.visibility = 'visible';
+        modal.style.zIndex = '10000';
+        modal.classList.remove('hidden');
+        
+        // Add modal backdrop
+        const backdrop = document.createElement('div');
+        backdrop.className = 'modal-backdrop';
+        backdrop.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 9999;
+        `;
+        document.body.appendChild(backdrop);
+        
+        // Get clicked thumbnail
+        const clickedThumbnail = product.querySelector('img').src;
+        
+        // Get all product images
+        const images = JSON.parse(product.dataset.images);
+        
+        // Put clicked thumbnail first in array
+        const clickedImgName = clickedThumbnail.split('/').pop();
+        const clickedIndex = images.findIndex(img => img.includes(clickedImgName));
+        if (clickedIndex > 0) {
+            [images[0], images[clickedIndex]] = [images[clickedIndex], images[0]]; 
+        }
+        
+        // Get product data
+        const category = product.getAttribute('data-category');
+        const name = product.getAttribute('data-name');
+        const price = product.getAttribute('data-price');
+        const description = product.getAttribute('data-description');
+        
+        // Update modal content
+        document.getElementById('modal-category').textContent = category;
+        document.getElementById('modal-title').textContent = name;
+        document.getElementById('modal-price').innerHTML = `<span class="icon-saudi_riyal">&#xea;</span>${parseFloat(price).toLocaleString()}`;
+        document.getElementById('modal-description').textContent = description;
 
-      // Update modal content
-      document.getElementById('modal-category').textContent = category;
-      document.getElementById('modal-title').textContent = name;
-      document.getElementById('modal-price').innerHTML = `<span class="icon-saudi_riyal">&#xea;</span>${parseFloat(price).toLocaleString()}`;
-      document.getElementById('modal-description').textContent = description;
+        // Clear and update slideshow
+        const slideshow = document.getElementById('modal-slideshow');
+        const dotsContainer = document.getElementById('modal-dots');
+        slideshow.innerHTML = '';
+        dotsContainer.innerHTML = '';
 
-      // Clear and update slideshow
-      const slideshow = document.getElementById('modal-slideshow');
-      const dotsContainer = document.getElementById('modal-dots');
-      slideshow.innerHTML = '';
-      dotsContainer.innerHTML = '';
+        // Create slides and dots
+        images.forEach((image, index) => {
+            const slide = document.createElement('div');
+            slide.className = 'mySlides';
+            slide.style.display = index === 0 ? 'block' : 'none';
+            slide.innerHTML = `<img src="${image}" class="w-full rounded-lg mb-4">`;
+            slideshow.appendChild(slide);
 
-      // Create slides and dots
-      variants.forEach((image, index) => {
-        const slide = document.createElement('div');
-        slide.className = 'mySlides';
-        slide.style.display = index === 0 ? 'block' : 'none';
-        slide.innerHTML = `<img src="${image}" class="w-full rounded-lg mb-4 zoom">`;
-        slideshow.appendChild(slide);
+            const dot = document.createElement('span');
+            dot.className = `dot${index === 0 ? ' active' : ''}`;
+            dotsContainer.appendChild(dot);
+        });
 
-        const dot = document.createElement('span');
-        dot.className = `dot${index === 0 ? ' active' : ''}`;
-        dotsContainer.appendChild(dot);
-      });
+        // Initialize slideshow
+        slideIndex = 1;
+        showSlides(slideIndex);
+        
+    }
 
-      // Initialize slideshow
-      slideIndex = 1;
-      showSlides(slideIndex);
+    function closeModal() {
+        
+        const modal = document.getElementById('product-modal');
+        if (modal) {
+            modal.style.display = 'none';
+            document.querySelector('.modal-backdrop')?.remove();
+        }
     }
 
     // Add click handlers for prev/next buttons
@@ -431,11 +460,6 @@ document.addEventListener("DOMContentLoaded", function() {
     document.addEventListener('DOMContentLoaded', setupRTLModals);
 
     // Enhanced modal closing with animations
-    function closeModal() {
-      const modal = document.getElementById('product-modal');
-      if (modal) modal.classList.add('hidden');
-    }
-
     // Close modal when clicking outside (more reliable method)
     document.addEventListener('click', function(e) {
       const modal = document.getElementById('product-modal');
@@ -513,38 +537,5 @@ document.addEventListener("DOMContentLoaded", function() {
     // Persist RTL mode on navigation
     if (sessionStorage.getItem('lang') === 'ar') {
         document.documentElement.dir = 'rtl';
-    }
-
-    function initZoom(imageElement) {
-      $('#zoom-image').attr('src', imageElement.src);
-      $('.zoom-container').removeClass('hidden');
-      $('.slideshow-container').addClass('hidden');
-      
-      $('#zoom-image').elevateZoom({
-        zoomType: "lens",
-        lensShape: "round",
-        lensSize: 200,
-        cursor: "crosshair",
-        zoomWindowFadeIn: 300,
-        zoomWindowFadeOut: 300
-      });
-    }
-    
-    function resetZoom() {
-      $('.zoom-container').addClass('hidden');
-      $('.slideshow-container').removeClass('hidden');
-      $('.zoomContainer').remove();
-    }
-    
-    // Add to openQuickView after slideshow init:
-    $('.mySlides img').click(function() {
-      initZoom(this);
-    });
-    
-    // Add to closeModal:
-    function closeModal() {
-      const modal = document.getElementById('product-modal');
-      if (modal) modal.classList.add('hidden');
-      resetZoom();
     }
 });

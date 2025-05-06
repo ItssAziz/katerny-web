@@ -1,5 +1,6 @@
 <?php
 return [
+    /* Basic Strings */
     'home' => 'Home',
     'rings' => 'Rings',
     'necklaces' => 'Necklaces',
@@ -15,10 +16,12 @@ return [
     'call_us' => 'Call Us',
     'connect_with_us' => 'Connect With Us',
     'address' => 'AL-AZIZIYA, MAKKAH, NY 10160',
+    
+    /* Footer */
     'copyright' => ' 2024 Katnery. All rights reserved.',
     'new' => 'The new',
     'sensation' => 'sensation',
-    'exclusive_designs' => 'Exclusive Designs. Timeless Elegance.',
+    'exclusive_designs' => 'Exclusive Designs',
     'popular_products' => 'Popular Products',
     'trending_now' => 'Trending Now',
     'quick_view' => 'Quick View',
@@ -27,6 +30,62 @@ return [
     'craftsmanship_image' => 'Handcrafted Details',
     'sustainability_image' => 'Sustainable Materials',
     'customer_care_image' => 'Personalized Service',
+    
+    /* Homepage */
+    'customer_satisfaction' => 'Customer Satisfaction',
+    'your_satisfaction_is_our_priority' => 'Your satisfaction is our priority. We ensure a seamless shopping experience from start to finish.',
+    'welcome_to_katnery' => 'Welcome to Katnery, where timeless elegance meets modern design. Our jewelry is crafted with precision and love to bring you the perfect blend of style and sophistication. Located in the heart of Makkah, Saudi Arabia, we are proud to offer exclusive designs that resonate with your unique taste.',
+    'we_would_love_to_hear_from_you' => 'We would love to hear from you! Reach out to us for any inquiries, feedback, or custom orders. Our team is here to assist you in finding the perfect piece of jewelry.',
+    
+    /* Contact Form */
+    'your_name' => 'Your Name',
+    'your_email' => 'Your Email',
+    'your_message' => 'Your Message',
+    'send_message' => 'Send Message',
+    'via_telegram' => 'via Telegram',
+    
+    /* Product Badges */
+    'sale' => 'Sale!',
+    'free_shipping' => '& Free Shipping',
+    
+    /* Typed.js Phrases */
+    'phrase_options' => [
+        ['prefix' => 'Luxurious', 'suffix' => 'touch'],
+        ['prefix' => 'Timeless', 'suffix' => 'elegance'],
+        ['prefix' => 'Modern', 'suffix' => 'sparkle'],
+        ['prefix' => 'Romantic', 'suffix' => 'style'],
+        ['prefix' => 'Complete', 'suffix' => 'look']
+    ],
+    
+    /* Sorting Options */
+    'sorting' => 'Sorting',
+    'sort_by' => 'Sort by',
+    'sort_by_price' => 'Price',
+    'sort_by_name' => 'Name',
+    'sort_by_popularity' => 'Popularity',
+    'sort_by_rating' => 'Rating',
+    'sort_by_newest' => 'Newest',
+    'sort_by_oldest' => 'Oldest',
+    'ascending' => 'Ascending',
+    'descending' => 'Descending',
+    'default_sorting' => 'Default sorting',
+    'price_low_to_high' => 'Price: Low to High',
+    'price_high_to_low' => 'Price: High to Low',
+    'name_a_to_z' => 'Name: A to Z',
+    'name_z_to_a' => 'Name: Z to A',
+    
+    /* Product Categories */
+    'rings_page_title' => 'Rings',
+    'necklaces_page_title' => 'Necklaces',
+    'bracelets_page_title' => 'Bracelets',
+    'earrings_page_title' => 'Earrings',
+    
+    /* Product Filters */
+    'max_price' => 'Max Price',
+    'price_filter_label' => 'Max Price:',
+    'showing_x_products' => 'Showing %d products',
+    
+    /* Product Names & Descriptions */
     'bracelet' => 'Bracelet',
     'bracelet_description' => 'Our classic bracelet is the perfect addition to any outfit. Made from high quality materials.',
     'bracelet_2_description' => 'Double your elegance with our stylish bracelet with unique design.',
@@ -45,71 +104,27 @@ return [
     'we_offer_unique_stylish_pieces' => 'We offer unique, stylish pieces designed to help you stand out on any occasion.',
     'customer_satisfaction' => 'Customer Satisfaction',
     'your_satisfaction_is_our_priority' => 'Your satisfaction is our priority. We ensure a seamless shopping experience from start to finish.',
-    'welcome_to_katnery' => 'Welcome to Katnery, where timeless elegance meets modern design. Our jewelry is crafted with precision and love to bring you the perfect blend of style and sophistication. Located in the heart of Makkah, Saudi Arabia, we are proud to offer exclusive designs that resonate with your unique taste.',
-    'we_would_love_to_hear_from_you' => 'We would love to hear from you! Reach out to us for any inquiries, feedback, or custom orders. Our team is here to assist you in finding the perfect piece of jewelry.',
-    'your_name' => 'Your Name',
-    'your_email' => 'Your Email',
-    'your_message' => 'Your Message',
-    'send_message' => 'Send Message',
-    'via_telegram' => 'via Telegram',
-    'sale' => 'Sale!',
-    'free_shipping' => 'Free Shipping',
-    'rings_page_title' => 'Rings',
-    'max_price' => 'Max Price',
-    'default_sorting' => 'Default sorting',
-    'price_low_to_high' => 'Price: Low to High',
-    'price_high_to_low' => 'Price: High to Low',
-    'name_a_to_z' => 'Name: A to Z',
-    'name_z_to_a' => 'Name: Z to A',
-    'quick_view' => 'Quick View',
-    'sale_badge' => 'Sale!',
-    'free_shipping' => '& Free Shipping',
     'elegant_gold_ring' => 'Elegant Gold Ring',
-    'sparkling_gemstone_ring' => 'Sparkling Gemstone Ring',
-    'classic_timeless_ring' => 'Classic Timeless Ring',
-    'delicate_charm_ring' => 'Delicate Charm Ring',
     'elegant_gold_ring_desc' => 'A stunning ring featuring a unique design that combines elegance and modernity. Perfect for special occasions or everyday wear.',
+    'sparkling_gemstone_ring' => 'Sparkling Gemstone Ring',
     'sparkling_gemstone_ring_desc' => 'A dazzling ring with sparkling gemstones. An exceptional piece that adds brilliance to your look.',
+    'classic_timeless_ring' => 'Classic Timeless Ring',
     'classic_timeless_ring_desc' => 'A classic design that never goes out of style. An elegant ring suitable for all occasions.',
+    'delicate_charm_ring' => 'Delicate Charm Ring',
     'delicate_charm_ring_desc' => 'A delicate ring that adds a touch of charm to any outfit. Perfect for layering or wearing alone.',
-    'showing_x_products' => 'Showing %d products',
-    'phrase_options' => [
-        ['prefix' => 'Luxurious', 'suffix' => 'touch'],
-        ['prefix' => 'Timeless', 'suffix' => 'elegance'],
-        ['prefix' => 'Modern', 'suffix' => 'sparkle'],
-        ['prefix' => 'Romantic', 'suffix' => 'style'],
-        ['prefix' => 'Complete', 'suffix' => 'look']
-    ],
-    /* Sorting Options */
-    'sorting' => 'Sorting',
-    'sort_by' => 'Sort by',
-    'sort_by_price' => 'Price',
-    'sort_by_name' => 'Name',
-    'sort_by_popularity' => 'Popularity',
-    'sort_by_rating' => 'Rating',
-    'sort_by_newest' => 'Newest',
-    'sort_by_oldest' => 'Oldest',
-    'ascending' => 'Ascending',
-    'descending' => 'Descending',
-    /* Necklaces Page */
-    'necklaces_page_title' => 'Necklaces',
     'elegant_pearl_necklace' => 'Elegant Pearl Necklace',
     'diamond_pendant_necklace' => 'Diamond Pendant Necklace',
     'elegant_pearl_necklace_desc' => 'A timeless pearl necklace featuring a unique design that combines elegance and modernity. Perfect for special occasions or everyday wear.',
     'diamond_pendant_necklace_desc' => 'A stunning diamond pendant necklace that adds a touch of luxury to any outfit. Crafted with premium materials for lasting beauty.',
-    'price_filter_label' => 'Max Price:',
-    /* Bracelets Page */
-    'bracelets_page_title' => 'Bracelets',
     'gold_cuff_bracelet' => 'Gold Cuff Bracelet',
     'silver_chain_bracelet' => 'Silver Chain Bracelet',
     'gold_cuff_bracelet_desc' => 'A bold gold cuff bracelet that makes a statement. Perfect for layering or wearing alone.',
     'silver_chain_bracelet_desc' => 'Delicate silver chain bracelet with adjustable length. Ideal for everyday wear.',
-    /* Earrings Page */
-    'earrings_page_title' => 'Earrings',
     'diamond_stud_earrings' => 'Diamond Stud Earrings',
     'gold_hoop_earrings' => 'Gold Hoop Earrings',
     'diamond_stud_earrings_desc' => 'Classic diamond stud earrings that add elegance to any outfit. Perfect for both casual and formal occasions.',
     'gold_hoop_earrings_desc' => 'Versatile gold hoop earrings available in multiple sizes. Timeless design for everyday wear.',
+    
     /* About Page */
     'about_title' => 'About Katnery',
     'about_hero' => 'Crafting timeless jewelry with passion and precision',
@@ -126,6 +141,7 @@ return [
     'craftsmanship_desc' => 'Each piece undergoes 20+ quality checks by our master jewelers.',
     'sustainability_desc' => 'We use 100% recycled gold and conflict-free diamonds.',
     'customer_care_desc' => 'Lifetime warranty and free annual cleaning for all pieces.',
+    
     /* Contact Page */
     'contact_title' => 'Contact Us',
     'contact_subtitle' => 'Get in touch via Telegram or phone',

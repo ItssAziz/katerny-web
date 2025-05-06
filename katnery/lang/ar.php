@@ -1,24 +1,23 @@
 <?php
 return [
+    /* Basic Strings */
     'home' => 'الرئيسية',
-    'rings' => 'خواتم',
-    'necklaces' => 'سلاسل',
-    'bracelets' => 'أساور',
-    'earrings' => 'أقراط',
     'about' => 'من نحن',
-    'contact' => 'تواصل معنا',
-    'about_us' => 'من نحن',
+    'contact' => 'اتصل بنا',
     'shop' => 'تسوق',
+    'about_us' => 'من نحن',
     'contact_us' => 'اتصل بنا',
     'get_in_touch' => 'تواصل معنا عبر التليجرام أو الهاتف',
     'message_us' => 'راسلنا على التليجرام',
     'call_us' => 'اتصل بنا',
     'connect_with_us' => 'تواصل معنا',
     'address' => 'العزيزية، مكة المكرمة، نيويورك 10160',
+    
+    /* Footer */
     'copyright' => '© 2024 كاتنري. جميع الحقوق محفوظة.',
     'new' => 'إحساس',
     'sensation' => 'جديد',
-    'exclusive_designs' => 'تصاميم حصرية. أناقة خالدة.',
+    'exclusive_designs' => 'تصاميم حصرية',
     'popular_products' => 'منتجات رائجة',
     'trending_now' => 'الأكثر مبيعاً',
     'quick_view' => 'عرض سريع',
@@ -27,14 +26,12 @@ return [
     'craftsmanship_image' => 'تفاصيل مصنوعة يدويًا',
     'sustainability_image' => 'مواد مستدامة',
     'customer_care_image' => 'خدمة شخصية',
-    'bracelet' => 'سوار',
-    'bracelet_description' => 'سوارنا الكلاسيكي هو الإضافة المثالية لأي إطلالة. مصنوع من مواد عالية الجودة.',
-    'bracelet_2_description' => 'ضاعفي أناقتك مع سوارنا الأنيق ذو التصميم الفريد.',
-    'bracelet_2' => 'سوار 2',
-    'necklace' => 'قلادة',
-    'necklace_description' => 'أحدثي فرقاً مع قلادتنا الرائعة المصممة بدقة وبمواد عالية الجودة',
-    'ring' => 'خاتم',
-    'ring_description' => 'أكملي إطلالتك بخاتمنا الفاخر ذو التصميم المتقن',
+    
+    /* Homepage */
+    'customer_satisfaction' => 'رضا العملاء',
+    'your_satisfaction_is_our_priority' => 'رضاكِ هو أولويتنا. نضمن تجربة تسوق سلسة من البداية إلى النهاية.',
+    'welcome_to_katnery' => 'مرحبًا بكم في كاتنري، حيث تلتقي الأناقة الخالدة بالتصميم العصري.<br>تُصنع مجوهراتنا بدقة وحب لتقديم المزيج المثالي من الأناقة والرقي. تقع متاجرنا في قلب مكة المكرمة، المملكة العربية السعودية، ونحن فخورون بتقديم تصاميم حصرية تتناغم مع ذوقك الفريد.',
+    'we_would_love_to_hear_from_you' => 'نحن نحب أن نسمع منكم! تواصلوا معنا لأي استفسارات أو ملاحظات أو طلبات مخصصة. فريقنا هنا لمساعدتك في العثور على القطعة المثالية من المجوهرات.',
     'best_selling' => 'الأكثر مبيعاً',
     'be_always_on_the_trend' => 'كوني دائماً على الموضة',
     'stay_ahead_with_the_latest_styles_and_trends' => 'ابقَ في الصدارة مع أحدث الصيحات والاتجاهات. اكتشف مجموعات المجوهرات الحصرية التي ستُعزز مظهرك.',
@@ -43,17 +40,19 @@ return [
     'premium_quality' => 'جودة فائقة',
     'our_jewelry_is_crafted_with_the_finest_materials' => 'تُصنع مجوهراتنا من أفضل المواد لضمان الأناقة والمتانة الدائمة.',
     'we_offer_unique_stylish_pieces' => 'نقدم قطعًا فريدة وعصرية مصممة لمساعدتكِ على التميز في أي مناسبة.',
-    'customer_satisfaction' => 'رضا العملاء',
-    'your_satisfaction_is_our_priority' => 'رضاكِ هو أولويتنا. نضمن تجربة تسوق سلسة من البداية إلى النهاية.',
-    'welcome_to_katnery' => 'مرحبًا بكم في كاتنري، حيث تلتقي الأناقة الخالدة بالتصميم العصري.<br>تُصنع مجوهراتنا بدقة وحب لتقديم المزيج المثالي من الأناقة والرقي. تقع متاجرنا في قلب مكة المكرمة، المملكة العربية السعودية، ونحن فخورون بتقديم تصاميم حصرية تتناغم مع ذوقك الفريد.',
-    'we_would_love_to_hear_from_you' => 'نحن نحب أن نسمع منكم! تواصلوا معنا لأي استفسارات أو ملاحظات أو طلبات مخصصة. فريقنا هنا لمساعدتك في العثور على القطعة المثالية من المجوهرات.',
+    
+    /* Contact Form */
     'your_name' => 'اسمك',
     'your_email' => 'بريدك الإلكتروني',
     'your_message' => 'رسالتك',
     'send_message' => 'إرسال الرسالة',
     'via_telegram' => 'عبر التليجرام',
+    
+    /* Product Badges */
     'sale' => 'خصم!',
     'free_shipping' => 'شحن مجاني',
+    
+    /* Typed.js Phrases */
     'phrase_options' => [
         ['prefix' => 'لمسة', 'suffix' => 'فاخرة'],
         ['prefix' => 'سحر', 'suffix' => 'دائم'],
@@ -61,53 +60,74 @@ return [
         ['prefix' => 'أناقة', 'suffix' => 'رومانسية'],
         ['prefix' => 'إطلالة', 'suffix' => 'مكتملة']
     ],
+    
     /* Sorting Options */
     'default_sorting' => 'الترتيب الافتراضي',
     'price_low_to_high' => 'السعر: من الأقل للأعلى',
     'price_high_to_low' => 'السعر: من الأعلى للأقل',
     'name_a_to_z' => 'الاسم: من أ إلى ي',
     'name_z_to_a' => 'الاسم: من ي إلى أ',
-    /* Rings Page */
+    
+    /* Product Categories */
+    'rings' => 'خواتم',
+    'necklaces' => 'سلاسل',
+    'bracelets' => 'أساور',
+    'earrings' => 'أقراط',
     'rings_page_title' => 'خواتم',
+    'necklaces_page_title' => 'سلاسل',
+    'bracelets_page_title' => 'أساور',
+    'earrings_page_title' => 'أقراط',
+    
+    /* Product Filters */
     'max_price' => 'أقصى سعر',
-    'quick_view' => 'عرض سريع',
+    'price_filter_label' => 'أقصى سعر:',
+    'showing_x_products' => 'عرض %d منتجات',
     'sale_badge' => 'تخفيض!',
     'free_shipping' => 'وشحن مجاني',
-    'showing_x_products' => 'عرض %d منتجات',
-    'price_filter_label' => 'أقصى سعر:',
-    /* Product Names */
+    'quick_view' => 'عرض سريع',
+    
+    /* Product Names & Descriptions */
     'elegant_gold_ring' => 'خاتم ذهبي أنيق',
-    'sparkling_gemstone_ring' => 'خاتم مرصع بالجواهر',
-    'classic_timeless_ring' => 'خاتم كلاسيكي خالد',
-    'delicate_charm_ring' => 'خاتم ساحر رقيق',
-
-    /* Product Descriptions */
     'elegant_gold_ring_desc' => 'خاتم مذهل بتصميم فريد يجمع بين الأناقة والحداثة. مثالي للمناسبات الخاصة أو للارتداء اليومي.',
+    
+    'sparkling_gemstone_ring' => 'خاتم مرصع بالجواهر',
     'sparkling_gemstone_ring_desc' => 'خاتم يخطف الأنظار بجواهر متلألئة. قطعة استثنائية تضيف لمسة من البريق إلى إطلالتك.',
+    
+    'classic_timeless_ring' => 'خاتم كلاسيكي خالد',
     'classic_timeless_ring_desc' => 'تصميم كلاسيكي لا يخضع للموضة. خاتم أنيق يناسب جميع المناسبات.',
+    
+    'delicate_charm_ring' => 'خاتم ساحر رقيق',
     'delicate_charm_ring_desc' => 'خاتم رقيق يضفي لمسة من السحر على أي إطلالة. مثالي للطبقات أو للارتداء بمفرده.',
-
-    /* Necklaces Page */
-    'necklaces_page_title' => 'سلاسل',
+    
+    'bracelet' => 'سوار',
+    'bracelet_description' => 'سوارنا الكلاسيكي هو الإضافة المثالية لأي إطلالة. مصنوع من مواد عالية الجودة.',
+    'bracelet_2_description' => 'ضاعفي أناقتك مع سوارنا الأنيق ذو التصميم الفريد.',
+    'bracelet_2' => 'سوار 2',
+    
+    'necklace' => 'قلادة',
+    'necklace_description' => 'أحدثي فرقاً مع قلادتنا الرائعة المصممة بدقة وبمواد عالية الجودة',
+    
+    'ring' => 'خاتم',
+    'ring_description' => 'أكملي إطلالتك بخاتمنا الفاخر ذو التصميم المتقن',
+    
     'elegant_pearl_necklace' => 'قلادة لؤلؤ أنيقة',
-    'diamond_pendant_necklace' => 'قلادة ماسية معلقة',
     'elegant_pearl_necklace_desc' => 'قلادة لؤلؤ خالدة بتصميم فريد يجمع بين الأناقة والحداثة. مثالية للمناسبات الخاصة أو للارتداء اليومي.',
+    
+    'diamond_pendant_necklace' => 'قلادة ماسية معلقة',
     'diamond_pendant_necklace_desc' => 'قلادة ماسية مبهرجة تضيف لمسة من الفخامة إلى أي إطلالة. مصنوعة من مواد عالية الجودة لجمال دائم.',
-
-    /* Bracelets Page */
-    'bracelets_page_title' => 'أساور',
+    
     'gold_cuff_bracelet' => 'سوار ذهبي',
-    'silver_chain_bracelet' => 'سوار سلسلة فضية',
     'gold_cuff_bracelet_desc' => 'سوار ذهبي جريء يلفت الانتباه. مثالي للطبقات أو للارتداء بمفرده.',
+    
+    'silver_chain_bracelet' => 'سوار سلسلة فضية',
     'silver_chain_bracelet_desc' => 'سوار سلسلة فضية رقيق بطول قابل للتعديل. مثالي للارتداء اليومي.',
-
-    /* Earrings Page */
-    'earrings_page_title' => 'أقراط',
+    
     'diamond_stud_earrings' => 'أقراط ماسية',
-    'gold_hoop_earrings' => 'أقراط ذهبية دائرية',
     'diamond_stud_earrings_desc' => 'أقراط ماسية كلاسيكية تضيف لمسة أناقة إلى أي إطلالة. مثالية للمناسبات اليومية والرسمية.',
+    
+    'gold_hoop_earrings' => 'أقراط ذهبية دائرية',
     'gold_hoop_earrings_desc' => 'أقراط ذهبية دائرية متعددة المقاسات. تصميم خالد للارتداء اليومي.',
-
+    
     /* About Page */
     'about_title' => 'عن كاتنري',
     'about_hero' => 'صنع مجوهرات خالدة بشغف ودقة',
@@ -124,6 +144,7 @@ return [
     'craftsmanship_desc' => 'كل قطعة تخضع لأكثر من 20 فحص جودة من قبل صاغتنا المحترفين.',
     'sustainability_desc' => 'نستخدم ذهبًا معاد تدويره بنسبة 100% وألماسًا خاليًا من النزاعات.',
     'customer_care_desc' => 'ضمان مدى الحياة وتنظيف مجاني سنوي لجميع القطع.',
+    
     /* Contact Page */
     'contact_title' => 'اتصل بنا',
     'contact_subtitle' => 'تواصل معنا عبر التليجرام أو الهاتف',
