@@ -90,10 +90,10 @@ include('header.php');
          data-category="Necklace"
          data-name="<?= $translations['necklace'] ?>"
          data-price="250"
-         data-images='["/assets/img/cover 2.jpg", "/assets/img/cover 5.jpg", "/assets/img/kat list.jpg", "/assets/img/kat ring 2.jpg"]'
+         data-images='["/assets/img/necklace-01-a.jpg", "/assets/img/necklace-01-b.jpg", "/assets/img/necklace-01-c.jpg", "/assets/img/necklace-01-d.jpg"]'
          data-description="<?= $translations['necklace_description'] ?>">
       <div class="product-image">
-        <img alt="<?= $translations['necklace'] ?>" src="/assets/img/cover 2.jpg">
+        <img alt="<?= $translations['necklace'] ?>" src="/assets/img/necklace-01-a.jpg">
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
             <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
@@ -175,10 +175,10 @@ include('header.php');
          data-category="Necklace"
          data-name="<?= $translations['necklace'] ?>"
          data-price="250"
-         data-images='["/assets/img/cover 2.jpg", "/assets/img/cover 5.jpg", "/assets/img/kat list.jpg", "/assets/img/kat ring 2.jpg"]'
+         data-images='["/assets/img/necklace-01-a.jpg", "/assets/img/necklace-01-b.jpg", "/assets/img/necklace-01-c.jpg", "/assets/img/necklace-01-d.jpg"]'
          data-description="<?= $translations['necklace_description'] ?>">
       <div class="product-image">
-        <img alt="<?= $translations['necklace'] ?>" src="/assets/img/cover 2.jpg">
+        <img alt="<?= $translations['necklace'] ?>" src="/assets/img/necklace-01-a.jpg">
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
             <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
