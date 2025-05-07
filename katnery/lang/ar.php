@@ -20,7 +20,7 @@ return [
     'exclusive_designs' => 'تصاميم حصرية',
     'popular_products' => 'منتجات رائجة',
     'trending_now' => 'الأكثر مبيعاً',
-    'quick_view' => 'عرض سريع',
+    'quick_view' => 'عرض',
     'brand_logo' => 'شعار كاتنري للمجوهرات',
     'workshop_image' => 'ورشة مجوهراتنا',
     'craftsmanship_image' => 'تفاصيل مصنوعة يدويًا',
@@ -88,7 +88,7 @@ return [
     'showing_x_products' => 'عرض %d منتجات',
     'sale_badge' => 'تخفيض!',
     'free_shipping' => 'وشحن مجاني',
-    'quick_view' => 'عرض سريع',
+    'quick_view' => 'عرض',
     
     /* Product Names & Descriptions */
     'elegant_gold_ring' => 'خاتم ذهبي أنيق',

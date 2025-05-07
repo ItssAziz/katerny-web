@@ -24,7 +24,7 @@ return [
     'exclusive_designs' => 'Exclusive Designs',
     'popular_products' => 'Popular Products',
     'trending_now' => 'Trending Now',
-    'quick_view' => 'Quick View',
+    'quick_view' => 'View',
     'brand_logo' => 'Katnery Jewelry Logo',
     'workshop_image' => 'Our Jewelry Workshop',
     'craftsmanship_image' => 'Handcrafted Details',

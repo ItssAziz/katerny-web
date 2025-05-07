@@ -369,31 +369,13 @@ section {
   box-shadow: 0 4px 16px rgba(0,0,0,0.13);
   z-index: 11;
   transition: opacity 0.2s, transform 0.2s;
-  display: block !important;
-  position: absolute;
-  top: -100%;
-  left: 50%;
-  transform: translateX(-50%);
   width: auto;
-  height: auto;
   max-width: 200px;
   line-height: 1.2;
   text-align: center;
   visibility: visible !important;
-  content: attr(data-tooltip);
-  position: fixed;
-  margin-top: -100px;
-  pointer-events: all;
-  display: inline-block !important;
-  position: relative;
-  position: absolute !important;
-  position: absolute;
-  position: fixed;
-  position: absolute !important;
-  position: relative;
-  position: absolute !important;
-  position: fixed !important;
 }
+
 .quick-view-btn:hover .quick-view-tooltip,
 .quick-view-btn:focus .quick-view-tooltip {
   opacity: 1;
@@ -1070,20 +1052,7 @@ img, video {
     object-fit: cover;
 }
 
-.overlay {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: rgba(255, 255, 255, 0.7);
-    padding: 8px;
-    border-radius: 50%;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.product-image:hover .overlay {
-    opacity: 1;
-}
+/* .overlay removed: No overlay on product images */
 
 .eye-icon {
     position: relative;
