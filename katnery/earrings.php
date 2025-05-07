@@ -44,7 +44,7 @@ require_once 'header.php';
     <div class="product-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         <!-- Product Items -->
         <div class="product-item text-center" 
-            data-category="Earring"
+            data-category="<?= $translations['earrings_category'] ?? 'Earring' ?>"
             data-name="<?= $translations['statement_chandelier_earrings'] ?? 'Statement Chandelier Earrings' ?>"
             data-price="1800"
             data-images='["/assets/img/earrings-01-a.webp", "/assets/img/earrings-01-b.webp", "/assets/img/earrings-01-c.jpg", "/assets/img/earrings-01-d.jpeg"]'
@@ -53,7 +53,7 @@ require_once 'header.php';
                 <img src="/assets/img/earrings-01-a.webp" alt="<?= htmlspecialchars($translations['statement_chandelier_earrings'] ?? 'Statement Chandelier Earrings') ?> - <?= htmlspecialchars($translations['statement_chandelier_earrings_desc'] ?? 'Dramatic chandelier earrings with intricate metalwork' )?>" class="w-full">
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
-                        <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>">
+                        <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
                         <span class="quick-view-tooltip"><?= $translations['quick_view'] ?? 'Quick View' ?></span>
                     </a>
                 </div>
@@ -63,7 +63,7 @@ require_once 'header.php';
         </div>
 
         <div class="product-item text-center" 
-            data-category="Earring"
+            data-category="<?= $translations['earrings_category'] ?? 'Earring' ?>"
             data-name="<?= $translations['elegant_stud_earrings'] ?? 'Elegant Stud Earrings' ?>"
             data-price="950"
             data-images='["/assets/img/earrings-01-a.webp", "/assets/img/earrings-01-b.webp", "/assets/img/earrings-01-c.jpg", "/assets/img/earrings-01-d.jpeg"]'
@@ -72,7 +72,7 @@ require_once 'header.php';
                 <img src="/assets/img/earrings-01-b.webp" alt="<?= htmlspecialchars($translations['elegant_stud_earrings'] ?? 'Elegant Stud Earrings') ?> - <?= htmlspecialchars($translations['elegant_stud_earrings_desc'] ?? 'Sophisticated stud earrings with secure fastening' )?>" class="w-full">
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
-                        <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>">
+                        <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
                         <span class="quick-view-tooltip"><?= $translations['quick_view'] ?? 'Quick View' ?></span>
                     </a>
                 </div>
@@ -83,7 +83,7 @@ require_once 'header.php';
 
         <!-- Product Item 3 -->
         <div class="product-item text-center" 
-            data-category="Earrings"
+            data-category="<?= $translations['earrings_category'] ?? 'Earring' ?>"
             data-name="<?= $translations['drop_earrings'] ?? 'Drop Earrings' ?>"
             data-price="1100"
             data-images='["/assets/img/earrings-01-c.jpg", "/assets/img/earrings-01-d.jpeg", "/assets/img/earrings-01-a.webp", "/assets/img/earrings-01-b.webp"]'
@@ -92,7 +92,7 @@ require_once 'header.php';
                 <img src="/assets/img/earrings-01-c.jpg" alt="<?= htmlspecialchars($translations['drop_earrings'] ?? 'Drop Earrings') ?> - <?= htmlspecialchars($translations['drop_earrings_desc'] ?? 'Elegant drop earrings with secure fastening' )?>" class="w-full">
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
-                        <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>">
+                        <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
                         <span class="quick-view-tooltip"><?= $translations['quick_view'] ?? 'Quick View' ?></span>
                     </a>
                 </div>
@@ -103,7 +103,7 @@ require_once 'header.php';
 
         <!-- Product Item 4 -->
         <div class="product-item text-center" 
-            data-category="Earrings"
+            data-category="<?= $translations['earrings_category'] ?? 'Earring' ?>"
             data-name="<?= $translations['chandelier_earrings'] ?? 'Chandelier Earrings' ?>"
             data-price="1350"
             data-images='["/assets/img/earrings-01-d.jpeg", "/assets/img/earrings-01-a.webp", "/assets/img/earrings-01-b.webp", "/assets/img/earrings-01-c.jpg"]'
@@ -112,7 +112,7 @@ require_once 'header.php';
                 <img src="/assets/img/earrings-01-d.jpeg" alt="<?= htmlspecialchars($translations['chandelier_earrings'] ?? 'Chandelier Earrings') ?> - <?= htmlspecialchars($translations['chandelier_earrings_desc'] ?? 'Statement chandelier earrings' )?>" class="w-full">
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
-                        <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>">
+                        <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
                         <span class="quick-view-tooltip"><?= $translations['quick_view'] ?? 'Quick View' ?></span>
                     </a>
                 </div>

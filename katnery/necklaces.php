@@ -53,7 +53,7 @@ require_once 'header.php';
                 <img src="/assets/img/necklace-01-a.jpg" alt="<?= htmlspecialchars($translations['luxury_gold_choker'] ?? 'Luxurious Gold Choker') ?> - <?= htmlspecialchars($translations['luxury_gold_choker_desc'] ?? 'Handcrafted 18K gold choker with diamond accents') ?>" class="w-full">
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
-                        <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>">
+                        <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
                         <span class="quick-view-tooltip"><?= $translations['quick_view'] ?? 'Quick View' ?></span>
                     </a>
                 </div>
@@ -73,7 +73,7 @@ require_once 'header.php';
                 <img src="/assets/img/necklace-01-b.jpg" alt="<?= htmlspecialchars($translations['modern_lariat_necklace'] ?? 'Modern Silver Lariat Necklace') ?> - <?= htmlspecialchars($translations['modern_lariat_necklace_desc'] ?? 'Contemporary sterling silver lariat with adjustable length') ?>" class="w-full">
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
-                        <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>">
+                        <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
                         <span class="quick-view-tooltip"><?= $translations['quick_view'] ?? 'Quick View' ?></span>
                     </a>
                 </div>
@@ -93,7 +93,7 @@ require_once 'header.php';
                 <img src="/assets/img/necklace-01-c.jpg" alt="<?= htmlspecialchars($translations['gold_choker_necklace'] ?? 'Gold Choker Necklace') ?> - <?= htmlspecialchars($translations['gold_choker_necklace_desc'] ?? 'Luxurious gold choker with intricate design') ?>" class="w-full">
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
-                        <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>">
+                        <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
                         <span class="quick-view-tooltip"><?= $translations['quick_view'] ?? 'Quick View' ?></span>
                     </a>
                 </div>
@@ -113,7 +113,7 @@ require_once 'header.php';
                 <img src="/assets/img/necklace-01-d.jpg" alt="<?= htmlspecialchars($translations['silver_lariat_necklace'] ?? 'Silver Lariat Necklace') ?> - <?= htmlspecialchars($translations['silver_lariat_necklace_desc'] ?? 'Modern silver lariat necklace with adjustable length') ?>" class="w-full">
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
-                        <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>">
+                        <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
                         <span class="quick-view-tooltip"><?= $translations['quick_view'] ?? 'Quick View' ?></span>
                     </a>
                 </div>

@@ -69,6 +69,10 @@ return [
     'name_z_to_a' => 'الاسم: من ي إلى أ',
     
     /* Product Categories */
+    'earrings_category' => 'أقراط',
+    'bracelets_category' => 'أساور',
+    'necklaces_category' => 'قلائد',
+    'rings_category' => 'خواتم',
     'rings' => 'خواتم',
     'necklaces' => 'سلاسل',
     'bracelets' => 'أساور',

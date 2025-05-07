@@ -79,6 +79,10 @@ return [
     'necklaces_page_title' => 'Necklaces',
     'bracelets_page_title' => 'Bracelets',
     'earrings_page_title' => 'Earrings',
+    'earrings_category' => 'Earrings',
+    'bracelets_category' => 'Bracelets',
+    'necklaces_category' => 'Necklaces',
+    'rings_category' => 'Rings',
     
     /* Product Filters */
     'max_price' => 'Max Price',

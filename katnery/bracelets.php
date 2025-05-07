@@ -57,7 +57,7 @@ require_once 'header.php';
         <div class="product-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             <!-- Product Items -->
             <div class="product-item text-center" 
-                data-category="Bracelet"
+                data-category="<?= $translations['bracelets_category'] ?? 'Bracelet' ?>"
                 data-name="<?= $translations['chain_bracelet'] ?? 'Chain Bracelet' ?>"
                 data-price="1100"
                 data-images='["/assets/img/bracelet-01-a.webp", "/assets/img/bracelet-01-b.webp", "/assets/img/bracelet-01-c.jpg", "/assets/img/bracelet-01-d.jpg"]'
@@ -66,7 +66,7 @@ require_once 'header.php';
                     <img src="/assets/img/bracelet-01-a.webp" alt="<?= htmlspecialchars($translations['chain_bracelet'] ?? 'Chain Bracelet') ?> - <?= htmlspecialchars($translations['chain_bracelet_desc'] ?? 'Delicate chain bracelet with adjustable length') ?>" class="w-full">
                     <div class="overlay">
                         <a href="#" class="eye-icon quick-view-btn">
-                            <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>">
+                            <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
                             <span class="quick-view-tooltip"><?= $translations['quick_view'] ?? 'Quick View' ?></span>
                         </a>
                     </div>
@@ -76,7 +76,7 @@ require_once 'header.php';
             </div>
 
             <div class="product-item text-center" 
-                data-category="Bracelet"
+                data-category="<?= $translations['bracelets_category'] ?? 'Bracelet' ?>"
                 data-name="<?= $translations['bangle_bracelet'] ?? 'Bangle Bracelet' ?>"
                 data-price="1250"
                 data-images='["/assets/img/bracelet-01-b.webp", "/assets/img/bracelet-01-c.jpg", "/assets/img/bracelet-01-d.jpg", "/assets/img/bracelet-01-a.webp"]'
@@ -85,7 +85,7 @@ require_once 'header.php';
                     <img src="/assets/img/bracelet-01-b.webp" alt="<?= htmlspecialchars($translations['bangle_bracelet'] ?? 'Bangle Bracelet') ?> - <?= htmlspecialchars($translations['bangle_bracelet_desc'] ?? 'Solid bangle bracelet with engraved details') ?>" class="w-full">
                     <div class="overlay">
                         <a href="#" class="eye-icon quick-view-btn">
-                            <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>">
+                            <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
                             <span class="quick-view-tooltip"><?= $translations['quick_view'] ?? 'Quick View' ?></span>
                         </a>
                     </div>
@@ -96,7 +96,7 @@ require_once 'header.php';
 
             <!-- Product Item 3 -->
             <div class="product-item text-center" 
-                data-category="Bracelet"
+                data-category="<?= $translations['bracelets_category'] ?? 'Bracelet' ?>"
                 data-name="<?= $translations['personalized_charm_bracelet'] ?? 'Personalized Charm Bracelet' ?>"
                 data-price="1400"
                 data-images='["/assets/img/bracelet-01-c.jpg", "/assets/img/bracelet-01-a.webp", "/assets/img/bracelet-01-b.webp", "/assets/img/bracelet-01-d.jpg"]'
@@ -105,7 +105,7 @@ require_once 'header.php';
                     <img src="/assets/img/bracelet-01-c.jpg" alt="<?= htmlspecialchars($translations['personalized_charm_bracelet'] ?? 'Personalized Charm Bracelet') ?> - <?= htmlspecialchars($translations['personalized_charm_bracelet_desc'] ?? 'Custom-crafted bracelet with hand-selected charms') ?>" class="w-full">
                     <div class="overlay">
                         <a href="#" class="eye-icon quick-view-btn">
-                            <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>">
+                            <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
                             <span class="quick-view-tooltip"><?= $translations['quick_view'] ?? 'Quick View' ?></span>
                         </a>
                     </div>
@@ -116,7 +116,7 @@ require_once 'header.php';
 
             <!-- Product Item 4 -->
             <div class="product-item text-center" 
-                data-category="Bracelet"
+                data-category="<?= $translations['bracelets_category'] ?? 'Bracelet' ?>"
                 data-name="<?= $translations['elegant_diamondcut_tennis_bracelet'] ?? 'Elegant Diamond-Cut Tennis Bracelet' ?>"
                 data-price="1600"
                 data-images='["/assets/img/bracelet-01-d.jpg", "/assets/img/bracelet-01-a.webp", "/assets/img/bracelet-01-b.webp", "/assets/img/bracelet-01-c.jpg"]'
@@ -125,7 +125,7 @@ require_once 'header.php';
                     <img src="/assets/img/bracelet-01-d.jpg" alt="<?= htmlspecialchars($translations['elegant_diamondcut_tennis_bracelet'] ?? 'Elegant Diamond-Cut Tennis Bracelet') ?> - <?= htmlspecialchars($translations['elegant_diamondcut_tennis_bracelet_desc'] ?? 'Exquisite diamond-cut tennis bracelet') ?>" class="w-full">
                     <div class="overlay">
                         <a href="#" class="eye-icon quick-view-btn">
-                            <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>">
+                            <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
                             <span class="quick-view-tooltip"><?= $translations['quick_view'] ?? 'Quick View' ?></span>
                         </a>
                     </div>

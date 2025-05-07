@@ -56,7 +56,7 @@ include('header.php');
                 <img alt="<?= $translations['elegant_gold_ring'] ?>" src="/assets/img/ring-01-a.jpg">
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
-                        <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?>">
+                        <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
                         <span class="quick-view-tooltip"><?= $translations['quick_view'] ?></span>
                     </a>
                 </div>
@@ -76,7 +76,7 @@ include('header.php');
         <img alt="<?= $translations['bracelet_2'] ?>" src="/assets/img/bracelet-01-b.jpg">
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
-            <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?>">
+            <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
             <span class="quick-view-tooltip"><?= $translations['quick_view'] ?></span>
           </a>
         </div>
@@ -96,7 +96,7 @@ include('header.php');
         <img alt="<?= $translations['necklace'] ?>" src="/assets/img/cover 2.jpg">
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
-            <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?>">
+            <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
             <span class="quick-view-tooltip"><?= $translations['quick_view'] ?></span>
           </a>
         </div>
@@ -116,7 +116,7 @@ include('header.php');
         <img alt="<?= $translations['ring'] ?>" src="/assets/img/cover ring.jpg">
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
-            <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?>">
+            <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
             <span class="quick-view-tooltip"><?= $translations['quick_view'] ?></span>
           </a>
         </div>
@@ -143,7 +143,7 @@ include('header.php');
         <img alt="<?= $translations['bracelet'] ?>" src="/assets/img/bracelet-01-a.jpg">
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
-            <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?>">
+            <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
             <span class="quick-view-tooltip"><?= $translations['quick_view'] ?></span>
           </a>
         </div>
@@ -162,7 +162,7 @@ include('header.php');
         <img alt="<?= $translations['bracelet_2'] ?>" src="/assets/img/bracelet-01-b.jpg">
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
-            <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?>">
+            <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
             <span class="quick-view-tooltip"><?= $translations['quick_view'] ?></span>
           </a>
         </div>
@@ -181,7 +181,7 @@ include('header.php');
         <img alt="<?= $translations['necklace'] ?>" src="/assets/img/cover 2.jpg">
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
-            <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?>">
+            <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
             <span class="quick-view-tooltip"><?= $translations['quick_view'] ?></span>
           </a>
         </div>
@@ -200,7 +200,7 @@ include('header.php');
         <img alt="<?= $translations['ring'] ?>" src="/assets/img/cover ring.jpg">
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
-            <img src="/assets/img/quick view.png" alt="<?= $translations['quick_view'] ?>">
+            <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
             <span class="quick-view-tooltip"><?= $translations['quick_view'] ?></span>
           </a>
         </div>
@@ -307,6 +307,8 @@ include('header.php');
         </div>
     </div>
 </div>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
 
 <script src="/assets/js/main.js"></script>
 
