@@ -207,8 +207,9 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-        const lang = document.documentElement.dir === 'rtl' ? 'ar' : 'en';
-        const formatString = window.translations[lang]?.showing_x_products || defaultText;
+        // Get the language from the session
+        const lang = sessionStorage.getItem('lang') || 'en';
+        const formatString = window.translations[lang]?.showing_products_count || defaultText;
         countElem.textContent = formatString.replace('%d', visibleCount);
     }
 
@@ -267,11 +268,54 @@ document.addEventListener("DOMContentLoaded", function() {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const mobileNav = document.querySelector('.mobile-nav');
 
-    mobileMenuToggle.addEventListener('click', () => {
-        mobileMenuToggle.classList.toggle('active');
-        mobileNav.classList.toggle('active');
-        document.body.classList.toggle('no-scroll');
+    function openMobileNav() {
+        mobileMenuToggle.classList.add('active');
+        mobileNav.classList.add('active');
+        document.body.classList.add('no-scroll');
+        // Focus trap: focus first link
+        setTimeout(() => {
+            const firstLink = mobileNav.querySelector('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])');
+            if (firstLink) firstLink.focus();
+        }, 100);
+    }
+    function closeMobileNav() {
+        mobileMenuToggle.classList.remove('active');
+        mobileNav.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+    }
+    mobileMenuToggle.addEventListener('click', openMobileNav);
+    document.querySelector('.mobile-nav-close').addEventListener('click', closeMobileNav);
+
+    // Backdrop logic
+    const mobileNavBackdrop = document.querySelector('.mobile-nav-backdrop');
+    if (mobileNavBackdrop) {
+        mobileNavBackdrop.addEventListener('click', closeMobileNav);
+    }
+
+    // ESC key closes menu
+    document.addEventListener('keydown', function(e) {
+        if (mobileNav.classList.contains('active')) {
+            if (e.key === 'Escape' || e.keyCode === 27) {
+                closeMobileNav();
+            }
+            // Focus trap
+            if (e.key === 'Tab') {
+                const focusableEls = mobileNav.querySelectorAll('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])');
+                const firstEl = focusableEls[0];
+                const lastEl = focusableEls[focusableEls.length - 1];
+                if (!e.shiftKey && document.activeElement === lastEl) {
+                    e.preventDefault();
+                    firstEl.focus();
+                } else if (e.shiftKey && document.activeElement === firstEl) {
+                    e.preventDefault();
+                    lastEl.focus();
+                }
+            }
+        }
     });
+
+    // Animate menu items on open (handled by CSS)
+
 
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
