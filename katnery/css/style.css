@@ -1012,7 +1012,7 @@ section {
 .text-5xl.font-bold {
     margin-left: 104px;
     font-size: 4.33rem; /* Ensures consistent large heading */
-    margin-top: 20px;
+    margin-top: 60px;
     margin-bottom: 70px;
     line-height: 1.4em;
     font-family: 'Merriweather', serif;
@@ -1411,8 +1411,9 @@ img {
     cursor: pointer;
     padding: 9px;
     position: fixed;
-    right: 350px;
     display: none; /* Hidden by default */
+    left: 380px;
+
 }
 
 /* Show only on mobile */
@@ -1420,6 +1421,12 @@ img {
     .mobile-menu-toggle {
         display: block;
         z-index: 1000;
+        cursor: pointer;
+        padding: 9px;
+        position: fixed;
+        display: none; /* Hidden by default */
+        right: 380px;
+
     }
 }
 
