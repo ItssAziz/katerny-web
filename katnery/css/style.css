@@ -251,6 +251,21 @@ header .logo img {
     padding: 0 0.25rem;
 }
 
+.language-switcher a.active {
+  color: #a86e3b;
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.language-switcher a {
+  transition: color 0.3s ease;
+}
+
+.language-switcher a:hover {
+  color: #dba45d;
+}
+
 header .logo {
     position: absolute;
     left: 60%; /* Shifted right from 50% */

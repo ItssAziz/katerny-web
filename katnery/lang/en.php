@@ -15,7 +15,6 @@ return [
     'message_us' => 'Message Us on Telegram',
     'call_us' => 'Call Us',
     'connect_with_us' => 'Connect With Us',
-    'address' => 'AL-AZIZIYA, MAKKAH, NY 10160',
     
     /* Footer */
     'copyright' => ' 2024 Katnery. All rights reserved.',

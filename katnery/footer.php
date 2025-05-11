@@ -29,7 +29,6 @@
         <!-- Contact Us Section -->
         <div class="footer-contact">
             <h3><?= $translations['contact_us'] ?></h3>
-            <p><?= $translations['address'] ?></p>
             <p><a href="mailto:katnery@gmail.com">katnery@gmail.com</a></p>
             <p><a href="tel:+966553464889">+966 55 346 4889</a></p>
         </div>
