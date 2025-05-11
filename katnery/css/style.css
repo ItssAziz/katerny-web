@@ -1439,7 +1439,6 @@ img {
         cursor: pointer;
         padding: 9px;
         position: fixed;
-        display: none; /* Hidden by default */
         right: 380px;
 
     }
