@@ -41,7 +41,7 @@ require_once 'header.php';
     </div>
 
     <!-- Product Grid -->
-    <div class="product-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+    <div class="product-grid">
         <!-- Product Item 1 -->
         <div class="product-item text-center" 
             data-category="Necklace"
@@ -50,7 +50,9 @@ require_once 'header.php';
             data-images='["/assets/img/necklace-01-a.jpg", "/assets/img/necklace-01-b.jpg", "/assets/img/necklace-01-c.jpg", "/assets/img/necklace-01-d.jpg"]'
             data-description="<?= $translations['luxury_gold_choker_desc'] ?? 'Handcrafted 18K gold choker with diamond accents' ?>">
             <div class="product-image">
-                <img src="/assets/img/necklace-01-a.jpg" alt="<?= htmlspecialchars($translations['luxury_gold_choker'] ?? 'Luxurious Gold Choker') ?> - <?= htmlspecialchars($translations['luxury_gold_choker_desc'] ?? 'Handcrafted 18K gold choker with diamond accents') ?>" class="w-full">
+                <a href="product.php?name=<?= urlencode($translations['luxury_gold_choker'] ?? 'Luxurious Gold Choker') ?>&price=2200&description=<?= urlencode($translations['luxury_gold_choker_desc'] ?? 'Handcrafted 18K gold choker with diamond accents') ?>&images=/assets/img/necklace-01-a.jpg,/assets/img/necklace-01-b.jpg,/assets/img/necklace-01-c.jpg,/assets/img/necklace-01-d.jpg&category=<?= urlencode('Necklace') ?>">
+                    <img src="/assets/img/necklace-01-a.jpg" alt="<?= htmlspecialchars($translations['luxury_gold_choker'] ?? 'Luxurious Gold Choker') ?> - <?= htmlspecialchars($translations['luxury_gold_choker_desc'] ?? 'Handcrafted 18K gold choker with diamond accents') ?>" class="w-full">
+                </a>
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
                         <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
@@ -70,7 +72,9 @@ require_once 'header.php';
             data-images='["/assets/img/necklace-01-b.jpg", "/assets/img/necklace-01-c.jpg", "/assets/img/necklace-01-d.jpg", "/assets/img/necklace-01-a.jpg"]'
             data-description="<?= $translations['modern_lariat_necklace_desc'] ?? 'Contemporary sterling silver lariat with adjustable length' ?>">
             <div class="product-image">
-                <img src="/assets/img/necklace-01-b.jpg" alt="<?= htmlspecialchars($translations['modern_lariat_necklace'] ?? 'Modern Silver Lariat Necklace') ?> - <?= htmlspecialchars($translations['modern_lariat_necklace_desc'] ?? 'Contemporary sterling silver lariat with adjustable length') ?>" class="w-full">
+                <a href="product.php?name=<?= urlencode($translations['modern_lariat_necklace'] ?? 'Modern Silver Lariat Necklace') ?>&price=1750&description=<?= urlencode($translations['modern_lariat_necklace_desc'] ?? 'Contemporary sterling silver lariat with adjustable length') ?>&images=/assets/img/necklace-01-b.jpg,/assets/img/necklace-01-c.jpg,/assets/img/necklace-01-d.jpg,/assets/img/necklace-01-a.jpg&category=<?= urlencode('Necklace') ?>">
+                    <img src="/assets/img/necklace-01-b.jpg" alt="<?= htmlspecialchars($translations['modern_lariat_necklace'] ?? 'Modern Silver Lariat Necklace') ?> - <?= htmlspecialchars($translations['modern_lariat_necklace_desc'] ?? 'Contemporary sterling silver lariat with adjustable length') ?>" class="w-full">
+                </a>
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
                         <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
@@ -90,7 +94,9 @@ require_once 'header.php';
             data-images='["/assets/img/necklace-01-c.jpg", "/assets/img/necklace-01-d.jpg", "/assets/img/necklace-01-a.jpg", "/assets/img/necklace-01-b.jpg"]'
             data-description="<?= $translations['gold_choker_necklace_desc'] ?? 'Luxurious gold choker with intricate design' ?>">
             <div class="product-image">
-                <img src="/assets/img/necklace-01-c.jpg" alt="<?= htmlspecialchars($translations['gold_choker_necklace'] ?? 'Gold Choker Necklace') ?> - <?= htmlspecialchars($translations['gold_choker_necklace_desc'] ?? 'Luxurious gold choker with intricate design') ?>" class="w-full">
+                <a href="product.php?name=<?= urlencode($translations['gold_choker_necklace'] ?? 'Gold Choker Necklace') ?>&price=1800&description=<?= urlencode($translations['gold_choker_necklace_desc'] ?? 'Luxurious gold choker with intricate design') ?>&images=/assets/img/necklace-01-c.jpg,/assets/img/necklace-01-d.jpg,/assets/img/necklace-01-a.jpg,/assets/img/necklace-01-b.jpg&category=<?= urlencode('Necklace') ?>">
+                    <img src="/assets/img/necklace-01-c.jpg" alt="<?= htmlspecialchars($translations['gold_choker_necklace'] ?? 'Gold Choker Necklace') ?> - <?= htmlspecialchars($translations['gold_choker_necklace_desc'] ?? 'Luxurious gold choker with intricate design') ?>" class="w-full">
+                </a>
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
                         <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
@@ -110,7 +116,9 @@ require_once 'header.php';
             data-images='["/assets/img/necklace-01-a.jpg", "/assets/img/necklace-01-b.jpg", "/assets/img/necklace-01-c.jpg", "/assets/img/necklace-01-d.jpg"]'
             data-description="<?= $translations['silver_lariat_necklace_desc'] ?? 'Modern silver lariat necklace with adjustable length' ?>">
             <div class="product-image">
-                <img src="/assets/img/necklace-01-d.jpg" alt="<?= htmlspecialchars($translations['silver_lariat_necklace'] ?? 'Silver Lariat Necklace') ?> - <?= htmlspecialchars($translations['silver_lariat_necklace_desc'] ?? 'Modern silver lariat necklace with adjustable length') ?>" class="w-full">
+                <a href="product.php?name=<?= urlencode($translations['silver_lariat_necklace'] ?? 'Silver Lariat Necklace') ?>&price=1500&description=<?= urlencode($translations['silver_lariat_necklace_desc'] ?? 'Elegant silver lariat with modern design') ?>&images=/assets/img/necklace-01-d.jpg,/assets/img/necklace-01-a.jpg,/assets/img/necklace-01-b.jpg,/assets/img/necklace-01-c.jpg&category=<?= urlencode('Necklace') ?>">
+                    <img src="/assets/img/necklace-01-d.jpg" alt="<?= htmlspecialchars($translations['silver_lariat_necklace'] ?? 'Silver Lariat Necklace') ?> - <?= htmlspecialchars($translations['silver_lariat_necklace_desc'] ?? 'Elegant silver lariat with modern design') ?>" class="w-full">
+                </a>
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
                         <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">

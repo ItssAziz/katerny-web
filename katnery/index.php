@@ -26,10 +26,12 @@ include('header.php');
             <span class="prefix-text"><?= $translations['new'] ?></span>
             <span class="txt-type" 
                   data-wait="3000" 
-                  data-words='["<?= $translations['rings'] ?>", 
-                               "<?= $translations['necklaces'] ?>", 
-                               "<?= $translations['bracelets'] ?>", 
-                               "<?= $translations['earrings'] ?>"]'>
+                  data-words='<?= json_encode([
+                      $translations["rings"],
+                      $translations["necklaces"],
+                      $translations["bracelets"],
+                      $translations["earrings"]
+                  ]) ?>'>
             </span>
             <span class="suffix-text"><?= $translations['sensation'] ?></span>
         </h1>
@@ -43,7 +45,7 @@ include('header.php');
 <section class="trending-products">
   <h3 class="section-title small"><?= $translations['popular_products'] ?></h3>
   <h2 class="section-title big"><?= $translations['trending_now'] ?></h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-0">
+  <div class="product-grid">
     <!-- Standardized Product Item Structure -->
      <!-- Product Items -->
      <div class="product-item text-center" 
@@ -53,14 +55,13 @@ include('header.php');
             data-images='["/assets/img/ring-01-a.jpg", "/assets/img/ring-01-b.jpg", "/assets/img/ring-01-c.jpg", "/assets/img/ring-01-d.jpg"]'
             data-description="<?= $translations['elegant_gold_ring_desc'] ?>">
             <div class="product-image">
-                <img alt="<?= $translations['elegant_gold_ring'] ?>" src="/assets/img/ring-01-a.jpg">
-                <div class="overlay">
-                    <a href="#" class="eye-icon quick-view-btn">
-                        <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
-                        <span class="quick-view-tooltip"><?= $translations['quick_view'] ?></span>
-                    </a>
-                </div>
-            </div>
+    <img alt="<?= $translations['elegant_gold_ring'] ?>" src="/assets/img/ring-01-a.jpg">
+    <div class="overlay">
+        <a href="#" class="eye-icon quick-view-btn">
+            <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
+        </a>
+    </div>
+</div>
             <h2 class="text-xl font-semibold"><?= $translations['elegant_gold_ring'] ?></h2>
             <p class="price"><span class="icon-saudi_riyal">&#xea;</span>1500</p>
         </div>
@@ -77,7 +78,6 @@ include('header.php');
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
             <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
-            <span class="quick-view-tooltip"><?= $translations['quick_view'] ?></span>
           </a>
         </div>
       </div>
@@ -97,7 +97,6 @@ include('header.php');
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
             <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
-            <span class="quick-view-tooltip"><?= $translations['quick_view'] ?></span>
           </a>
         </div>
       </div>
@@ -117,7 +116,6 @@ include('header.php');
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
             <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
-            <span class="quick-view-tooltip"><?= $translations['quick_view'] ?></span>
           </a>
         </div>
       </div>
@@ -131,7 +129,7 @@ include('header.php');
 <section class="best-selling">
   <h3 class="section-title small"><?= $translations['shop'] ?></h3>
   <h2 class="section-title big"><?= $translations['best_selling'] ?></h2>
-  <div class="product-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+  <div class="product-grid">
     <!-- Standardized Product Item Structure -->
     <div class="product-item text-center" 
          data-category="Bracelet"
@@ -144,7 +142,6 @@ include('header.php');
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
             <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
-            <span class="quick-view-tooltip"><?= $translations['quick_view'] ?></span>
           </a>
         </div>
       </div>
@@ -163,7 +160,6 @@ include('header.php');
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
             <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
-            <span class="quick-view-tooltip"><?= $translations['quick_view'] ?></span>
           </a>
         </div>
       </div>
@@ -182,7 +178,6 @@ include('header.php');
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
             <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
-            <span class="quick-view-tooltip"><?= $translations['quick_view'] ?></span>
           </a>
         </div>
       </div>
@@ -201,7 +196,6 @@ include('header.php');
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
             <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
-            <span class="quick-view-tooltip"><?= $translations['quick_view'] ?></span>
           </a>
         </div>
       </div>

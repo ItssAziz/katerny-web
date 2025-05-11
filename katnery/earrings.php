@@ -41,7 +41,7 @@ require_once 'header.php';
     </div>
 
     <!-- Product Grid -->
-    <div class="product-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+    <div class="product-grid">
         <!-- Product Items -->
         <div class="product-item text-center" 
             data-category="<?= $translations['earrings_category'] ?? 'Earring' ?>"
@@ -50,7 +50,9 @@ require_once 'header.php';
             data-images='["/assets/img/earrings-01-a.webp", "/assets/img/earrings-01-b.webp", "/assets/img/earrings-01-c.jpg", "/assets/img/earrings-01-d.jpeg"]'
             data-description="<?= $translations['statement_chandelier_earrings_desc'] ?? 'Dramatic chandelier earrings with intricate metalwork' ?>">
             <div class="product-image">
-                <img src="/assets/img/earrings-01-a.webp" alt="<?= htmlspecialchars($translations['statement_chandelier_earrings'] ?? 'Statement Chandelier Earrings') ?> - <?= htmlspecialchars($translations['statement_chandelier_earrings_desc'] ?? 'Dramatic chandelier earrings with intricate metalwork' )?>" class="w-full">
+                <a href="product.php?name=<?= urlencode($translations['statement_chandelier_earrings'] ?? 'Statement Chandelier Earrings') ?>&price=1800&description=<?= urlencode($translations['statement_chandelier_earrings_desc'] ?? 'Dramatic chandelier earrings with intricate metalwork') ?>&images=/assets/img/earrings-01-a.webp,/assets/img/earrings-01-b.webp,/assets/img/earrings-01-c.jpg,/assets/img/earrings-01-d.jpeg&category=<?= urlencode($translations['earrings_category'] ?? 'Earring') ?>">
+                    <img src="/assets/img/earrings-01-a.webp" alt="<?= htmlspecialchars($translations['statement_chandelier_earrings'] ?? 'Statement Chandelier Earrings') ?> - <?= htmlspecialchars($translations['statement_chandelier_earrings_desc'] ?? 'Dramatic chandelier earrings with intricate metalwork' )?>" class="w-full">
+                </a>
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
                         <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
@@ -69,7 +71,9 @@ require_once 'header.php';
             data-images='["/assets/img/earrings-01-a.webp", "/assets/img/earrings-01-b.webp", "/assets/img/earrings-01-c.jpg", "/assets/img/earrings-01-d.jpeg"]'
             data-description="<?= $translations['elegant_stud_earrings_desc'] ?? 'Sophisticated stud earrings with secure fastening' ?>">
             <div class="product-image">
-                <img src="/assets/img/earrings-01-b.webp" alt="<?= htmlspecialchars($translations['elegant_stud_earrings'] ?? 'Elegant Stud Earrings') ?> - <?= htmlspecialchars($translations['elegant_stud_earrings_desc'] ?? 'Sophisticated stud earrings with secure fastening' )?>" class="w-full">
+                <a href="product.php?name=<?= urlencode($translations['elegant_stud_earrings'] ?? 'Elegant Stud Earrings') ?>&price=950&description=<?= urlencode($translations['elegant_stud_earrings_desc'] ?? 'Sophisticated stud earrings with secure fastening') ?>&images=/assets/img/earrings-01-a.webp,/assets/img/earrings-01-b.webp,/assets/img/earrings-01-c.jpg,/assets/img/earrings-01-d.jpeg&category=<?= urlencode($translations['earrings_category'] ?? 'Earring') ?>">
+                    <img src="/assets/img/earrings-01-b.webp" alt="<?= htmlspecialchars($translations['elegant_stud_earrings'] ?? 'Elegant Stud Earrings') ?> - <?= htmlspecialchars($translations['elegant_stud_earrings_desc'] ?? 'Sophisticated stud earrings with secure fastening' )?>" class="w-full">
+                </a>
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
                         <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
@@ -89,7 +93,9 @@ require_once 'header.php';
             data-images='["/assets/img/earrings-01-c.jpg", "/assets/img/earrings-01-d.jpeg", "/assets/img/earrings-01-a.webp", "/assets/img/earrings-01-b.webp"]'
             data-description="<?= $translations['drop_earrings_desc'] ?? 'Elegant drop earrings with secure fastening' ?>">
             <div class="product-image">
-                <img src="/assets/img/earrings-01-c.jpg" alt="<?= htmlspecialchars($translations['drop_earrings'] ?? 'Drop Earrings') ?> - <?= htmlspecialchars($translations['drop_earrings_desc'] ?? 'Elegant drop earrings with secure fastening' )?>" class="w-full">
+                <a href="product.php?name=<?= urlencode($translations['drop_earrings'] ?? 'Drop Earrings') ?>&price=1100&description=<?= urlencode($translations['drop_earrings_desc'] ?? 'Elegant drop earrings with secure fastening') ?>&images=/assets/img/earrings-01-c.jpg,/assets/img/earrings-01-d.jpeg,/assets/img/earrings-01-a.webp,/assets/img/earrings-01-b.webp&category=<?= urlencode($translations['earrings_category'] ?? 'Earring') ?>">
+                    <img src="/assets/img/earrings-01-c.jpg" alt="<?= htmlspecialchars($translations['drop_earrings'] ?? 'Drop Earrings') ?> - <?= htmlspecialchars($translations['drop_earrings_desc'] ?? 'Elegant drop earrings with secure fastening' )?>" class="w-full">
+                </a>
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
                         <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
@@ -109,7 +115,9 @@ require_once 'header.php';
             data-images='["/assets/img/earrings-01-d.jpeg", "/assets/img/earrings-01-a.webp", "/assets/img/earrings-01-b.webp", "/assets/img/earrings-01-c.jpg"]'
             data-description="<?= $translations['chandelier_earrings_desc'] ?? 'Statement chandelier earrings' ?>">
             <div class="product-image">
-                <img src="/assets/img/earrings-01-d.jpeg" alt="<?= htmlspecialchars($translations['chandelier_earrings'] ?? 'Chandelier Earrings') ?> - <?= htmlspecialchars($translations['chandelier_earrings_desc'] ?? 'Statement chandelier earrings' )?>" class="w-full">
+                <a href="product.php?name=<?= urlencode($translations['chandelier_earrings'] ?? 'Chandelier Earrings') ?>&price=1350&description=<?= urlencode($translations['chandelier_earrings_desc'] ?? 'Statement chandelier earrings') ?>&images=/assets/img/earrings-01-d.jpeg,/assets/img/earrings-01-a.webp,/assets/img/earrings-01-b.webp,/assets/img/earrings-01-c.jpg&category=<?= urlencode($translations['earrings_category'] ?? 'Earring') ?>">
+                    <img src="/assets/img/earrings-01-d.jpeg" alt="<?= htmlspecialchars($translations['chandelier_earrings'] ?? 'Chandelier Earrings') ?> - <?= htmlspecialchars($translations['chandelier_earrings_desc'] ?? 'Statement chandelier earrings' )?>" class="w-full">
+                </a>
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
                         <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">

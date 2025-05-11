@@ -41,7 +41,7 @@ require_once 'header.php';
     </div>
  
     <!-- Product Grid -->
-    <div class="product-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+    <div class="product-grid">
         <!-- Product Items -->
         <div class="product-item text-center" 
             data-category="Ring" 

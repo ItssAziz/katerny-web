@@ -427,6 +427,7 @@ section {
   opacity: 0;
   pointer-events: none;
   z-index: 1;
+  transition: opacity 0.25s cubic-bezier(.4,0,.2,1);
 }
 
 .product-image {
@@ -434,45 +435,54 @@ section {
   width: 100%;
   height: 100%;
   display: block;
+  overflow: hidden;
 }
 
-.overlay .quick-view-btn {
-  position: absolute;
-  bottom: unset;
-  right: 18px;
-  left: unset;
-  top: 18px;
-  transform: none;
-  pointer-events: auto;
-  width: 32px;
-  height: 32px;
-  transition: opacity 0.25s cubic-bezier(.4,0,.2,1);
-  z-index: 2;
+/* Main Quick View Button Style */
+.quick-view-btn {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(255,255,255,0.85);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+  outline: none;
+  z-index: 10;
 }
+
+/* Positioned in top-right corner */
+.overlay .quick-view-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  pointer-events: auto;
+  opacity: 0;
+  transform: translateY(-8px) scale(0.95);
+}
+
+.quick-view-btn:hover {
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
 .product-image:hover .overlay,
 .product-image:focus-within .overlay {
   opacity: 1;
 }
 
-.quick-view-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255,255,255,0.7);
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  cursor: pointer;
-  position: absolute;
-  border: 1px solid rgba(0,0,0,0.08);
-  transition: background 0.2s, box-shadow 0.2s, border 0.2s;
-  outline: none;
-  z-index: 2;
+.product-image:hover .overlay .quick-view-btn,
+.product-image:focus-within .overlay .quick-view-btn {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
+
+/* Additional button styling removed - redundant with above definitions */
 .quick-view-btn:active {
   background: rgba(240,240,240,0.95);
   box-shadow: 0 2px 8px rgba(0,0,0,0.09);
@@ -487,117 +497,11 @@ section {
   max-height: 20px;
 }
 
-.quick-view-tooltip {
-  opacity: 0;
-  pointer-events: none;
-  position: absolute;
-  left: 50%;
-  bottom: 120%;
-  transform: translateX(-50%) translateY(0);
-  background: #222;
-  color: #fff;
-  padding: 7px 16px;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  white-space: nowrap;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.13);
-  z-index: 11;
-  transition: opacity 0.2s, transform 0.2s;
-  width: auto;
-  max-width: 200px;
-  line-height: 1.2;
-  text-align: center;
-  visibility: visible !important;
-}
-
-.quick-view-btn:hover .quick-view-tooltip,
-.quick-view-btn:focus .quick-view-tooltip {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateX(-50%) translateY(-4px);
-}
-.quick-view-tooltip::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 100%;
-  transform: translateX(-50%);
-  border-width: 7px 7px 0 7px;
-  border-style: solid;
-  border-color: #222 transparent transparent transparent;
-}
-
-/* Responsive Sizing */
-@media (max-width: 640px) {
-  .quick-view-btn {
-    width: 42px;
-    height: 42px;
-  }
-  .quick-view-btn img,
-  .quick-view-btn svg {
-    width: 20px;
-    height: 20px;
-  }
-  .quick-view-tooltip {
-    font-size: 0.95rem;
-    padding: 6px 12px;
-    border-radius: 6px;
-  }
-  .quick-view-tooltip::after {
-    border-width: 6px 6px 0 6px;
-  }
-}
+/* Removed .quick-view-tooltip rules */
 
 .eye-icon {
     position: relative;
     display: inline-block;
-}
-
-.quick-view-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-  min-width: 44px;
-  min-height: 44px;
-}
-
-
-
-.quick-view-btn:hover .quick-view-tooltip {
-  opacity: 1;
-}
-
-.quick-view-tooltip {
-    background-color: #000;
-    color: white;
-    padding: 5px 10px;
-    font-size: 14px;
-    border-radius: 5px;
-    transition: opacity 0.3s ease, visibility 0s ease 0.3s;
-    white-space: nowrap;
-    z-index: 10;
-}
-
-/* Arrow for the tooltip */
-.quick-view-tooltip::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: -10px; /* Arrow will appear to the right of the tooltip */
-    transform: translateY(-50%);
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid #000; /* Arrow color */
-}
-
-/* Show the tooltip when hovering over the icon */
-.eye-icon:hover .quick-view-tooltip {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 0.3s ease;
 }
 
 .eye-icon img {
@@ -1108,67 +1012,242 @@ section {
     font-family: 'Merriweather', serif;
 }
 
-/* Exclude the pics section */
-.trending-products > div {
-    margin-left: 0; /* Reset margin */
+/* Unified Image Styling */
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.4s cubic-bezier(.4,2,.3,1);
 }
 
-/* Product Image Styling */
-.product-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.product-item:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.quick-view-btn img {
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: 0 auto;
     transition: transform 0.3s ease;
 }
 
-/* Override Image Default Styling */
-img, video {
-    max-width: none !important;
+.quick-view-btn:hover img {
+    transform: scale(1.1);
+}
+
+/* Base image styles */
+img {
+    max-width: 100%;
     height: auto;
+    vertical-align: middle;
+    will-change: transform;
 }
 
-/* Product Count Text */
-#product-count {
-    margin-left: 104px;
-    color: #000000b3;
-}
-
-/* Product Item Styling */
 .product-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: center;
+    margin-bottom: 10px; /* Adds space between image and text */
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
 }
 
 .product-item img {
-    margin-bottom: 10px; /* Adds space between image and text */
+    transition: transform 0.7s ease;
 }
 
-.product-item h2 {
-    margin-top: 10px;
+.product-item:hover .product-image img {
+    transform: scale(1.05);
 }
 
-/* Product Grid Responsive Layout */
+/* --- Modern Product Grid Redesign --- */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem 2rem;
+    margin: 2.5rem auto 3rem auto;
+    max-width: 1300px;
     width: 100%;
-    overflow: hidden;
+    align-items: stretch;
+    justify-content: center;
+    padding: 0 1rem;
+    background: none;
 }
 
 .product-item {
-    width: 200px;
-    height: 287.8px;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px 0 rgba(60, 60, 60, 0.10), 0 1.5px 6px 0 rgba(160, 120, 60, 0.08);
+    transition: box-shadow 0.3s cubic-bezier(.4,2,.3,1), transform 0.3s cubic-bezier(.4,2,.3,1);
+    overflow: hidden;
+    position: relative;
+    height: 420px;
+    padding-bottom: 1.5rem;
+    margin: 0 0.5rem 1.2rem 0.5rem; /* Small horizontal and bottom gap between cards */
+}
+
+@media (max-width: 767px) {
+    .product-item {
+        height: 320px;
+        width: 280px;
+        padding-bottom: 0.7rem;
+        margin: 0 0.2rem 0.7rem 0.2rem;
+        border-radius: 12px;
+    }
+    .product-image {
+        height: 120px;
+        border-radius: 12px 12px 0 0;
+    }
+    .product-item h2 {
+        font-size: 1rem;
+        margin-top: 0.7rem;
+    }
+    .product-item .price {
+        font-size: 0.98rem;
+    }
+}
+
+.product-item:hover {
+    box-shadow: 0 12px 36px 0 rgba(60, 60, 60, 0.16), 0 4px 16px 0 rgba(160,120,60,0.10);
+    transform: translateY(-6px) scale(1.025);
+    z-index: 2;
+}
+
+.product-image {
+    width: 100%;
+    height: 340px;
+    overflow: hidden;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f7f7f7;
+}
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s cubic-bezier(.4,2,.3,1);
+    border-radius: 0;
+}
+.product-item:hover .product-image img {
+    transform: scale(1.07);
+}
+
+/* Overlay button (e.g. quick view/favorite) */
+.product-image .overlay-btn {
+    position: absolute;
+    bottom: 18px;
+    right: 18px;
+    background: rgba(255,255,255,0.88);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(60,60,60,0.12);
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.25s, transform 0.25s;
+}
+.product-item:hover .overlay-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.product-item h2 {
+    font-size: 1.18rem;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    color: #2d2218;
+    margin: 1.1rem 0 0.5rem 0;
+    letter-spacing: 0.01em;
+}
+.product-item .price {
+    color: #a86e3b;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive grid for tablets */
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 98vw;
+        gap: 1.1rem;
+    }
+    .product-image {
+        height: 230px;
+    }
+}
+
+/* Responsive grid for mobile */
+@media (max-width: 767px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+        padding: 0 0.5rem;
+        max-width: 100vw;
+        gap: 0.7rem;
+    }
+    .product-image {
+        height: 170px;
+    }
+}
+/* --- End Modern Product Grid Redesign --- */
+
+/* Utility class for spacing above product grid sections */
+.section-above-products {
+    margin-bottom: 2.5rem;
+}
+
+/* Standardize product image heights */
+.product-grid img {
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns tablet */
+        max-width: 95vw;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* 1 column mobile */
+        padding: 0 0.5rem;
+        max-width: 100vw;
+        gap: 0.75rem;
+        justify-items: center;
+    }
 }
 
 .product-image img {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    display: block;
+    max-width: 100%;
 }
 
 @media (max-width: 767px) {
@@ -1182,22 +1261,10 @@ img, video {
     }
 }
 
-.product-item {
-    width: 200px;
-    height: 287.8px;
-    box-sizing: border-box;
-}
-
 .product-image {
     position: relative;
     width: 310px;
     height: 387.5px;
-}
-
-.product-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 /* .overlay removed: No overlay on product images */
@@ -1206,10 +1273,6 @@ img, video {
     position: relative;
     display: inline-block;
 }
-
-
-
-
 
 .eye-icon:hover .quick-view-tooltip {
     visibility: visible;
@@ -1253,7 +1316,6 @@ img, video {
 .slide img {
     width: 100%;
 }
-
 
 /* Modal Navigation Arrows */
 .prev, .next {
@@ -1465,33 +1527,6 @@ img, video {
     justify-content: center;
 }
 
-
-.mobile-nav-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #a86e3b;
-    letter-spacing: 0.5px;
-    text-shadow: 0 1px 0 #fff7;
-}
-
-.mobile-nav-close {
-    background: none;
-    border: none;
-    color: #333;
-    font-size: 2.2rem;
-    line-height: 1;
-    cursor: pointer;
-    padding: 0 0.5rem;
-    margin-left: 1rem;
-    transition: color 0.2s, background 0.2s;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .mobile-nav-close:hover, .mobile-nav-close:focus {
     color: #fff;
     background: #a86e3b;
@@ -1563,77 +1598,7 @@ img, video {
     outline-offset: 2px;
 }
 
-
-.mobile-nav-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.2rem 1.5rem 0.5rem 1.5rem;
-    border-bottom: 1px solid #eee;
-    background: #faf9f7;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-
-.mobile-nav-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #a86e3b;
-    letter-spacing: 0.5px;
-}
-
-.mobile-nav-close {
-    background: none;
-    border: none;
-    color: #333;
-    font-size: 2rem;
-    line-height: 1;
-    cursor: pointer;
-    padding: 0 0.5rem;
-    margin-left: 1rem;
-    transition: color 0.2s;
-}
-
-.mobile-nav-close:hover {
-    color: #a86e3b;
-}
-
-.mobile-nav ul li:last-child {
-    border-bottom: none;
-}
-
-[dir="rtl"] .mobile-nav {
-    left: 0;
-    right: auto;
-    transform: translateX(-100%);
-}
-
-.mobile-nav.active {
-    transform: translateX(0);
-}
-
-[dir="rtl"] .mobile-nav.active {
-    transform: translateX(0);
-}
-
 /* PRODUCT STYLES */
-.product-item {
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.product-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
-}
-
-.product-image img {
-    transition: transform 0.7s ease;
-}
-
-.product-item:hover .product-image img {
-    transform: scale(1.05);
-}
 
 .product-card {
     @apply rounded-lg overflow-hidden shadow-md transition-all duration-300;
@@ -1663,8 +1628,8 @@ img, video {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    justify-content: center;}
-
+    justify-content: center;
+}
 
 .related-products .product-item h2 {
     font-size: 1.25rem;
@@ -2464,10 +2429,8 @@ img, video {
 }
 
 /* Touch Targets */
-.quick-view-btn {
-  min-width: 44px;
-  min-height: 44px;
-}
+/* Quick View Button Base Sizing - REMOVED DUPLICATE */
+
 
 select {
   font-size: 16px; /* Prevent iOS zoom */
@@ -2493,9 +2456,11 @@ img {
 
 /* Responsive Images */
 .product-image img {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    display: block;
+    max-width: 100%;
 }
 
 @media (max-width: 640px) {

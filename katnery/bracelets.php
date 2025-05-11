@@ -54,7 +54,7 @@ require_once 'header.php';
         </div>
 
         <!-- Product Grid -->
-        <div class="product-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="product-grid">
             <!-- Product Items -->
             <div class="product-item text-center" 
                 data-category="<?= $translations['bracelets_category'] ?? 'Bracelet' ?>"
@@ -63,7 +63,9 @@ require_once 'header.php';
                 data-images='["/assets/img/bracelet-01-a.webp", "/assets/img/bracelet-01-b.webp", "/assets/img/bracelet-01-c.jpg", "/assets/img/bracelet-01-d.jpg"]'
                 data-description="<?= $translations['chain_bracelet_desc'] ?? 'Delicate chain bracelet with adjustable length' ?>">
                 <div class="product-image">
-                    <img src="/assets/img/bracelet-01-a.webp" alt="<?= htmlspecialchars($translations['chain_bracelet'] ?? 'Chain Bracelet') ?> - <?= htmlspecialchars($translations['chain_bracelet_desc'] ?? 'Delicate chain bracelet with adjustable length') ?>" class="w-full">
+                    <a href="product.php?name=<?= urlencode($translations['chain_bracelet'] ?? 'Chain Bracelet') ?>&price=1100&description=<?= urlencode($translations['chain_bracelet_desc'] ?? 'Delicate chain bracelet with adjustable length') ?>&images=/assets/img/bracelet-01-a.webp,/assets/img/bracelet-01-b.webp,/assets/img/bracelet-01-c.jpg,/assets/img/bracelet-01-d.jpg&category=<?= urlencode($translations['bracelets_category'] ?? 'Bracelet') ?>">
+                        <img src="/assets/img/bracelet-01-a.webp" alt="<?= htmlspecialchars($translations['chain_bracelet'] ?? 'Chain Bracelet') ?> - <?= htmlspecialchars($translations['chain_bracelet_desc'] ?? 'Delicate chain bracelet with adjustable length') ?>" class="w-full">
+                    </a>
                     <div class="overlay">
                         <a href="#" class="eye-icon quick-view-btn">
                             <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
@@ -82,7 +84,9 @@ require_once 'header.php';
                 data-images='["/assets/img/bracelet-01-b.webp", "/assets/img/bracelet-01-c.jpg", "/assets/img/bracelet-01-d.jpg", "/assets/img/bracelet-01-a.webp"]'
                 data-description="<?= $translations['bangle_bracelet_desc'] ?? 'Solid bangle bracelet with engraved details' ?>">
                 <div class="product-image">
-                    <img src="/assets/img/bracelet-01-b.webp" alt="<?= htmlspecialchars($translations['bangle_bracelet'] ?? 'Bangle Bracelet') ?> - <?= htmlspecialchars($translations['bangle_bracelet_desc'] ?? 'Solid bangle bracelet with engraved details') ?>" class="w-full">
+                    <a href="product.php?name=<?= urlencode($translations['bangle_bracelet'] ?? 'Bangle Bracelet') ?>&price=1250&description=<?= urlencode($translations['bangle_bracelet_desc'] ?? 'Solid bangle bracelet with engraved details') ?>&images=/assets/img/bracelet-01-b.webp,/assets/img/bracelet-01-c.jpg,/assets/img/bracelet-01-d.jpg,/assets/img/bracelet-01-a.webp&category=<?= urlencode($translations['bracelets_category'] ?? 'Bracelet') ?>">
+                        <img src="/assets/img/bracelet-01-b.webp" alt="<?= htmlspecialchars($translations['bangle_bracelet'] ?? 'Bangle Bracelet') ?> - <?= htmlspecialchars($translations['bangle_bracelet_desc'] ?? 'Solid bangle bracelet with engraved details') ?>" class="w-full">
+                    </a>
                     <div class="overlay">
                         <a href="#" class="eye-icon quick-view-btn">
                             <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
@@ -102,7 +106,9 @@ require_once 'header.php';
                 data-images='["/assets/img/bracelet-01-c.jpg", "/assets/img/bracelet-01-a.webp", "/assets/img/bracelet-01-b.webp", "/assets/img/bracelet-01-d.jpg"]'
                 data-description="<?= $translations['personalized_charm_bracelet_desc'] ?? 'Custom-crafted bracelet with hand-selected charms' ?>">
                 <div class="product-image">
-                    <img src="/assets/img/bracelet-01-c.jpg" alt="<?= htmlspecialchars($translations['personalized_charm_bracelet'] ?? 'Personalized Charm Bracelet') ?> - <?= htmlspecialchars($translations['personalized_charm_bracelet_desc'] ?? 'Custom-crafted bracelet with hand-selected charms') ?>" class="w-full">
+                    <a href="product.php?name=<?= urlencode($translations['personalized_charm_bracelet'] ?? 'Personalized Charm Bracelet') ?>&price=1400&description=<?= urlencode($translations['personalized_charm_bracelet_desc'] ?? 'Customizable charm bracelet with adjustable length') ?>&images=/assets/img/bracelet-01-c.jpg,/assets/img/bracelet-01-d.jpg,/assets/img/bracelet-01-a.webp,/assets/img/bracelet-01-b.webp&category=<?= urlencode($translations['bracelets_category'] ?? 'Bracelet') ?>">
+                        <img src="/assets/img/bracelet-01-c.jpg" alt="<?= htmlspecialchars($translations['personalized_charm_bracelet'] ?? 'Personalized Charm Bracelet') ?> - <?= htmlspecialchars($translations['personalized_charm_bracelet_desc'] ?? 'Customizable charm bracelet with adjustable length') ?>" class="w-full">
+                    </a>
                     <div class="overlay">
                         <a href="#" class="eye-icon quick-view-btn">
                             <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
@@ -122,7 +128,9 @@ require_once 'header.php';
                 data-images='["/assets/img/bracelet-01-d.jpg", "/assets/img/bracelet-01-a.webp", "/assets/img/bracelet-01-b.webp", "/assets/img/bracelet-01-c.jpg"]'
                 data-description="<?= $translations['elegant_diamondcut_tennis_bracelet_desc'] ?? 'Exquisite diamond-cut tennis bracelet' ?>">
                 <div class="product-image">
-                    <img src="/assets/img/bracelet-01-d.jpg" alt="<?= htmlspecialchars($translations['elegant_diamondcut_tennis_bracelet'] ?? 'Elegant Diamond-Cut Tennis Bracelet') ?> - <?= htmlspecialchars($translations['elegant_diamondcut_tennis_bracelet_desc'] ?? 'Exquisite diamond-cut tennis bracelet') ?>" class="w-full">
+                    <a href="product.php?name=<?= urlencode($translations['elegant_diamondcut_tennis_bracelet'] ?? 'Elegant Diamond-Cut Tennis Bracelet') ?>&price=1600&description=<?= urlencode($translations['elegant_diamondcut_tennis_bracelet_desc'] ?? 'Classic tennis bracelet with diamond-cut finish') ?>&images=/assets/img/bracelet-01-d.jpg,/assets/img/bracelet-01-a.webp,/assets/img/bracelet-01-b.webp,/assets/img/bracelet-01-c.jpg&category=<?= urlencode($translations['bracelets_category'] ?? 'Bracelet') ?>">
+                        <img src="/assets/img/bracelet-01-d.jpg" alt="<?= htmlspecialchars($translations['elegant_diamondcut_tennis_bracelet'] ?? 'Elegant Diamond-Cut Tennis Bracelet') ?> - <?= htmlspecialchars($translations['elegant_diamondcut_tennis_bracelet_desc'] ?? 'Classic tennis bracelet with diamond-cut finish') ?>" class="w-full">
+                    </a>
                     <div class="overlay">
                         <a href="#" class="eye-icon quick-view-btn">
                             <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
