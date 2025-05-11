@@ -55,13 +55,15 @@ include('header.php');
             data-images='["/assets/img/ring-01-a.jpg", "/assets/img/ring-01-b.jpg", "/assets/img/ring-01-c.jpg", "/assets/img/ring-01-d.jpg"]'
             data-description="<?= $translations['elegant_gold_ring_desc'] ?>">
             <div class="product-image">
-    <img alt="<?= $translations['elegant_gold_ring'] ?>" src="/assets/img/ring-01-a.jpg">
-    <div class="overlay">
-        <a href="#" class="eye-icon quick-view-btn">
-            <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
-        </a>
-    </div>
-</div>
+                <a href="product.php?name=<?= urlencode($translations['elegant_gold_ring']) ?>&price=1500&description=<?= urlencode($translations['elegant_gold_ring_desc']) ?>&images=/assets/img/ring-01-a.jpg,/assets/img/ring-01-b.jpg,/assets/img/ring-01-c.jpg,/assets/img/ring-01-d.jpg&category=Ring">
+                    <img alt="<?= $translations['elegant_gold_ring'] ?>" src="/assets/img/ring-01-a.jpg" class="w-full h-auto">
+                </a>
+                <div class="overlay">
+                    <a href="#" class="eye-icon quick-view-btn">
+                        <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
+                    </a>
+                </div>
+            </div>
             <h2 class="text-xl font-semibold"><?= $translations['elegant_gold_ring'] ?></h2>
             <p class="price"><span class="icon-saudi_riyal">&#xea;</span>1500</p>
         </div>
@@ -74,7 +76,9 @@ include('header.php');
          data-images='["/assets/img/bracelet-01-b.jpg", "/assets/img/bracelet-01-c.jpg", "/assets/img/bracelet-d.jpg", "/assets/img/bracelet-01-a.jpg"]'
          data-description="<?= $translations['bracelet_2_description'] ?>">
       <div class="product-image">
-        <img alt="<?= $translations['bracelet_2'] ?>" src="/assets/img/bracelet-01-b.jpg">
+        <a href="product.php?name=<?= urlencode($translations['bracelet_2']) ?>&price=180&description=<?= urlencode($translations['bracelet_2_description']) ?>&images=/assets/img/bracelet-01-b.jpg,/assets/img/bracelet-01-c.jpg,/assets/img/bracelet-d.jpg,/assets/img/bracelet-01-a.jpg&category=Bracelet">
+            <img alt="<?= $translations['bracelet_2'] ?>" src="/assets/img/bracelet-01-b.jpg" class="w-full h-auto">
+        </a>
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
             <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
@@ -93,7 +97,9 @@ include('header.php');
          data-images='["/assets/img/necklace-01-a.jpg", "/assets/img/necklace-01-b.jpg", "/assets/img/necklace-01-c.jpg", "/assets/img/necklace-01-d.jpg"]'
          data-description="<?= $translations['necklace_description'] ?>">
       <div class="product-image">
-        <img alt="<?= $translations['necklace'] ?>" src="/assets/img/necklace-01-a.jpg">
+        <a href="product.php?name=<?= urlencode($translations['necklace']) ?>&price=250&description=<?= urlencode($translations['necklace_description']) ?>&images=/assets/img/necklace-01-a.jpg,/assets/img/necklace-01-b.jpg,/assets/img/necklace-01-c.jpg,/assets/img/necklace-01-d.jpg&category=Necklace">
+            <img alt="<?= $translations['necklace'] ?>" src="/assets/img/necklace-01-a.jpg" class="w-full h-auto">
+        </a>
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
             <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
@@ -112,7 +118,9 @@ include('header.php');
          data-images='["/assets/img/cover ring.jpg", "/assets/img/kat ring 2.jpg", "/assets/img/cover 2.jpg", "/assets/img/cover 5.jpg"]'
          data-description="<?= $translations['ring_description'] ?>">
       <div class="product-image">
-        <img alt="<?= $translations['ring'] ?>" src="/assets/img/cover ring.jpg">
+        <a href="product.php?name=<?= urlencode($translations['ring']) ?>&price=300&description=<?= urlencode($translations['ring_description']) ?>&images=/assets/img/cover ring.jpg,/assets/img/kat ring 2.jpg,/assets/img/cover 2.jpg,/assets/img/cover 5.jpg&category=Ring">
+            <img alt="<?= $translations['ring'] ?>" src="/assets/img/cover ring.jpg" class="w-full h-auto">
+        </a>
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
             <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
@@ -138,7 +146,9 @@ include('header.php');
          data-images='["/assets/img/bracelet-01-a.jpg", "/assets/img/bracelet-01-b.jpg", "/assets/img/bracelet-01-c.jpg", "/assets/img/bracelet-d.jpg"]'
          data-description="<?= $translations['bracelet_description'] ?>">
       <div class="product-image">
-        <img alt="<?= $translations['bracelet'] ?>" src="/assets/img/bracelet-01-a.jpg">
+        <a href="product.php?name=<?= urlencode($translations['bracelet']) ?>&price=225&description=<?= urlencode($translations['bracelet_description']) ?>&images=/assets/img/bracelet-01-a.jpg,/assets/img/bracelet-01-b.jpg,/assets/img/bracelet-01-c.jpg,/assets/img/bracelet-d.jpg&category=Bracelet">
+            <img alt="<?= $translations['bracelet'] ?>" src="/assets/img/bracelet-01-a.jpg" class="w-full h-auto">
+        </a>
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
             <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
@@ -156,7 +166,9 @@ include('header.php');
          data-images='["/assets/img/bracelet-01-b.jpg", "/assets/img/bracelet-01-c.jpg", "/assets/img/bracelet-d.jpg", "/assets/img/bracelet-01-a.jpg"]'
          data-description="<?= $translations['bracelet_2_description'] ?>">
       <div class="product-image">
-        <img alt="<?= $translations['bracelet_2'] ?>" src="/assets/img/bracelet-01-b.jpg">
+        <a href="product.php?name=<?= urlencode($translations['bracelet_2']) ?>&price=180&description=<?= urlencode($translations['bracelet_2_description']) ?>&images=/assets/img/bracelet-01-b.jpg,/assets/img/bracelet-01-c.jpg,/assets/img/bracelet-d.jpg,/assets/img/bracelet-01-a.jpg&category=Bracelet">
+            <img alt="<?= $translations['bracelet_2'] ?>" src="/assets/img/bracelet-01-b.jpg" class="w-full h-auto">
+        </a>
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
             <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
@@ -174,7 +186,9 @@ include('header.php');
          data-images='["/assets/img/necklace-01-a.jpg", "/assets/img/necklace-01-b.jpg", "/assets/img/necklace-01-c.jpg", "/assets/img/necklace-01-d.jpg"]'
          data-description="<?= $translations['necklace_description'] ?>">
       <div class="product-image">
-        <img alt="<?= $translations['necklace'] ?>" src="/assets/img/necklace-01-a.jpg">
+        <a href="product.php?name=<?= urlencode($translations['necklace']) ?>&price=250&description=<?= urlencode($translations['necklace_description']) ?>&images=/assets/img/necklace-01-a.jpg,/assets/img/necklace-01-b.jpg,/assets/img/necklace-01-c.jpg,/assets/img/necklace-01-d.jpg&category=Necklace">
+            <img alt="<?= $translations['necklace'] ?>" src="/assets/img/necklace-01-a.jpg" class="w-full h-auto">
+        </a>
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
             <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
@@ -192,7 +206,9 @@ include('header.php');
          data-images='["/assets/img/cover ring.jpg", "/assets/img/kat ring 2.jpg", "/assets/img/cover 2.jpg", "/assets/img/cover 5.jpg"]'
          data-description="<?= $translations['ring_description'] ?>">
       <div class="product-image">
-        <img alt="<?= $translations['ring'] ?>" src="/assets/img/cover ring.jpg">
+        <a href="product.php?name=<?= urlencode($translations['ring']) ?>&price=300&description=<?= urlencode($translations['ring_description']) ?>&images=/assets/img/cover ring.jpg,/assets/img/kat ring 2.jpg,/assets/img/cover 2.jpg,/assets/img/cover 5.jpg&category=Ring">
+            <img alt="<?= $translations['ring'] ?>" src="/assets/img/cover ring.jpg" class="w-full h-auto">
+        </a>
         <div class="overlay">
           <a href="#" class="eye-icon quick-view-btn">
             <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">

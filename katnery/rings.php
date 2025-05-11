@@ -56,7 +56,6 @@ require_once 'header.php';
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
                         <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
-                        <span class="quick-view-tooltip"><?= $translations['quick_view'] ?></span>
                     </a>
                 </div>
             </div>
@@ -77,7 +76,6 @@ require_once 'header.php';
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
                         <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
-                        <span class="quick-view-tooltip"><?= $translations['quick_view'] ?></span>
                     </a>
                 </div>
             </div>
@@ -98,7 +96,6 @@ require_once 'header.php';
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
                         <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
-                        <span class="quick-view-tooltip"><?= $translations['quick_view'] ?></span>
                     </a>
                 </div>
             </div>
@@ -119,7 +116,6 @@ require_once 'header.php';
                 <div class="overlay">
                     <a href="#" class="eye-icon quick-view-btn">
                         <img src="/assets/img/quick-view.svg" alt="<?= $translations['quick_view'] ?? 'Quick View' ?>" width="28" height="28" loading="lazy">
-                        <span class="quick-view-tooltip"><?= $translations['quick_view'] ?></span>
                     </a>
                 </div>
             </div>
