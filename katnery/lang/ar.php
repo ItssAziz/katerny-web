@@ -161,6 +161,10 @@ return [
     'modern_lariat_necklace' => 'قلادة لارييت فضية عصرية',
     'modern_lariat_necklace_desc' => 'قلادة لارييت من الفضة الإسترليني عيار 925 بآلية انزلاق مبتكرة تتيح طولاً قابل للتعديل وتنسيقات متعددة',
     
+    /* Product Page */
+    'available' => 'متوفر',
+    'order_via_telegram' => 'اطلب عبر التليجرام',
+    
     /* Modal Translations */
     'category' => 'الفئة',
     'product_name' => 'اسم المنتج',

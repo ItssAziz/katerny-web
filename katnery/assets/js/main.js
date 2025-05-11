@@ -507,7 +507,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Close modal when clicking outside (more reliable method)
     document.addEventListener('click', function(e) {
       const modal = document.getElementById('product-modal');
-      if (!modal.classList.contains('hidden') && 
+      if (modal && !modal.classList.contains('hidden') && 
         !e.target.closest('.product-item') && 
         !e.target.closest('#product-modal > div')) {
         closeModal();

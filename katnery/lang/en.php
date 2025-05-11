@@ -162,6 +162,10 @@ return [
     'modern_lariat_necklace' => 'Modern Silver Lariat Necklace',
     'modern_lariat_necklace_desc' => 'Contemporary 925 sterling silver lariat with innovative sliding mechanism for customizable length and versatile styling',
     
+    /* Product Page */
+    'available' => 'Available',
+    'order_via_telegram' => 'Order via Telegram',
+    
     /* About Page */
     'about_title' => 'About Katnery',
     'about_hero' => 'Crafting timeless jewelry with passion and precision',

@@ -204,5 +204,11 @@ return [
         ['prefix' => 'ሩህሩህ', 'suffix' => 'ዘይቤ'], // 'Romantic style'
         ['prefix' => 'ተሟሟ', 'suffix' => 'አይነት'] // 'Complete look'
     ],
+    
+    // Product Page
+    'available' => 'ተገኝቷል',  
+    'order_via_telegram' => 'በቴሌግራም ይዘዙ',  
+
 ];
+
 ?>
