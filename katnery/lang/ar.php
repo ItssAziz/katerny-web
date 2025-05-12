@@ -13,6 +13,7 @@ return [
      
     /* Footer */
     'copyright' => '© 2024 كاتنري. جميع الحقوق محفوظة.',
+    'copyright_notice' => '٢٠٢٥ كاتنري من تصميم عزيز. جميع الحقوق محفوظة.',
     'new' => 'إحساس',
     'sensation' => 'جديد',
     'exclusive_designs' => 'تصاميم حصرية',

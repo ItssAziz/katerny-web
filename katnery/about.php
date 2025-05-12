@@ -4,12 +4,14 @@
 <section class="hero-section relative h-96 flex items-center justify-center bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/img/kat list.jpg');">
     <div class="text-center px-4">
         <h1 class="text-5xl md:text-6xl font-bold text-white mb-4"><?= $translations['about_title'] ?></h1>
-        <p class="text-xl text-white max-w-2xl mx-auto"><?= $translations['about_hero'] ?></p>
     </div>
     <div class="absolute bottom-0 left-0 right-0 flex justify-center pb-8">
         <a href="#content" class="text-white animate-bounce">
             <i class="fas fa-chevron-down text-3xl"></i>
         </a>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 flex justify-center pb-8">
+        <p class="text-xl text-white max-w-2xl mx-auto"><?= $translations['about_hero'] ?></p>
     </div>
 </section>
 

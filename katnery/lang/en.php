@@ -18,6 +18,7 @@ return [
     
     /* Footer */
     'copyright' => ' 2024 Katnery. All rights reserved.',
+    'copyright_notice' => '2025 Katnery by Aziz. All rights reserved.',
     'new' => 'The new',
     'sensation' => 'sensation',
     'exclusive_designs' => 'Exclusive Designs',

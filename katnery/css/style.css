@@ -877,6 +877,7 @@ section {
     margin-top: 20px;
 }
 
+
 .site-footer {
   background-color: #FAF5F0;
   color: #ccc;
@@ -993,9 +994,10 @@ section {
 }
 
 /* Mobile Layout (max-width: 767px) */
+/* Mobile Layout (max-width: 767px) */
 @media (max-width: 767px) {
   .site-footer {
-    padding: 2rem 1rem;
+    padding: 2rem 1.5rem 2rem 3.5rem;
   }
 
   .footer-content {
@@ -1008,30 +1010,50 @@ section {
     gap: 1rem;
     align-items: start;
     text-align: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 2.5rem;
     width: 100vw;
     box-sizing: border-box;
     overflow-x: hidden;
   }
 
-  /* Ensure text inside columns is aligned properly */
   .footer-about,
-  .footer-shop,
-  .footer-contact {
+  .footer-shop {
     min-width: 0;
     word-break: break-word;
     overflow-wrap: break-word;
-    text-align: center !important;
+    text-align: left !important;
     margin-left: 0;
     margin-right: 0;
+    padding-left: 10px;
+  }
+
+  .footer-contact {
+    grid-area: contact;
+    width: 100%;
+    margin-top: 0.5rem;
+    text-align: center !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 3rem;
+  }
+
+  .footer-contact p {
+    text-align: center !important;
+    margin: 0 auto;
+    display: block;
   }
 
   .footer-about ul,
   .footer-about ul li,
   .footer-shop ul,
   .footer-shop ul li {
-    text-align: center !important;
+    text-align: left !important;
     margin-left: 0;
     margin-right: 0;
     padding-left: 0;
@@ -1043,60 +1065,55 @@ section {
     box-sizing: border-box;
   }
 
-  /* Remove RTL text-align for .footer-about on mobile */
-  @media (max-width: 767px) {
-    [dir="rtl"] .footer-about,
-    [dir="rtl"] .footer-about ul,
-    [dir="rtl"] .footer-about ul li {
-      text-align: center !important;
-    }
+  [dir="rtl"] .footer-about,
+  [dir="rtl"] .footer-about ul,
+  [dir="rtl"] .footer-about ul li {
+    text-align: right !important;
   }
 
-  /* Footer Logo */
+  [dir="rtl"] .footer-shop,
+  [dir="rtl"] .footer-shop ul li {
+    text-align: right !important;
+  }
+
   .footer-logo {
     grid-area: logo;
     width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 1rem;
+    padding-right: 3rem;
   }
 
-  /* Footer Shop and About */
+  .footer-logo img {
+    max-width: 150px;
+    margin: 0 auto;
+    display: block;
+  }
+
   .footer-shop {
     grid-area: shop;
     width: 100%;
     margin-bottom: 1rem;
-    text-align: center;
+    text-align: left;
   }
 
   .footer-about {
     grid-area: about;
     width: 100%;
     margin-bottom: 1rem;
-    text-align: center;
+    text-align: left;
   }
 
   .footer-about ul,
   .footer-about ul li {
-    text-align: center !important;
+    text-align: left !important;
     margin-left: 0;
     margin-right: 0;
     padding-left: 0;
     padding-right: 0;
     display: block;
-  }
-
-  /* Footer Contact */
-  .footer-contact {
-    grid-area: contact;
-    width: 100%;
-    margin-top: 0.5rem;
-    text-align: center;
-    margin-left: 40px; /* Adjusted this to slide it slightly to the right */
-  }
-
-  .footer-logo img {
-    max-width: 150px;
-    margin: 0 auto;
   }
 
   .footer-links ul {
@@ -1106,7 +1123,18 @@ section {
   .copyright {
     text-align: center !important;
   }
+
+  /* RTL fix: center logo and contact */
+  [dir="rtl"] .footer-logo,
+  [dir="rtl"] .footer-contact {
+    padding-right: 0 !important;
+    padding-left: 70px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    justify-content: center !important;
+  }
 }
+
 
 
 
@@ -1141,6 +1169,25 @@ section {
     margin-bottom: 70px;
     line-height: 1.4em;
     font-family: 'Merriweather', serif;
+}
+
+@media (max-width: 767px) {
+  .text-5xl.font-bold {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: center !important;
+    width: 100%;
+    padding: 0 1rem; /* Add some padding on mobile */
+    font-size: 3.5rem; /* Reduce font size for mobile */
+  }
+
+  /* Contact subtitle centering on mobile */
+  .hero-section p {
+    margin-left: 0 !important;
+    width: 100% !important;
+    padding: 0 1rem; /* Add some padding on mobile */
+    font-size: 1.25rem; /* Adjust font size for mobile */
+  }
 }
 
 /* Unified Image Styling */
@@ -2478,13 +2525,7 @@ img, video {
   padding-right: 1.5rem;
 }
 
-/* Fix for RTL dropdown arrow */
-[dir="rtl"] .relative .fa-chevron-down {
-    right: auto;
-    left: 0;
-    margin-right: 0;
-    margin-left: 0.5rem;
-}
+
 
 .icon-saudi_riyal {
     font-family: 'Arial', sans-serif;
@@ -2707,4 +2748,67 @@ img {
   .icon-check {
     color: #2ca66f;
   }
+}
+
+/* About Page Hero Section */
+.hero-section {
+  margin-top: var(--header-height); /* Match header height */
+}
+
+/* Hero section content positioning */
+.hero-section .absolute {
+  padding-bottom: 2rem; /* Add more spacing at bottom */
+}
+
+.hero-section .absolute a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.hero-section .absolute p {
+  margin: 0;
+  padding: 0 1rem;
+  text-align: center;
+
+}
+
+/* About Page Hero Section Arrow */
+.hero-section .fa-chevron-down {
+  font-size: 1.5rem; /* Base size */
+  color: white;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 767px) {
+  .hero-section {
+    margin-top: 60px; /* Ensure consistent spacing on mobile */
+  }
+
+  .hero-section h1 {
+    text-align: center;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .hero-section h1.text-5xl.font-bold {
+    text-align: center !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    display: block;
+  }
+
+  .hero-section .fa-chevron-down {
+    font-size: 1.25rem; /* Smaller on mobile */
+    margin-top: 2rem; /* Move down from the top */
+    margin-bottom: 1rem; /* Add spacing below */
+  }
+}
+/* Fix for RTL dropdown arrow */
+[dir="rtl"] .fa-chevron-down {
+  right: auto;
+  left: 0;
+  margin-right: 0;
+  margin-left: 0.5rem;
 }

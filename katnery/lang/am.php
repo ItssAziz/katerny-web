@@ -18,6 +18,7 @@ return [
         
     /* Footer */
     'copyright' => ' 2024 ካትነሪ. ሁሉም መብቶች የተጠበቁ ናቸው።',
+    'copyright_notice' => '2025 ካትነሪ በአዚዝ. ሁሉም መብቶች የተጠበቁ ናቸው።',
 'new' => 'አዲስ',
 'sensation' => 'ስሜት',
 'exclusive_designs' => 'ልዩ ዲዛይኖች',
@@ -68,7 +69,7 @@ return [
 'hoop_earrings' => 'የቁርጭ ጆሮ ሐብት',
 'hoop_earrings_desc' => 'በተለያዩ መጠኖች የሚገኙ ቁርጭ ጆሮ ሐብቶች',
 'drop_earrings' => 'የሚያዝ ጆሮ ሐብት',
-'drop_earrings_desc' => 'የሚያዝ የጆሮ ሐብት በደህና የተያዙ',
+'drop_earrings_desc' => 'የሚያዝ የጆሮ ሐብት በደህንነት የተያዙ',
 'diamond_stud_earrings' => 'የዳይመንድ ጆሮ ሐብት',
 'diamond_stud_earrings_desc' => 'የዳይመንድ ጆሮ ሐብት ለማንኛውም አለባበስ የሚያክል። ለቀና እና ለመደበኛ አስፈላጊ የሆነ።',
 'gold_hoop_earrings' => 'የወርቅ ጆሮ ሐብት',
