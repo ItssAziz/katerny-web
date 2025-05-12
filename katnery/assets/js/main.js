@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Get the language from the session
         const lang = sessionStorage.getItem('lang') || 'en';
-        const formatString = window.translations[lang]?.showing_products_count || defaultText;
+        const formatString = window.translations[lang]?.showing_products || defaultText;
         countElem.textContent = formatString.replace('%d', visibleCount);
     }
 

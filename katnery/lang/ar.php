@@ -85,7 +85,7 @@ return [
     /* Product Filters */
     'max_price' => 'أقصى سعر',
     'price_filter_label' => 'أقصى سعر:',
-    'showing_x_products' => 'عرض %d منتجات',
+    'showing_products' => 'عرض %d منتجات',
     'sale_badge' => 'تخفيض!',
     'free_shipping' => 'وشحن مجاني',
     'quick_view' => 'عرض',

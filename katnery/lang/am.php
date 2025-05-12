@@ -188,7 +188,8 @@ return [
     'default_sorting' => 'ነባር ምርጫ',
 
     // Product Count
-    'showing_products_count' => 'ምርቶች %d አሳይ',
+    'showing_products_count' => '%d ምርቶች እየታዩ ነው',
+    'showing_products' => '%d ምርቶች እየታዩ ነው',
 
     // Price Labels
     'max_price' => 'ከፍተኛ ዋጋ',
