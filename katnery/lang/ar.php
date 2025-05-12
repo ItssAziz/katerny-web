@@ -1,5 +1,6 @@
 <?php
 return [
+    'main_nav' => 'القائمة الرئيسية',
     /* Basic Strings */
     'home' => 'الرئيسية',
     'about' => 'من نحن',

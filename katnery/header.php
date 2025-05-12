@@ -73,7 +73,7 @@ $translations = require "lang/$lang.php";
 
             <nav class="mobile-nav" tabindex="-1">
     <div class="mobile-nav-header">
-        <span class="mobile-nav-title">Main Nav</span>
+        <span class="mobile-nav-title"><?= $translations['main_nav'] ?></span>
         <button class="mobile-nav-close" aria-label="Close Menu">&times;</button>
     </div>
     <ul>

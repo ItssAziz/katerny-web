@@ -1,5 +1,6 @@
 <?php
 return [
+    'main_nav' => 'Main Menu',
     /* Basic Strings */
     'home' => 'Home',
     'rings' => 'Rings',

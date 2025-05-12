@@ -583,3 +583,40 @@ document.addEventListener("DOMContentLoaded", function() {
         document.documentElement.dir = 'rtl';
     }
 });
+
+const menuToggle = document.querySelector('.mobile-menu-toggle');
+const mobileNav = document.querySelector('.mobile-nav');
+const backdrop = document.querySelector('.mobile-nav-backdrop'); // optional, if you use it
+let scrollPosition = 0;
+
+if (menuToggle && mobileNav) {
+  menuToggle.addEventListener('click', () => {
+    const isOpening = !mobileNav.classList.contains('active');
+
+    if (isOpening) {
+      // Lock scroll and show menu
+      scrollPosition = window.scrollY;
+      document.body.style.top = `-${scrollPosition}px`;
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+      document.body.classList.add('nav-open');
+      mobileNav.classList.add('active');
+      backdrop?.classList.add('active'); // optional
+    } else {
+      // Close menu
+      document.body.classList.remove('nav-open');
+      mobileNav.classList.remove('active');
+      backdrop?.classList.remove('active'); // optional
+    }
+  });
+
+  // After menu transition ends
+  mobileNav.addEventListener('transitionend', (e) => {
+    if (e.propertyName === 'transform' && !mobileNav.classList.contains('active')) {
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, scrollPosition);
+    }
+  });
+}

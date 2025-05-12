@@ -1,5 +1,6 @@
 <?php
 return [
+    'main_nav' => 'ዋና አሰሳ',
     /* Basic Strings */
     'home' => 'ዋና ገጽ',
 'rings' => 'ቀለበቶች',
