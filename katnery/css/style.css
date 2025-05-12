@@ -647,8 +647,8 @@ section {
 
 /* First image styling (smaller image, centered vertically) */
 .image-first {
-    width: 538px;
-    height: 760px;
+    width: 450px;
+    height: 550px;
     object-fit: cover;
     border-radius: 8px;
     position: absolute;
@@ -669,6 +669,7 @@ section {
     width: 400px;
     height: 550px;
     object-fit: cover;
+    border-radius: 8px;
     position: relative;
     left: -200px;
     z-index: 2;
@@ -734,12 +735,18 @@ section {
     }
     
     .always-on-trend img {
-        width: 100%;
+        width: 70%;
         margin: 0 auto;
     }
     
     [dir="rtl"] .always-on-trend .text-content {
         text-align: right;
+    }
+    .image-first {
+      left: 30%;
+    }
+    .image-second {
+      left: -30%;
     }
 }
 
@@ -1164,10 +1171,15 @@ section {
 
 /* Base image styles */
 img {
-    max-width: 100%;
+    width: auto;
     height: auto;
     vertical-align: middle;
     will-change: transform;
+}
+/* Override any max-width: 100% that might be applied */
+img, video {
+  max-width: none; /* Remove any max-width restrictions */
+  height: auto;
 }
 
 .product-item {
