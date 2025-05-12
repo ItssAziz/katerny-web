@@ -585,38 +585,36 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 const menuToggle = document.querySelector('.mobile-menu-toggle');
-const mobileNav = document.querySelector('.mobile-nav');
-const backdrop = document.querySelector('.mobile-nav-backdrop'); // optional, if you use it
-let scrollPosition = 0;
+const mobileNav  = document.querySelector('.mobile-nav');
+const backdrop   = document.querySelector('.mobile-nav-backdrop'); // if you have one
+let scrollY = 0;
 
 if (menuToggle && mobileNav) {
   menuToggle.addEventListener('click', () => {
-    const isOpening = !mobileNav.classList.contains('active');
+    const opening = !mobileNav.classList.contains('active');
 
-    if (isOpening) {
-      // Lock scroll and show menu
-      scrollPosition = window.scrollY;
-      document.body.style.top = `-${scrollPosition}px`;
+    if (opening) {
+      // lock at current scroll
+      scrollY = window.scrollY;
+      document.body.style.top      = `-${scrollY}px`;
       document.body.style.position = 'fixed';
-      document.body.style.width = '100%';
-      document.body.classList.add('nav-open');
+      document.body.style.width    = '100%';
       mobileNav.classList.add('active');
-      backdrop?.classList.add('active'); // optional
+      backdrop?.classList.add('active');
     } else {
-      // Close menu
-      document.body.classList.remove('nav-open');
+      // hide menu
       mobileNav.classList.remove('active');
-      backdrop?.classList.remove('active'); // optional
+      backdrop?.classList.remove('active');
     }
   });
 
-  // After menu transition ends
-  mobileNav.addEventListener('transitionend', (e) => {
+  // after slide-out finishes, restore scroll
+  mobileNav.addEventListener('transitionend', e => {
     if (e.propertyName === 'transform' && !mobileNav.classList.contains('active')) {
       document.body.style.position = '';
-      document.body.style.top = '';
-      document.body.style.width = '';
-      window.scrollTo(0, scrollPosition);
+      document.body.style.top      = '';
+      document.body.style.width    = '';
+      window.scrollTo(0, scrollY);
     }
   });
 }
