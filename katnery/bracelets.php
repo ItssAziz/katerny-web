@@ -18,7 +18,6 @@ require_once 'header.php';
 
     <div class="container mx-auto px-4 py-8" <?= ($_SESSION['lang'] ?? 'en') == 'ar' ? 'dir="rtl"' : '' ?>>
         <!-- Breadcrumb Navigation -->
-        <!-- Breadcrumb Navigation -->
 <nav class="breadcrumb-nav text-sm text-gray-500 mb-4">
     <a href="index.php" class="no-underline text-gray-500"><?= $translations['home'] ?></a> &nbsp;/&nbsp; <?= $translations['bracelets_page_title'] ?>
 </nav>
@@ -28,7 +27,7 @@ require_once 'header.php';
 
         <!-- Sorting, Filtering and Product Count -->
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
-            <span id="product-count" class="text-gray-500"></span>
+            <span id="product-count" class="text-gray-500"><?= sprintf($translations['showing_products'], 0) ?></span>
             
             <div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
                 <!-- Price Range Filter -->

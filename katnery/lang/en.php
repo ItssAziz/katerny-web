@@ -88,7 +88,7 @@ return [
     /* Product Filters */
     'max_price' => 'Max Price',
     'price_filter_label' => 'Max Price:',
-    'showing_x_products' => 'Showing %d products',
+    'showing_products' => 'Showing %d products',
     
     /* Product Names & Descriptions */
     'bracelet' => 'Bracelet',

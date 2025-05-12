@@ -1548,6 +1548,11 @@ img, video {
     
     [dir="rtl"] .product-grid {
         direction: rtl;
+        text-align: center;
+        padding: 0 1rem;
+        justify-items: center;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 }
 
@@ -2303,8 +2308,8 @@ img, video {
     /* RTL Overrides */
     [dir="rtl"] {
         .content,
-        .text-content,
-        .product-grid {
+        .text-content
+         {
             text-align: right;
             direction: rtl;
         }
@@ -2313,19 +2318,19 @@ img, video {
             left: -80%;
             right: auto;
             position: fixed;
-    top: 0;
-    height: 100vh;
-    /* width: 85vw; */
-    max-width: 340px;
-    padding: 0;
-    background: #fff;
-    box-shadow: -2px 0 24px rgba(0, 0, 0, 0.18);
-    border-radius: 0 0 20px 20px;
-    transition: transform 0.4s ease-in-out;
-    z-index: 1201;
-    overflow-y: auto;
-    outline: none;
-    display: block;
+            top: 0;
+            height: 100vh;
+            /* width: 85vw; */
+            max-width: 340px;
+            padding: 0;
+            background: #fff;
+            box-shadow: -2px 0 24px rgba(0, 0, 0, 0.18);
+            border-radius: 0 0 20px 20px;
+            transition: transform 0.4s ease-in-out;
+            z-index: 1201;
+            overflow-y: auto;
+            outline: none;
+            display: block;
         }
     }
 }
@@ -2351,11 +2356,6 @@ img, video {
     .product-image {
         width: 200px;
         height: 200px;
-    }
-    
-    [dir="rtl"] .product-grid {
-        direction: rtl;
-        text-align: right;
     }
 }
 

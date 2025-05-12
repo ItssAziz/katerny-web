@@ -15,7 +15,7 @@ require_once 'header.php';
 
     <!-- Sorting, Filtering and Product Count -->
     <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
-        <span id="product-count" class="text-gray-500"></span>
+        <span id="product-count" class="text-gray-500"><?= sprintf($translations['showing_products'], 0) ?></span>
         
         <div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
             <!-- Price Range Filter -->
