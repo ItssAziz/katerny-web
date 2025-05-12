@@ -58,15 +58,6 @@ header.scrolled {
 :root {
     --header-height: 60px;
 }
-  
-/* --- Consolidated Mobile Styles (max-width: 767px) --- */
-@media (max-width: 767px) {
-  header {
-    padding: 0.5rem 0;
-    height: 60px;
-  }
-}
-
 header .container {
     width: 100%;
     padding: 0 var(--header-padding);
@@ -77,8 +68,16 @@ header .container {
     position: relative;
 }
 
-/* Mobile Logo */
-@media (max-width: 768px) {    
+/* --- Consolidated Mobile Styles (max-width: 767px) --- */
+@media (max-width: 767px) {
+    header {
+      padding: 0.5rem 0;
+      height: 60px;
+    }
+  }
+  
+  /* Mobile Logo */
+  @media (max-width: 768px) {    
     .header-container {
       justify-content: space-between;
       padding: 0.5rem 1rem;
@@ -93,7 +92,7 @@ header .container {
       gap: 0.75rem;
       padding: 0.75rem 1rem;
     }
-    
+  
     .mobile-menu-btn {
       order: -1;
       margin-right: 0;
@@ -109,105 +108,109 @@ header .container {
       gap: 1rem;
       padding: 0.75rem 1rem;
     }
-    
+  
     .mobile-menu-btn {
       order: 0;
       margin-right: 0;
     }
   }
-
-@media (max-width: 768px) {
+  
+  @media (max-width: 768px) {
     nav:not(.mobile-nav) {
-        display: none;
+      display: none;
     }
-header .logo img {
-    position: relative;
-    left: 25%;
-    transform: none;
-    text-align: center;
-    margin: 0 auto;
-    width: 100px; /* Reduced from ~180px */
-    height: auto;
-    width: 80px; 
-}
-}
-/* ——————————————————————————
-   RTL: slide menu in from the left
-   —————————————————————————— */
-   [dir="rtl"] .mobile-nav {
-    left: 0;          /* anchor to the left edge */
-    right: auto;      /* don’t anchor to the right */
-    border-radius: 0 0 20px 20px;  /* keep your bottom-corners */
-    transform: translateX(-100%);  /* hide fully off to the left */
-  }
   
-  [dir="rtl"] .mobile-nav.active {
-    transform: translateX(0);      /* slide it flush into view */
+    header .logo img {
+      position: relative;
+      left: 25%;
+      transform: none;
+      text-align: center;
+      margin: 0 auto;
+      width: 100px; /* Reduced from ~180px */
+      height: auto;
+      width: 80px; 
+    }
   }
-  
 
-/* Mobile Header Fix */
+  /* FIX: Mobile RTL menu behavior */
 @media (max-width: 768px) {
+    [dir="rtl"] .mobile-nav {
+      left: -100%;
+      right: auto;
+      transform: translateX(0);
+    }
+    
+    [dir="rtl"] .mobile-nav.active {
+      transform: translateX(100%);
+    }
+     /* Fix backdrop click behavior */
+     [dir="rtl"] .mobile-nav-backdrop {
+        right: 0;
+        left: auto;
+      }
+  }
+  
+  /* Mobile Header Fix */
+  @media (max-width: 768px) {
     header {
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-
-    }
-
-/* --- Consolidated Mobile Styles (max-width: 767px) --- */
-@media (max-width: 767px) {
+  }
+  
+  /* --- Consolidated Mobile Styles (max-width: 767px) --- */
+  @media (max-width: 767px) {
     :root {
-        --header-padding: 1rem;
+      --header-padding: 1rem;
     }
-    
+  
     header .container {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: relative;
-        padding: 0 15px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      padding: 0 15px;
     }
-    
+  
     [dir="rtl"] header .container {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: relative;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
     }
-    
+  
     .left-nav,
     .right-nav {
-        display: none;
+      display: none;
     }
-    
+  
     [dir="rtl"] .mobile-menu-toggle {
-        left: 2rem;
-        display: block;
-        z-index: 1000;
+      left: 2rem;
+      display: block;
+      z-index: 1000;
     }
-    
+  
     .logo {
-        margin-right: 1rem;
+      margin-right: 1rem;
     }
-    
+  
     [dir="rtl"] .logo {
-        margin-left: 1rem;
-        margin-right: 0;
+      margin-left: 1rem;
+      margin-right: 0;
     }
-    
+  
     .mobile-nav {
-        width: 100%;
-        padding: 20px;
-        right: -100%;
+      width: 100%;
+      padding: 20px;
+      right: -100%;
     }
-    
+  
     .mobile-nav.active {
-        transform: translateX(-100%);
+      transform: translateX(-100%);
     }
-
-}
+  }
+  
 
 .left-nav,
 .right-nav {
