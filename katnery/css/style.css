@@ -121,14 +121,14 @@ header .container {
     }
   
     header .logo img {
-      position: relative;
-      left: 25%;
-      transform: none;
-      text-align: center;
-      margin: 0 auto;
-      width: 100px; /* Reduced from ~180px */
-      height: auto;
-      width: 80px; 
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        margin: 0 auto;
+        width: 100px; /* Reduced from ~180px */
+        height: auto;
+        width: 80px; 
     }
   }
 
