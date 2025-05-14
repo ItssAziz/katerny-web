@@ -50,13 +50,5 @@ $lang = $_SESSION['lang'];
 $translations = require __DIR__."/lang/$lang.php";
 ?>
 
-<script>
-    window.translations = {
-        en: <?= json_encode($translations) ?>,
-        ar: <?= json_encode(require __DIR__."/lang/ar.php") ?>
-    };
-</script>
-
-<script src="assets/js/main.js"></script>
 <script src="https://websitedemos.net/blingg-jewelry-store-04/wp-content/plugins/woocommerce/assets/js/zoom/jquery.zoom.min.js?ver=1.7.21-wc.9.3.1" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js" defer></script>

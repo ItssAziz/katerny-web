@@ -1,5 +1,30 @@
-console.log('[main.js] Script loaded');
 document.addEventListener("DOMContentLoaded", function() {
+  // Modal category dynamic logic
+  document.querySelectorAll('.quick-view-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const product = this.closest('.product-item');
+      if (!product) return;
+      const category = product.getAttribute('data-category'); // e.g., 'Ring', 'Bracelet', etc.
+      const lang = window.currentLang || 'en';
+      const translations = (window.translations && window.translations[lang]) || {};
+      // Use lowercase and plural key if needed (e.g., 'bracelets', 'rings')
+      let categoryKey = category.toLowerCase();
+      let label = translations[categoryKey] || category;
+      
+      let href = categoryKey + '.php?lang=' + lang;
+      const modalCategory = document.getElementById('modal-category');
+      if (modalCategory) {
+        setTimeout(() => {
+          modalCategory.href = href;
+          modalCategory.textContent = label;
+          
+        }, 50);
+      }
+      // ...continue with other modal population logic as needed...
+    });
+  });
+
   const quickViewBtns = document.querySelectorAll('.quick-view-btn');
   
     /**
@@ -207,8 +232,8 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-        // Get the language from the session
-        const lang = sessionStorage.getItem('lang') || 'en';
+        // Use the global window.currentLang for language context
+        const lang = window.currentLang || 'en';
         const formatString = window.translations[lang]?.showing_products || defaultText;
         countElem.textContent = formatString.replace('%d', visibleCount);
     }
