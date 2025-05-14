@@ -1,16 +1,22 @@
 /* ===============================
-   GLOBAL STYLES
+   GLOBAL STYLES & VARIABLES
    =============================== */
    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
    @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
-
+   
    :root {
-     --header-height: 60px;
-     --header-padding: 1.5rem;
+     /* header dimensions */
+     --header-height:           60px;
+     --header-vert-pad:         1.5rem;   /* desktop: top/bottom padding */
+     --header-padding:           1.5rem;    /* desktop: left/right gutter */
+     --header-gutter-mobile:    0px;      /* mobile: zero gutter */
    }
    
+   /* ===============================
+      RESET & GLOBAL
+      =============================== */
    html {
      font-size: 93.75%;
      overflow-x: hidden;
@@ -23,13 +29,13 @@
    }
    
    /* ===============================
-      HEADER BASE (LTR)
+      HEADER BASE (DESKTOP)
       =============================== */
    header {
      position: fixed;
      top: 0; left: 0; right: 0;
      height: var(--header-height);
-     padding: var(--header-padding) 200px;
+     padding: var(--header-vert-pad) 200px;
      background: rgba(255,255,255,0.2);
      backdrop-filter: blur(4px);
      border-bottom: 1px solid rgba(0,0,0,0.08);
@@ -42,16 +48,17 @@
      box-shadow: 0 2px 20px rgba(0,0,0,0.08);
    }
    
-   /* container + three zones */
+   /* ===============================
+      CONTAINER & THREE ZONES
+      =============================== */
    header .container {
      width: 100%;
      padding: 0 var(--header-padding);
      display: flex;
      align-items: center;
-     justify-content: center; /* logo centered */
+     justify-content: center;  /* logo centered */
      position: relative;
      height: 100%;
-     flex-direction: row; /* LTR */
    }
    .left-nav,
    .header-center,
@@ -62,18 +69,18 @@
      display: flex;
      align-items: center;
    }
-   .left-nav { left: var(--header-padding); }
-   .right-nav { right: var(--header-padding); }
+   .left-nav   { left: var(--header-padding); }
+   .right-nav  { right: var(--header-padding); }
    .header-center {
      left: 50%;
      transform: translate(-50%, -50%);
-     text-align: center;
      z-index: 100;
-     width: 100%;
-     max-width: 200px;
+     text-align: center;
    }
    
-   /* nav links */
+   /* ===============================
+      NAV ITEMS & SWITCHER
+      =============================== */
    nav ul {
      display: flex;
      gap: 1rem;
@@ -91,129 +98,133 @@
      color: #000;
      font-weight: bold;
    }
-   
-   /* language switcher */
    .language-switcher,
    .mobile-language-switcher {
      display: inline-flex;
      gap: 0.25rem;
      align-items: center;
    }
-   .language-switcher a,
-   .mobile-language-switcher a {
-     padding: 0;
-     transition: color 0.3s ease;
-   }
    .language-switcher a.active {
      color: #000;
      font-weight: bold;
    }
    
-   /* mobile toggle (show via media query) */
+   /* ===============================
+      MOBILE HAMBURGER TOGGLE
+      =============================== */
    .mobile-menu-toggle {
      display: none;
      cursor: pointer;
    }
    
    /* ===============================
-      RTL OVERRIDES
+      RTL OVERRIDES (all widths)
       =============================== */
    html[dir="rtl"] header .container {
      flex-direction: row-reverse;
-     padding-left: 3rem;
-     padding-right: 1rem;
    }
-   html[dir="rtl"] .left-nav {
-     right: var(--header-padding);
-     left: auto;
-   }
-   html[dir="rtl"] .right-nav {
-     left: var(--header-padding);
-     right: auto;
-   }
-   html[dir="rtl"] nav ul {
-     flex-direction: row-reverse;
-   }
+   html[dir="rtl"] .left-nav  { right: var(--header-padding);  left: auto; }
+   html[dir="rtl"] .right-nav { left: var(--header-padding);  right: auto; }
+   /* html[dir="rtl"] nav ul     { flex-direction: row-reverse; } */
    html[dir="rtl"] nav ul li a,
    html[dir="rtl"] .language-switcher a {
      text-align: right;
    }
-   html[dir="rtl"] .mobile-menu-toggle {
-     margin-left: auto;
-     margin-right: 0;
-   }
    
    /* ===============================
-      RESPONSIVE
-      =============================== */
-   @media (max-width: 768px) {
-     header {
-       padding: 0.5rem 0;
-       height: 60px;
-       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-     }
-   
-     :root {
-       --header-padding: 1rem;
-     }
-   
-     header .container {
-       justify-content: space-between;
-       padding: 0 15px;
-     }
-   
-     nav:not(.mobile-nav) {
-       display: none;
-     }
-   
-     header .logo img {
-       width: 120px;
-       height: auto;
-       position: relative;
-       left: 50%;
-       transform: translateX(-50%);
-       text-align: center;
-       margin: 0 auto;
-     }
-   
-     [dir="rtl"] header .logo img {
-       left: 50%;
-       transform: translateX(-50%);
-     }
-   
-     body.nav-open {
-       position: fixed;
-       width: 100%;
-       overflow: hidden;
-     }
-   
-     [dir="rtl"] .mobile-nav {
-       right: auto;
-       left: 0;
-       transform: translateX(-100%);
-     }
-   
-     [dir="rtl"] .mobile-nav.active {
-       transform: translateX(0);
-     }
-   
-     [dir="rtl"] .mobile-nav-backdrop {
-       right: 0;
-       left: auto;
-     }
-   }
-   
-   /* ===============================
-      MOBILE MENU TOGGLE
-      =============================== */
-   .mobile-menu-toggle {
-     position: fixed;
-     padding: 0.6rem;
-     z-index: 1000;
-     display: none;
-   }
+   RESPONSIVE OVERRIDES (max-width: 768px)
+   =============================== */
+@media (max-width: 768px) {
+  /* collapse side-gutter and adjust vertical pad */
+  :root {
+    --header-vert-pad:   0.5rem;
+    --header-gutter:     var(--header-gutter-mobile);
+  }
 
+  /* header tweaks */
+  header {
+    padding: var(--header-vert-pad) 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
 
+  /* container now full-width for true centering */
+  header .container {
+    padding: 0;
+    justify-content: space-between;
+  }
+
+  /* mobile nav & toggle */
+  nav:not(.mobile-nav) { display: none; }
+  .mobile-menu-toggle    { display: block; }
+
+  /* center the logo wrapper */
+  .header-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* reset logo image styles */
+  header .logo img {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin: 0;
+    position: static;
+    transform: none;
+  }
+
+  /* mobile-nav RTL slide tweaks */
+  [dir="rtl"] .mobile-nav           { left: 0; right: auto; transform: translateX(-100%); }
+  [dir="rtl"] .mobile-nav.active    { transform: translateX(0); }
+  [dir="rtl"] .mobile-nav-backdrop  { right: 0; left: auto; }
+
+  /* RTL Overrides */
+  [dir="rtl"] {
+    .content,
+    .text-content {
+      text-align: right;
+      direction: rtl;
+    }
+
+    .mobile-nav {
+      left: -80%;
+      right: auto;
+      position: fixed;
+      top: 0;
+      height: 100vh;
+      /* width: 85vw; */
+      max-width: 340px;
+      padding: 0;
+      background: #fff;
+      box-shadow: -2px 0 24px rgba(0, 0, 0, 0.18);
+      border-radius: 0 0 20px 20px;
+      transition: transform 0.4s ease-in-out;
+      z-index: 1201;
+      overflow-y: auto;
+      outline: none;
+      display: block;
+    }
+  }
+
+  /* prevent scroll when nav open */
+  body.nav-open {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+/* ===============================
+   MOBILE MENU TOGGLE
+   =============================== */
+.mobile-menu-toggle {
+  position: fixed;
+  padding: 0.6rem;
+  z-index: 1000;
+  display: none;
+}
 
 :dir(ltr) .mobile-menu-toggle {
   right: env(safe-area-inset-right, 1rem);
@@ -225,12 +236,12 @@
 
 @media (max-width: 768px) {
   .mobile-menu-toggle {
-      display: block;
+    display: block;
   }
 
   [dir="rtl"] .mobile-menu-toggle {
-      left: 1rem;
-      right: auto;
+    left: 1rem;
+    right: auto;
   }
 }
 
@@ -2299,35 +2310,6 @@ img, video {
     .newsletter-form {
         flex-direction: column;
         gap: 1rem;
-    }
-    
-    /* RTL Overrides */
-    [dir="rtl"] {
-        .content,
-        .text-content
-         {
-            text-align: right;
-            direction: rtl;
-        }
-        
-        .mobile-nav {
-            left: -80%;
-            right: auto;
-            position: fixed;
-            top: 0;
-            height: 100vh;
-            /* width: 85vw; */
-            max-width: 340px;
-            padding: 0;
-            background: #fff;
-            box-shadow: -2px 0 24px rgba(0, 0, 0, 0.18);
-            border-radius: 0 0 20px 20px;
-            transition: transform 0.4s ease-in-out;
-            z-index: 1201;
-            overflow-y: auto;
-            outline: none;
-            display: block;
-        }
     }
 }
 
