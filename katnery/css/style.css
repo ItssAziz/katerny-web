@@ -5,8 +5,8 @@
    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
    @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
-   
-   :root {
+
+   :root {  
      /* header dimensions */
      --header-height:           60px;
      --header-vert-pad:         1.5rem;   /* desktop: top/bottom padding */
@@ -175,45 +175,37 @@
     transform: none;
   }
 
-  /* mobile-nav RTL slide tweaks */
-  [dir="rtl"] .mobile-nav           { left: 0; right: auto; transform: translateX(-100%); }
-  [dir="rtl"] .mobile-nav.active    { transform: translateX(0); }
-  [dir="rtl"] .mobile-nav-backdrop  { right: 0; left: auto; }
+  /* ===============================
+   MOBILE NAV RTL SLIDE TWEAKS
+   =============================== */
+[dir="rtl"] .mobile-nav {
+  left: 0;
+  right: auto;
+  transform: translateX(-100%);
+  box-shadow: 2px 0 24px rgba(0, 0, 0, 0.18);
+}
 
-  /* RTL Overrides */
-  [dir="rtl"] {
-    .content,
-    .text-content {
-      text-align: right;
-      direction: rtl;
-    }
+[dir="rtl"] .mobile-nav.active {
+  transform: translateX(0);
+}
 
-    .mobile-nav {
-      left: -80%;
-      right: auto;
-      position: fixed;
-      top: 0;
-      height: 100vh;
-      /* width: 85vw; */
-      max-width: 340px;
-      padding: 0;
-      background: #fff;
-      box-shadow: -2px 0 24px rgba(0, 0, 0, 0.18);
-      border-radius: 0 0 20px 20px;
-      transition: transform 0.4s ease-in-out;
-      z-index: 1201;
-      overflow-y: auto;
-      outline: none;
-      display: block;
-    }
-  }
+[dir="rtl"] .mobile-nav-backdrop {
+  right: 0;
+  left: auto;
+}
 
-  /* prevent scroll when nav open */
-  body.nav-open {
-    position: fixed;
-    width: 100%;
-    overflow: hidden;
-  }
+/* RTL Overrides for text content */
+[dir="rtl"] .content,
+[dir="rtl"] .text-content {
+  text-align: right;
+  direction: rtl;
+}
+
+/* Prevent scroll when nav open */
+body.nav-open {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
 }
 
 /* ===============================
@@ -254,6 +246,9 @@
   transition: all 0.3s ease;
 }
 
+/* ===============================
+   MOBILE NAVIGATION PANEL
+   =============================== */
 .mobile-nav {
   position: fixed;
   top: 0;
@@ -263,16 +258,25 @@
   max-width: 340px;
   padding: 0;
   background: #fff;
-  box-shadow: -2px 0 24px rgba(0,0,0,0.18);
+  box-shadow: -2px 0 24px rgba(0, 0, 0, 0.18);
   border-radius: 0 0 20px 20px;
   transform: translateX(100%);
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
   z-index: 1201;
   overflow-y: auto;
   outline: none;
+  display: block;
+}
+
+.mobile-nav.active {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-nav.hidden {
   opacity: 0;
   pointer-events: none;
-  display: block;
 }
 
 .mobile-nav-header {
@@ -287,7 +291,7 @@
   position: sticky;
   top: 0;
   z-index: 10;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 
 .mobile-nav ul {
@@ -301,33 +305,32 @@
   gap: 1rem;
 }
 
-/* Show when active */
-.mobile-nav.active {
-  transform: translateX(0);
-  opacity: 1;
-  pointer-events: auto;
-}
-
 @keyframes navFadeIn {
   from { opacity: 0; transform: translateX(100%); }
   to { opacity: 1; transform: translateX(0); }
 }
 
-/* Backdrop */
+/* ===============================
+   BACKDROP
+   =============================== */
 .mobile-nav-backdrop {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1200;
   opacity: 0;
   transition: opacity 0.25s;
 }
+
 .mobile-nav.active ~ .mobile-nav-backdrop {
   display: block;
   opacity: 1;
 }
 
+/* ===============================
+   CLOSE BUTTON
+   =============================== */
 .mobile-nav-close {
   background: none;
   border: none;
@@ -347,11 +350,14 @@
 
 .mobile-nav-close:hover,
 .mobile-nav-close:focus {
-  color: #000000;
-  background: #ffffff;
+  color: #000;
+  background: #fff;
   outline: none;
 }
 
+/* ===============================
+   NAV LIST ITEMS
+   =============================== */
 .mobile-nav ul li {
   animation: menuItemFadeIn 0.4s forwards;
   height: 56px;
@@ -393,16 +399,19 @@
 .mobile-nav ul li a.active,
 .mobile-nav ul li a:focus {
   background: #f6efe8;
-  color: #000000;
+  color: #000;
   box-shadow: 0 2px 8px #00000022;
   outline: none;
 }
 
 .mobile-nav ul li a:hover {
   background: #f6efe8;
-  color: #000000;
+  color: #000;
 }
 
+/* ===============================
+   LANGUAGE SWITCHER
+   =============================== */
 .mobile-language-switcher {
   display: flex;
   align-items: center;
@@ -415,6 +424,7 @@
   outline: 2px solid #ffffff;
   outline-offset: 2px;
 }
+
 
 .cover {
     height: 100vh;
@@ -2354,42 +2364,32 @@ img, video {
     }
 }
 
-.icon-saudi_riyal {
-    font-family: 'Arial', sans-serif;
-    display: inline-block;
-    margin-right: 2px;
-    font-size: 0.9em;
-}
-
-/* Saudi Riyal Symbol */
+/* Define the font once */
 @font-face {
-    font-family: 'SaudiRiyal';
-    src: url('../fonts/saudiriyal.woff2') format('woff2'),
-         url('../fonts/saudiriyal.woff') format('woff'),
-         url('../fonts/saudiriyal.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'SaudiRiyalSymbol';
+  src: url('../fonts/saudiriyalsymbol.woff2') format('woff2'),
+       url('../fonts/saudiriyalsymbol.woff') format('woff'),
+       url('../fonts/saudiriyalsymbol.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.symbol {
-    font-family: 'SaudiRiyal', sans-serif;
-    font-size: inherit;
-    margin-right: 0.2em;
-    color: inherit;
-    font-weight: bold;
-}
-
-/* Saudi Riyal symbol styling */
+/* Use the symbol class */
 .icon-saudi_riyal {
-    font-family: 'Saudi Riyal';
-    font-size: 1em;
-    margin-right: 2px;
+  font-family: 'SaudiRiyalSymbol';
+  display: inline-block;
+  font-size: 1em;
+  margin-right: 2px;
+  font-weight: bold;
 }
 
+/* RTL support */
 [dir="rtl"] .icon-saudi_riyal {
-    margin-right: 0;
-    margin-left: 2px;
+  margin-right: 0;
+  margin-left: 2px;
 }
+
+
 
 /* Zoom Styles */
 .zoom-container {
