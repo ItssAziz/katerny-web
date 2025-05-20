@@ -5,8 +5,8 @@
    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
    @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
-
-   :root {  
+   
+   :root {
      /* header dimensions */
      --header-height:           60px;
      --header-vert-pad:         1.5rem;   /* desktop: top/bottom padding */
@@ -145,7 +145,6 @@
     background: #333;
     transition: all 0.3s ease;
   }
-<<<<<<< HEAD
   
   /* ===============================
      RESPONSIVE OVERRIDES (max-width: 768px)
@@ -293,62 +292,6 @@
     z-index: 1201;
     overflow-y: auto;
     outline: none;
-=======
-
-  /* ===============================
-   MOBILE NAV RTL SLIDE TWEAKS
-   =============================== */
-[dir="rtl"] .mobile-nav {
-  left: 0;
-  right: auto;
-  transform: translateX(-100%);
-  box-shadow: 2px 0 24px rgba(0, 0, 0, 0.18);
-}
-
-[dir="rtl"] .mobile-nav.active {
-  transform: translateX(0);
-}
-
-[dir="rtl"] .mobile-nav-backdrop {
-  right: 0;
-  left: auto;
-}
-
-/* RTL Overrides for text content */
-[dir="rtl"] .content,
-[dir="rtl"] .text-content {
-  text-align: right;
-  direction: rtl;
-}
-
-/* Prevent scroll when nav open */
-body.nav-open {
-  position: fixed;
-  width: 100%;
-  overflow: hidden;
-}
-
-/* ===============================
-   MOBILE MENU TOGGLE
-   =============================== */
-.mobile-menu-toggle {
-  position: fixed;
-  padding: 0.6rem;
-  z-index: 1000;
-  display: none;
-}
-
-:dir(ltr) .mobile-menu-toggle {
-  right: env(safe-area-inset-right, 1rem);
-}
-
-:dir(rtl) .mobile-menu-toggle {
-  left: env(safe-area-inset-left, 1rem);
-}
-
-@media (max-width: 768px) {
-  .mobile-menu-toggle {
->>>>>>> fe9e617dd51445160768db131350e0ebcfd17feb
     display: block;
   }
   
@@ -360,7 +303,6 @@ body.nav-open {
     pointer-events: auto;
     transition-delay: 0s;
   }
-<<<<<<< HEAD
   
   .mobile-nav-header {
     display: flex;
@@ -496,198 +438,6 @@ body.nav-open {
     outline-offset: 2px;
   }
   
-=======
-}
-
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  background: #333;
-  transition: all 0.3s ease;
-}
-
-/* ===============================
-   MOBILE NAVIGATION PANEL
-   =============================== */
-.mobile-nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 85vw;
-  max-width: 340px;
-  padding: 0;
-  background: #fff;
-  box-shadow: -2px 0 24px rgba(0, 0, 0, 0.18);
-  border-radius: 0 0 20px 20px;
-  transform: translateX(100%);
-  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
-  z-index: 1201;
-  overflow-y: auto;
-  outline: none;
-  display: block;
-}
-
-.mobile-nav.active {
-  transform: translateX(0);
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.mobile-nav.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.mobile-nav-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 1.2rem 1.5rem 0.5rem 1.5rem;
-  border-bottom: 1px solid #eee;
-  background: #faf9f7;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-}
-
-.mobile-nav ul {
-  width: 100%;
-  box-sizing: border-box;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-@keyframes navFadeIn {
-  from { opacity: 0; transform: translateX(100%); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-/* ===============================
-   BACKDROP
-   =============================== */
-.mobile-nav-backdrop {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1200;
-  opacity: 0;
-  transition: opacity 0.25s;
-}
-
-.mobile-nav.active ~ .mobile-nav-backdrop {
-  display: block;
-  opacity: 1;
-}
-
-/* ===============================
-   CLOSE BUTTON
-   =============================== */
-.mobile-nav-close {
-  background: none;
-  border: none;
-  color: #333;
-  font-size: 2.2rem;
-  line-height: 1;
-  cursor: pointer;
-  padding: 0 0.5rem;
-  transition: color 0.2s, background 0.2s;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.mobile-nav-close:hover,
-.mobile-nav-close:focus {
-  color: #000;
-  background: #fff;
-  outline: none;
-}
-
-/* ===============================
-   NAV LIST ITEMS
-   =============================== */
-.mobile-nav ul li {
-  animation: menuItemFadeIn 0.4s forwards;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  box-sizing: border-box;
-  padding: 15px 20px;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.mobile-nav.active ul li:nth-child(1) { animation-delay: 0.1s; }
-.mobile-nav.active ul li:nth-child(2) { animation-delay: 0.18s; }
-.mobile-nav.active ul li:nth-child(3) { animation-delay: 0.26s; }
-.mobile-nav.active ul li:nth-child(4) { animation-delay: 0.34s; }
-.mobile-nav.active ul li:nth-child(5) { animation-delay: 0.42s; }
-.mobile-nav.active ul li:nth-child(6) { animation-delay: 0.5s; }
-
-@keyframes menuItemFadeIn {
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.mobile-nav ul li:last-child {
-  border-bottom: none;
-}
-
-.mobile-nav ul li a {
-  align-items: center;
-  justify-content: flex-start;
-  height: 20px;
-  line-height: 1.2;
-  text-decoration: none;
-  margin-left: 2rem;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.mobile-nav ul li a.active,
-.mobile-nav ul li a:focus {
-  background: #f6efe8;
-  color: #000;
-  box-shadow: 0 2px 8px #00000022;
-  outline: none;
-}
-
-.mobile-nav ul li a:hover {
-  background: #f6efe8;
-  color: #000;
-}
-
-/* ===============================
-   LANGUAGE SWITCHER
-   =============================== */
-.mobile-language-switcher {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1rem 2rem;
-  justify-content: center;
-}
-
-.mobile-nav:focus {
-  outline: 2px solid #ffffff;
-  outline-offset: 2px;
-}
->>>>>>> fe9e617dd51445160768db131350e0ebcfd17feb
-
 
 .cover {
     height: 100vh;
@@ -2634,7 +2384,6 @@ img, video {
     }
 }
 
-<<<<<<< HEAD
 /* Load custom Saudi Riyal font */
 @font-face {
   font-family: 'SaudiRiyalSymbol';
@@ -2642,19 +2391,10 @@ img, video {
        url('/assets/fonts/saudiriyalsymbol.woff') format('woff'),
        url('/assets/fonts/saudiriyalsymbol.otf') format('opentype'),
        url('/assets/fonts/saudiriyalsymbol.ttf') format('truetype');
-=======
-/* Define the font once */
-@font-face {
-  font-family: 'SaudiRiyalSymbol';
-  src: url('../fonts/saudiriyalsymbol.woff2') format('woff2'),
-       url('../fonts/saudiriyalsymbol.woff') format('woff'),
-       url('../fonts/saudiriyalsymbol.otf') format('opentype');
->>>>>>> fe9e617dd51445160768db131350e0ebcfd17feb
   font-weight: normal;
   font-style: normal;
 }
 
-<<<<<<< HEAD
 /* Icon styling for Saudi Riyal */
 .icon-saudi_riyal {
   font-family: 'SaudiRiyalSymbol', Arial, sans-serif;
@@ -2676,24 +2416,7 @@ img, video {
   margin-right: 0.2em;
   color: inherit;
   font-weight: bold;
-=======
-/* Use the symbol class */
-.icon-saudi_riyal {
-  font-family: 'SaudiRiyalSymbol';
-  display: inline-block;
-  font-size: 1em;
-  margin-right: 2px;
-  font-weight: bold;
 }
-
-/* RTL support */
-[dir="rtl"] .icon-saudi_riyal {
-  margin-right: 0;
-  margin-left: 2px;
->>>>>>> fe9e617dd51445160768db131350e0ebcfd17feb
-}
-
-
 
 /* Zoom Styles */
 .zoom-container {
